@@ -1,0 +1,315 @@
+import React,{useEffect,useState,useContext} from 'react'
+import { Link } from 'react-router-dom'
+import axios from 'axios'
+import Table from 'react-bootstrap/Table';
+import {Form,Container,Row,Col,Card} from 'react-bootstrap';
+import Button from 'react-bootstrap/Button';
+import { DefContext } from "../Helpers/DefContext";
+import {  useParams,useNavigate } from "react-router-dom";
+function Products(props)
+{
+
+const  [numProd,SetNumProd]=useState("")
+
+
+function onChangeNum(e)
+{
+   
+  SetNumProd(e.target.value)
+
+}
+
+
+
+
+const { userState,setUserState} = useContext(DefContext);
+
+
+
+ 
+   const params = useParams();
+
+
+/*return(
+
+<tr>
+ <td>
+ <img src={`/Images/${props.product.image}`} width="100" height="50" />
+ </td>
+ <td>{props.product.name} </td>
+ <td>{props.product.price} </td>
+ <td>
+ <input type="text" id="fname" name="fname" onChange={onChangeNum} value={numProd}    /><br/>
+ </td>
+     <td>
+     <Button variant="warning"><a href='#' onClick={()=>props.OrderProduct(userState.id,params.id,props.product._id,numProd)}>Poruci</a></Button> 
+     </td>
+</tr>
+
+)*/
+
+
+return (
+  <Card className="h-100  ">
+    <Card.Img
+      variant="top"
+      src={`/Images/${props.product.image}`}
+      height="200px"
+      style={{ objectFit: "cover" }}
+    />
+    <Card.Body className="d-flex flex-column">
+      <Card.Title  style={{display:"flex", flexDirection:"column"  }}>
+      <span className="fs-5" ><b>Cena:</b>{props.product.price} DIN</span>
+        <span className="fs-5"><b>Ime proizvoda:</b>{props.product.name} </span>
+      </Card.Title>
+      <div className="mt-auto">
+      
+         
+      
+          <div
+            className="d-flex align-items-center flex-column"
+            style={{ gap: ".5rem" }}
+          >
+            <div
+              className="d-flex align-items-center justify-content-center"
+              style={{ gap: ".5rem" }}
+            >
+            
+            <Button className="w-100"    variant="success"   onClick={()=>props.OrderProduct(userState.id,params.id,props.product._id,numProd,SetNumProd )}>Porucite</Button> 
+              
+            <input type="text" id="fname" name="fname" onChange={onChangeNum} value={numProd} placeholder="Broj artikala"   />
+            {(isNaN(numProd) || !numProd) &&  <p   style={{color:'blue'}}   >Unesite broj artikala</p>}  
+            </div>
+         
+          </div>
+        
+      </div>
+    </Card.Body>
+  </Card>
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+function ChoseProduct() {
+
+    const [productA,setProducts] = useState({
+        products:[]
+   });
+
+   
+
+   const  navigate=useNavigate()
+
+    useEffect(() => {
+  
+        axios.get('http://localhost:5001/products/', {
+            headers: {
+              access: localStorage.getItem("access"),
+            },
+          }).then(response=>{
+
+            setProducts({products:response.data})
+           // console.log(response.data)
+            }
+            ).catch((error)=>{
+                console.log(error)
+               
+            })
+            
+
+
+
+
+
+    }, []);
+
+
+
+
+
+    function OrderProduct(SellerId,DriverId,ProductId,numProd,SetNumProd){
+
+
+      if(!isNaN(numProd) && numProd )
+      {
+      let order=
+      {
+         SellerId:SellerId,
+         DriverId:DriverId,
+         ProductId:ProductId,
+         numProd:numProd
+
+
+      }
+     axios.post('http://localhost:5001/shops/addOrderCart',order,{
+          headers: {
+            access: localStorage.getItem("access"),
+          },
+        }).then(
+           res=>
+            {
+              if(res.data==false)
+              {navigate("/NewShop")}
+            }
+           );
+          
+          }
+          else
+          {
+            console.log("nema OVDE")
+          }
+
+
+
+
+SetNumProd("")
+   
+   }
+
+
+
+
+
+
+
+
+
+
+
+    function ProductList()
+    {
+      
+       return productA.products.map(currentProduct=>{
+        return <Col   key={currentProduct._id+"f"}      ><Products product={currentProduct}  OrderProduct={OrderProduct} key={currentProduct._id}   ></Products></Col>
+       })
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /*return (
+    <div>
+    <>
+<Container  className="mt-4"  >
+<Row>
+<Col  xs={11} >
+<Card className='shadow-lg' >
+  <Card.Header className='p-4' >
+    <h4>ListaUser</h4>
+  </Card.Header>
+<Card.Body>
+<Table striped bordered hover variant="dark">
+    <thead>
+      
+      <tr>
+    <th>Slika</th>      
+  <th>Ime proizvoda </th>
+  <th>Cena</th>
+  <th>Broj artikala</th>
+  <th>Poruci</th>
+ 
+</tr>
+    </thead>
+    <tbody>
+     
+
+    {ProductList()}
+
+
+    </tbody>
+  </Table>
+</Card.Body>
+
+</Card>
+</Col>
+</Row>
+
+
+</Container>
+</>
+  </div>
+  )*/
+
+
+
+if(productA.products.length>0)
+{
+  return (
+    <>
+ 
+  <Container 
+  
+  className="d-flex align-items-center justify-content-center  "
+  style={{ minHeight: "90vh",minWidth:'10vh'}}
+>
+
+  <div className="w-100" style={{ }}>
+    
+    <Row  md={2} xs={1} lg={3}   className="g-3" >
+    {ProductList()}
+    </Row>
+    
+    
+    
+   
+</div>
+    </Container>
+    </>
+    )
+}
+else
+{
+
+  return(
+    <Container 
+    className="d-flex align-items-center justify-content-center"
+    style={{ minHeight: "90vh"}}
+  >
+    <div className="w-100" style={{ maxWidth: "400px" }}>
+  
+  
+  <h1>Nema proizvoda</h1>
+      </div>
+      </Container>
+  )
+
+
+
+
+
+
+
+
+
+}
+  
+}
+
+export default ChoseProduct

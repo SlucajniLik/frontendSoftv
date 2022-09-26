@@ -1,0 +1,464 @@
+import React from 'react';
+import  axios from 'axios'
+import './Style.css'
+import { useState,useContext } from 'react';
+import Button from 'react-bootstrap/Button';
+import {Form,Container,Card} from 'react-bootstrap';
+import { DefContext } from "../Helpers/DefContext";
+import { useNavigate,Link } from "react-router-dom";
+function RegisterUser() {
+
+
+
+  const navigate=useNavigate()
+
+  const { userState,setUserState} = useContext(DefContext);
+
+
+  const [name, setName] = useState("");
+  const [surname, setSurname] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [password2, setPassword2] = useState("");
+  const [role, setRole] = useState("Izaberite opciju");
+  const [image, setImage] = useState("");
+  const [nameErr, setNameErr] = useState(true);
+  const [surnameErr, setSurnameErr] = useState(true);
+  const [emailErr, setEmailErr] = useState(true);
+  const [passwordErr, setPasswordErr] = useState(true);
+  const [password2Err, setPassword2Err] = useState(true);
+  const [roleErr, setRoleErr] = useState(true);
+  const [imageErr, setImageErr] = useState(true);
+
+  function onChangeName(e)
+  {
+    setName(e.target.value)
+
+
+   /* const Namereg = new RegExp('[A-Z][a-z]{2}');   
+
+    if(!Namereg.test(name))
+    {
+       setNameErr(false)
+
+    }
+    else{
+     setNameErr(true)
+     
+    }*/
+
+
+  }
+  function onChangeSurname(e)
+  {
+    setSurname(e.target.value)
+
+
+   /* const Surnamereg = new RegExp('[A-Z][a-z]{2}'); 
+    if(!Surnamereg.test(surname))
+    {
+       setSurnameErr(false)
+
+    }
+    {
+     setSurnameErr(true)
+    }*/
+  }
+
+
+  function onChangePass(e)
+  {
+    setPassword(e.target.value)
+    /*const Passreg = new RegExp('[A-Z][a-z]{2}'); 
+    if(!Passreg.test(password))
+    {
+       setPasswordErr(false)
+
+    }
+    else
+    {
+ setPasswordErr(true)
+    }*/
+  }
+
+
+  function onChangePass2(e)
+  {
+    setPassword2(e.target.value)
+
+  /*  if(password!=password2)
+    {
+      setPassword2Err(false)
+
+    
+    }*/
+  }
+
+  function onChangeEmail(e)
+  {
+    setEmail(e.target.value)
+  /*  const Emailreg = new RegExp('[A-Z][a-z]{2}');    
+    if(!Emailreg.test(email))
+    {
+        setEmailErr(false)
+
+    }
+    else
+    {
+     setEmailErr(true)
+    }*/
+  }
+
+  function onChangeRole(e)
+  {
+    setRole(e.target.value)
+
+ /*   if(role=="Izaberite opciju")
+    {
+
+    setRoleErr(false)
+    
+    }
+    else
+    {
+      setRoleErr(true)
+    }*/
+  }
+
+  function onChangeImage(e)
+  {
+   
+    setImage(e.target.files[0])
+
+
+  /*  if(!image)
+{
+  setImageErr(false)
+
+}
+else
+{
+
+  setImageErr(true)
+}*/
+
+
+  }
+
+function validate()
+{
+
+
+var error = true
+
+const Namereg = new RegExp('[a-zA-z]{3,}');    
+const Surnamereg = new RegExp('[a-zA-z]{3,}'); 
+const Emailreg = new RegExp('[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+');    
+const Passreg = new RegExp('[a-zA-Z0-9+_.-]{8,}'); 
+const Imagereg=new RegExp('[A-Za-z].(jpg|jpeg|png|gif|JPG|JPEG|PNG|GIF)')
+
+
+
+   if(!Namereg.test(name))
+    {
+       setNameErr(false)
+      error=false
+    }
+    else{
+     setNameErr(true)
+     
+    }
+
+   
+   if(!Surnamereg.test(surname))
+   {
+      setSurnameErr(false)
+      error=false
+   }
+   else
+   {
+    setSurnameErr(true)
+   }
+   if(!Emailreg.test(email))
+   {
+       setEmailErr(false)
+       error=false
+   }
+   else
+   {
+    setEmailErr(true)
+   }
+   if(!Passreg.test(password))
+   {
+      setPasswordErr(false)
+      error=false
+   }
+   else
+   {
+setPasswordErr(true)
+   }
+
+if(password!=password2)
+{
+  setPassword2Err(false)
+  error=false
+
+}
+else
+{
+  setPassword2Err(true)
+}
+
+
+if(role=="Izaberite opciju")
+{
+error=false
+setRoleErr(false)
+
+}
+else
+{
+  setRoleErr(true)
+}
+
+if(!image|| !Imagereg.test(image.name) )
+{
+  setImageErr(false)
+  error=false
+}
+else
+{
+
+  setImageErr(true)
+}
+
+
+
+
+
+  return error;
+
+}
+
+
+const[existsErr,setExistsErr]=useState(true)
+
+ function onSubmit(e)
+{
+
+  e.preventDefault();
+ /* const user={
+      name:name,
+      surname:name2,
+      email:email,
+      password:password,
+      role:role,
+      image:image
+  }*/
+
+const user=new FormData()
+
+user.append("name",name)
+user.append("surname",surname)
+user.append("email",email)
+user.append("password",password)
+user.append("role",role)
+user.append("image",image)
+
+console.log(image)
+
+
+
+
+console.log(image.name)
+
+//console.log(validate(name,surname,email,password,password2,role))
+
+
+
+
+if(validate()==true)
+{
+
+   const useremail={
+    email:email
+   }
+
+
+  axios.post('http://localhost:5000/users/checkEmailExist',useremail).then(res=>
+  {
+        setExistsErr(res.data)   
+        console.log(res.data)
+        if(res.data!=false)
+        {
+
+
+
+
+ 
+          axios.post('http://localhost:5000/users/register',user).then(res=>
+          {
+                setExistsErr(res.data)     
+          } 
+          ).catch(err=>console.log(err))
+        
+          setName("")
+          setSurname("")
+          setPassword("")
+          setPassword2("")
+          setEmail("")
+          setImage("")
+          setRole("Izaberite opciju")
+        
+          console.log("true")
+        
+        
+          navigate("/login")
+
+        }
+  } 
+  )
+
+}
+else
+{
+  setExistsErr(true)
+  console.log("false")
+}
+
+
+
+
+
+  
+
+ 
+  //setImage("")
+
+
+
+
+
+}
+  /*return (
+    <Form onSubmit={onSubmit}   encType="multipart/form-data">
+<Form.Group className="mb-3" controlId="formBasicName">
+        <Form.Label>Ime:{userState.email}  </Form.Label>
+        <Form.Control type="text" placeholder="Enter ime"   value={name} onChange={onChangeName} />
+        {!nameErr && <p   style={{color:'red'}}   >Vase ime nije validno</p>}
+       
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="formBasicSurname">
+        <Form.Label>Prezime</Form.Label>
+        <Form.Control type="text" placeholder="Enter prezime"value={surname} onChange={onChangeSurname} />
+        {!surnameErr && <p   style={{color:'red'}}   >Vase prezime nije validno</p>}
+      </Form.Group>
+
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Label>Email address</Form.Label>
+        <Form.Control type="text" placeholder="Enter email"   value={email} onChange={onChangeEmail}  />
+        {!emailErr && <p   style={{color:'red'}}   >Vase email nije validan</p>}
+      </Form.Group>
+
+      <Form.Group className="mb-3" controlId="formBasicPassword">
+        <Form.Label>Password</Form.Label>
+        <Form.Control type="password" placeholder="Password" value={password} onChange={onChangePass}    />
+        {!passwordErr&& <p   style={{color:'red'}}   >Vase sifra nije validna</p>}
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="formConfirmPassword">
+        <Form.Label>Confirm password</Form.Label>
+        <Form.Control type="password" placeholder="Password"     value={password2} onChange={onChangePass2}      />
+        {!password2Err && <p   style={{color:'red'}}   >Uneli ste pogresnu sifru</p>}
+      </Form.Group>
+      <Form.Group controlId="formFile" className="mb-3">
+        <Form.Label>Default file input example</Form.Label>
+        <Form.Control type="file" filename="image"   onChange={onChangeImage}/>
+        {!imageErr && <p   style={{color:'red'}}   >Izaberite sliku</p>}
+      </Form.Group>
+      <Form.Select aria-label="Default select example"   value={role} onChange={onChangeRole}        >
+      <option value="Izaberite opciju">Izaberite opciju</option>
+      <option value="Admin">Admin</option>
+      <option value="Prodavac">Prodavac</option>
+      <option value="Vozac">Vozac</option>
+    </Form.Select>
+    {!roleErr && <p   style={{color:'red'}}   >Izaberite korisnika</p>}
+      <Button variant="primary" type="submit">
+        Submit
+      </Button>
+    </Form>
+  )*/
+
+
+return(
+  <Container 
+  className="d-flex align-items-center justify-content-center"
+  style={{ minHeight: "90vh"}}
+>
+  <div className="w-100" style={{ maxWidth: "400px" }}>
+
+
+      <Card>
+        <Card.Body>
+          <h2 className="text-center mb-4">Registrujte se</h2>
+      
+          <Form onSubmit={onSubmit}   encType="multipart/form-data">
+<Form.Group className="mb-3" controlId="formBasicName">
+        <Form.Label>Ime:</Form.Label>
+        <Form.Control type="text" placeholder="Unesite vase ime"   value={name} onChange={onChangeName} />
+        {!nameErr && <p   style={{color:'red'}}   >Vase ime nije validno</p>}
+       
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="formBasicSurname">
+        <Form.Label>Prezime</Form.Label>
+        <Form.Control type="text" placeholder="Unesite vase prezime"value={surname} onChange={onChangeSurname} />
+        {!surnameErr && <p   style={{color:'red'}}   >Vase prezime nije validno</p>}
+      </Form.Group>
+
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Label>Email</Form.Label>
+        <Form.Control type="text" placeholder="Unesite vas email"   value={email} onChange={onChangeEmail}  />
+        {!emailErr && <p   style={{color:'red'}}   >Vase email nije validan</p>}
+        {!existsErr && <p   style={{color:'red'}}   >Email vec postoji!</p>}
+      </Form.Group>
+
+      <Form.Group className="mb-3" controlId="formBasicPassword">
+        <Form.Label>Lozinka</Form.Label>
+        <Form.Control type="password" placeholder="Unesite vasu lozinku" value={password} onChange={onChangePass}    />
+        {!passwordErr&& <p   style={{color:'red'}}   >Vase sifra nije validna</p>}
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="formConfirmPassword">
+        <Form.Label>Potvrda lozinke</Form.Label>
+        <Form.Control type="password" placeholder="Potvrdite vasu lozinku"     value={password2} onChange={onChangePass2}      />
+        {!password2Err && <p   style={{color:'red'}}   >Uneli ste pogresnu sifru</p>}
+      </Form.Group>
+      <Form.Group controlId="formFile" className="mb-3">
+        <Form.Label>Slika</Form.Label>
+        <Form.Control type="file"   filename="image"   onChange={onChangeImage}/>
+        {!imageErr && <p   style={{color:'red'}}   >Izaberite sliku</p>}
+      </Form.Group>
+      <Form.Select aria-label="Default select example"   value={role} onChange={onChangeRole}        >
+      <option value="Izaberite opciju">Izaberite opciju</option>
+      <option value="Admin">Admin</option>
+      <option value="Prodavac">Prodavac</option>
+      <option value="Vozac">Vozac</option>
+    </Form.Select>
+    {!roleErr && <p   style={{color:'red'}}   >Izaberite korisnika</p>}
+    <br/>
+      <Button  variant="secondary"  className="w-100"   type="submit">
+        Submit
+      </Button>
+    </Form>
+        </Card.Body>
+      </Card>
+      </div>
+    </Container>
+
+)
+
+}
+
+
+
+
+
+export default RegisterUser;

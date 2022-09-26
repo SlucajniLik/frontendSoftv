@@ -263,7 +263,7 @@ user.append("surname",surname)
 user.append("email",email)
 user.append("password",password)
 user.append("role",role)
-user.append("image",image)
+//user.append("image",image)
 
 console.log(image)
 

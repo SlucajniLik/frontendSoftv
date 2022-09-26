@@ -300,7 +300,7 @@ if(validate()==true)
           {
                 setExistsErr(res.data)     
           } 
-          ).catch(err=>console.log(err))
+          ).catch(err=>console.log("ovde gresakaaa"+res.data+""+err))
         
           setName("")
           setSurname("")

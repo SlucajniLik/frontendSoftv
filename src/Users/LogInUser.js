@@ -46,7 +46,7 @@ function LogInUser() {
       password:password
   }
   //console.log(user);
- axios.post('http://localhost:5000/users/login',user).then(  res=>{
+ axios.post('https://serviceone1.herokuapp.com/users/login',user).then(  res=>{
     //console.log(jwt_decode(res.data).email)
     //console.log(res.data )
 

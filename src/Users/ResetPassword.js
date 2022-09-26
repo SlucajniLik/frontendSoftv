@@ -121,7 +121,7 @@ if(validate()==true)
 {
 
    console.log("Ovde token"+token)
-  axios.post('http://localhost:5000/users/resetPassword',user, {
+  axios.post('https://serviceone1.herokuapp.com/users/resetPassword',user, {
     headers: {
       access: token,
     },

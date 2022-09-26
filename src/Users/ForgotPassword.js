@@ -75,7 +75,7 @@ function onSubmit(e)
 
 
   //console.log(user);
-  axios.post('http://localhost:5000/users/forgotPassword',user).then(res=>{
+  axios.post('https://serviceone1.herokuapp.com/users/forgotPassword',user).then(res=>{
     //console.log(jwt_decode(res.data).email)
     console.log(res.data )
     setEmail("")

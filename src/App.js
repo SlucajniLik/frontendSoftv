@@ -48,7 +48,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/users/check", {
+      .get("https://serviceone1.herokuapp.com/users/check", {
         headers: {
           access: localStorage.getItem("access"),
         },

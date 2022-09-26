@@ -99,7 +99,7 @@ return error
     if(validate())
     {
 
-      axios.post('http://localhost:5000/products/addproduct',product,{
+      axios.post('https://serviceone1.herokuapp.com/products/addproduct',product,{
         headers: {
           access: localStorage.getItem("access"),
         },

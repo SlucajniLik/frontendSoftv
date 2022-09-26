@@ -104,7 +104,7 @@ function UpdateProduct() {
 
   if(validate())
   {
-    axios.post('http://localhost:5000/products/updateproduct/'+params.id,product,{
+    axios.post('https://serviceone1.herokuapp.com/products/updateproduct/'+params.id,product,{
       headers: {
         access: localStorage.getItem("access"),
       },

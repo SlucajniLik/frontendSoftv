@@ -127,7 +127,7 @@ function OrderdProduct() {
     useEffect(() => {
    const DriverId=jwtDecode(localStorage.getItem("access")).id
  
-        axios.get('http://localhost:5002/shops/OrderdProduct/'+params.id+'/'+DriverId, {
+        axios.get('https://servicethree3.herokuapp.com/shops/OrderdProduct/'+params.id+'/'+DriverId, {
             headers: {
               access: localStorage.getItem("access"),
             },
@@ -161,7 +161,7 @@ function OrderdProduct() {
 
       }
       console.log(order)
-     axios.post('http://localhost:5002/shops/DeliverProduct',order,{
+     axios.post('https://servicethree3.herokuapp.com/shops/DeliverProduct',order,{
           headers: {
             access: localStorage.getItem("access"),
           },

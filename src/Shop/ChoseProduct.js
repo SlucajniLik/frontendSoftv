@@ -117,7 +117,7 @@ function ChoseProduct() {
 
     useEffect(() => {
   
-        axios.get('http://localhost:5001/products/', {
+        axios.get('https://servicetwo2.herokuapp.com/products/', {
             headers: {
               access: localStorage.getItem("access"),
             },
@@ -156,7 +156,7 @@ function ChoseProduct() {
 
 
       }
-     axios.post('http://localhost:5001/shops/addOrderCart',order,{
+     axios.post('https://servicetwo2.herokuapp.com/shops/addOrderCart',order,{
           headers: {
             access: localStorage.getItem("access"),
           },

@@ -22,7 +22,7 @@ function ProfileS() {
 
     useEffect(() => {
         axios
-          .get("http://localhost:5001/users/profile/"+userState.id, {
+          .get("https://servicetwo2.herokuapp.com/users/profile/"+userState.id, {
             headers: {
               access: localStorage.getItem("access"),
             },

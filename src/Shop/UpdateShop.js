@@ -160,7 +160,7 @@ if(validate()){
   
   
   
-    axios.post('http://'+window.location.hostname+':'+5001+'/shops/UpdateShop/'+params.id,shop,{
+    axios.post('https://servicetwo2.herokuapp.com/shops/UpdateShop/'+params.id,shop,{
       headers: {
         access: localStorage.getItem("access"),
       },

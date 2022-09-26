@@ -42,7 +42,7 @@ function NewShop() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5001/shops/checkShop/"+userState.id, {
+      .get("https://servicetwo2.herokuapp.com/shops/checkShop/"+userState.id, {
         headers: {
           access: localStorage.getItem("access"),
         },
@@ -217,7 +217,7 @@ shop.append("nameSeller",userState.name)
 
 
 
-  axios.post('http://'+window.location.hostname+':'+5001+'/shops/addShop',shop,{
+  axios.post('https://servicetwo2.herokuapp.com/shops/addShop',shop,{
     headers: {
       access: localStorage.getItem("access"),
     },

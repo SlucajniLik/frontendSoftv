@@ -111,7 +111,7 @@ const [userA,setUsers] = useState({
 
     useEffect(() => {
   
-        axios.get('http://'+window.location.hostname+':'+5001+'/shops/', {
+        axios.get('https://servicetwo2.herokuapp.com/shops/', {
             headers: {
               access: localStorage.getItem("access"),
             },

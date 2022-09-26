@@ -155,7 +155,7 @@ function CartProduct() {
 
     useEffect(() => {
   
-        axios.get('http://localhost:5001/products/Card/'+userState.id, {
+        axios.get('https://servicethree3.herokuapp.com/products/Card/'+userState.id, {
             headers: {
               access: localStorage.getItem("access"),
             },
@@ -185,7 +185,7 @@ function CartProduct() {
     function DeleteOrder(id){
 
      
-     axios.delete('http://localhost:5001/products/deleteCart/'+id,{
+     axios.delete('https://servicetwo2.herokuapp.com/products/deleteCart/'+id,{
           headers: {
             access: localStorage.getItem("access"),
           },
@@ -208,7 +208,7 @@ function UpdateNum(id,valNum,setNProd)
 
     if(!isNaN(valNum)){
   let data=[]
-  axios.post('http://localhost:5001/products/CardUpdate/'+id+'/'+valNum,data,{
+  axios.post('https://servicetwo2.herokuapp.com/products/CardUpdate/'+id+'/'+valNum,data,{
     headers: {
       access: localStorage.getItem("access"),
     },
@@ -254,7 +254,7 @@ function UpdateNum(id,valNum,setNProd)
 function OrderProducts(orders){
 
 
-    axios.post('http://localhost:5001/shops/OrderProducts',orders,{
+    axios.post('https://servicetwo2.herokuapp.com/shops/OrderProducts',orders,{
         headers: {
           access: localStorage.getItem("access"),
         },

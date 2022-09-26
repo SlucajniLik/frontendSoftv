@@ -22,7 +22,7 @@ function ProfileD() {
 
     useEffect(() => {
         axios
-          .get("http://localhost:5002/users/profile/"+userState.id, {
+          .get("https://servicethree3.herokuapp.com/users/profile/"+userState.id, {
             headers: {
               access: localStorage.getItem("access"),
             },

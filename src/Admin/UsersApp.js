@@ -52,7 +52,7 @@ const [userA,setUsers] = useState({
 
     useEffect(() => {
   
-        axios.get('http://localhost:5000/users/', {
+        axios.get('https://serviceone1.herokuapp.com/users/', {
             headers: {
               access: localStorage.getItem("access"),
             },
@@ -77,7 +77,7 @@ const [userA,setUsers] = useState({
     function deleteUser(id){
 
         let data=[]
-        axios.delete('http://localhost:5000/users/delete/'+id,{
+        axios.delete('https://serviceone1.herokuapp.com/users/delete/'+id,{
             headers: {
               access: localStorage.getItem("access"),
             },

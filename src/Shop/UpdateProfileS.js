@@ -192,7 +192,7 @@ if(validate()==true)
   const useremail={
     email:email
    }
-  axios.post('http://localhost:5001/users/checkEmailExist',useremail).then(res=>
+  axios.post('https://servicetwo2.herokuapp.com/users/checkEmailExist',useremail).then(res=>
   {
         setExistsErr(res.data)   
         console.log(res.data)
@@ -205,7 +205,7 @@ if(validate()==true)
 
 
 
-  axios.post('http://localhost:5001/users/updateProfile/'+params.id,user,{
+  axios.post('https://servicetwo2.herokuapp.com/users/updateProfile/'+params.id,user,{
     headers: {
       access: localStorage.getItem("access"),
     },

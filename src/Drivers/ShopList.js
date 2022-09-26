@@ -127,7 +127,7 @@ const { userState,setUserState} = useContext(DefContext);
   const id= jwt_decode(localStorage.getItem("access")).id
 
 
-        axios.get('http://'+window.location.hostname+':'+5002+'/shops/'+id, {
+        axios.get('https://servicethree3.herokuapp.com/shops/'+id, {
             headers: {
               access: localStorage.getItem("access"),
             },

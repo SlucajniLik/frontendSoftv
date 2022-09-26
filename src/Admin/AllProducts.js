@@ -104,7 +104,7 @@ function AllProducts() {
 
     useEffect(() => {
   
-        axios.get('http://localhost:5000/products/', {
+        axios.get('https://serviceone1.herokuapp.com/products/', {
             headers: {
               access: localStorage.getItem("access"),
             },
@@ -132,7 +132,7 @@ function AllProducts() {
     function deleteProduct(id){
 
       let data=[]
-      axios.delete('http://localhost:5000/products/delete/'+id,{
+      axios.delete('https://serviceone1.herokuapp.com/products/delete/'+id,{
           headers: {
             access: localStorage.getItem("access"),
           },

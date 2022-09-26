@@ -52,7 +52,7 @@ const [userA,setUsers] = useState({
 
     useEffect(() => {
   
-        axios.get('https://serviceone1.herokuapp.com/users/', {
+        axios.get('https://serviceone1.herokuapp.com/users/All', {
             headers: {
               access: localStorage.getItem("access"),
             },

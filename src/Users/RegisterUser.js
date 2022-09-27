@@ -340,7 +340,7 @@ uploadBytes(imageRef,image).then(
 
   getDownloadURL(imageRef)
   .then((url) => {
-    console.log(url)
+    console.log("pogledaj ovde url"+url)
   })
 
 

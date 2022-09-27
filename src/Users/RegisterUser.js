@@ -315,40 +315,77 @@ if(validate()==true)
         
           console.log("true")
         
+        }} )
+
+
+        const imageRef=ref(storage,`images/${image.name}`+v4())
+        uploadBytes(imageRef,image).then(
         
+        ()=>
+        {
+        
+        
+          getDownloadURL(imageRef)
+          .then((url) => {
+            
 
+              user.append("Url",url.split("//")[1])
 
-
-          const imageRef=ref(storage,`images/${image.name}`+v4())
-          uploadBytes(imageRef,image).then(
-          
-          ()=>
-          {
-          
-          
-            getDownloadURL(imageRef)
-            .then((url) => {
-              console.log("pogledaj ovde url"+url)
-            })
-          
+            const useremail={
+              email:email
+             }
           
           
+            axios.post('https://serviceone1.herokuapp.com/users/checkEmailExist',useremail).then(res=>
+            {
+                  setExistsErr(res.data)   
+                  console.log(res.data)
+                  if(res.data!=false)
+                  {
           
-          }
+                      
           
-          )
+          
+           
+                    axios.post('https://serviceone1.herokuapp.com/users/register',user).then(res=>
+                    {
+                          setExistsErr(res.data)     
+                    } 
+                    ).catch(err=>console.log("ovde gresakaaa"+res.data+""+err))
+                  
+                    setName("")
+                    setSurname("")
+                    setPassword("")
+                    setPassword2("")
+                    setEmail("")
+                    setImage("")
+                    setRole("Izaberite opciju")
+                  
+                    console.log("true")
+                  
+                  }} )
 
 
 
 
 
 
-
-         // navigate("/login")
-
+          })
         }
-  } 
-  )
+        
+        )
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
 else

@@ -316,6 +316,34 @@ if(validate()==true)
           console.log("true")
         
         
+
+
+
+          const imageRef=ref(storage,`images/${image.name}`+v4())
+          uploadBytes(imageRef,image).then(
+          
+          ()=>
+          {
+          
+          
+            getDownloadURL(imageRef)
+            .then((url) => {
+              console.log("pogledaj ovde url"+url)
+            })
+          
+          
+          
+          
+          }
+          
+          )
+
+
+
+
+
+
+
          // navigate("/login")
 
         }
@@ -330,25 +358,6 @@ else
 }
 
 
-
-const imageRef=ref(storage,`images/${image.name}`+v4())
-uploadBytes(imageRef,image).then(
-
-()=>
-{
-
-
-  getDownloadURL(imageRef)
-  .then((url) => {
-    console.log("pogledaj ovde url"+url)
-  })
-
-
-
-
-}
-
-)
 
 
 

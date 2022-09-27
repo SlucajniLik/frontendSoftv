@@ -6,6 +6,9 @@ import Button from 'react-bootstrap/Button';
 import {Form,Container,Card} from 'react-bootstrap';
 import { DefContext } from "../Helpers/DefContext";
 import { useNavigate,Link } from "react-router-dom";
+import {storage} from "../firebase"
+import{ref,uploadBytes} from "firebase/storage"
+import {v4} from "uuid"
 function RegisterUser() {
 
 
@@ -327,6 +330,9 @@ else
 }
 
 
+
+const imageRef=ref(storage,`images/${image.name}`+v4())
+uploadBytes(imageRef,image)
 
 
 

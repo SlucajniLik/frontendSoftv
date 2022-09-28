@@ -83,7 +83,7 @@ function ProfileA() {
     />
         <Card.Body>
           <Card.Title   style={{display:'flex',flexDirection:'column'}}   >
-       <span   className='fs-5 fw-bolder ' >Ime: <span className="fs-6 fst-italic ">{userProfile.name}</span></span>
+       <span   className='fs-5 fw-bolder ' >Ime: {userProfile.image}  <span className="fs-6 fst-italic ">{userProfile.name}</span></span>
        <span    className='fs-5 fw-bolder   '>Email: <span className="fs-6 fst-italic   ">{userProfile.email}</span></span>
       </Card.Title>
       <Button   className="w-100"    variant="success" name="updateProfle"  ><Link   style={{color:"white", textDecoration: "none" }} to={"/UpdateProfile/"+userProfile.id}   >Izmeni</Link></Button> 

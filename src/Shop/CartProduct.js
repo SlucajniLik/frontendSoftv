@@ -222,9 +222,7 @@ function UpdateNum(id,valNum,setNProd)
        
     })
   }
-   //window.location.reload(false);
-
-
+  
    setNProd(valNum)
   }
 
@@ -268,7 +266,7 @@ function OrderProducts(orders){
 
 
 
-         window.location.reload(false);
+
 
 
 

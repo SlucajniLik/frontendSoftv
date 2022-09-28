@@ -259,7 +259,7 @@ Remove
       </Card>
      
 
-
+<img src=" firebasestorage.googleapis.com/v0/b/uploadimage-5f186.appspot.com/o/images%2Fnikola%20tesla.pngf9e62d4c-9489-4dd3-a445-915c9ad4f981?alt=media&token=03178379-e6d0-437d-9a40-9901cdc898f7 "/>
       </div>
     </Container>
    )

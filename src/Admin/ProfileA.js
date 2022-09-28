@@ -66,7 +66,6 @@ function ProfileA() {
     <div>
 
 
-
       <Container 
       className="d-flex align-items-center justify-content-center "
       style={{ minHeight: "90vh"}}

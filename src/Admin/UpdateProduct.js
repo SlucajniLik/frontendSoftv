@@ -21,7 +21,7 @@ function UpdateProduct() {
   const [nameErr, setNameErr] = useState(true);
   const [priceErr, setPriceErr] = useState(true);
   const [imageErr, setImageErr] = useState(true);
-
+  const [Success,SetSuccess]=useState(false)
 
 
 
@@ -153,6 +153,7 @@ function UpdateProduct() {
     }).then(res=>console.log(res.data))  
 
    // navigate("/AllProducts")
+   SetSuccess(true)
   }
 }
   
@@ -191,15 +192,16 @@ function UpdateProduct() {
         <Form.Label>Unesite sliku</Form.Label>
         <Form.Control type="file" filename="image"   onChange={onChangeImage}/>
         {!imageErr && <p   style={{color:'red'}}   >Unesite sliku proizvoda</p>}
+        {Success && <p   style={{color:'green'}}   >Uspesno ste izmenili proizvod</p>}
       </Form.Group>
-
+    
      
 
 
 
 
-      <Button  className="w-100"  variant="secondary"  type="submit">
-        Submit
+      <Button  className="w-100"  variant="success"  type="submit">
+        Izmeni
       </Button>
     </Form>
 

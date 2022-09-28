@@ -74,7 +74,7 @@ function ProfileD() {
     <Card   >
     <Card.Img
       variant="top"
-      src={userProfile.UrlImg}
+      src={userProfile.image}
       height="200px"
       style={{ objectFit: "cover" }}
     />

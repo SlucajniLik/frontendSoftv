@@ -145,8 +145,8 @@ function ChoseProduct() {
     function OrderProduct(SellerId,DriverId,ProductId,numProd,SetNumProd){
 
 
-      if(numProd )
-      {
+     // if(numProd )
+     // {
       let order=
       {
          SellerId:SellerId,
@@ -168,11 +168,11 @@ function ChoseProduct() {
             }
            );
           
-          }
-          else
-          {
-            console.log("nema OVDE")
-          }
+          //}
+          //else
+         // {
+           // console.log("nema OVDE")
+         //}
 
 
 

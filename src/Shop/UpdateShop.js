@@ -216,6 +216,13 @@ if(validate()){
 
 
 }
+else
+{
+
+
+console.log("Not validate")
+
+}
 
 
 }

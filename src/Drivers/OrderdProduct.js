@@ -56,7 +56,7 @@ return (
  <td>
  <img src={props.order.ProductId.UrlImg} width="100" height="50"/>
  </td>
- <td>{props.order.createdAt.split("T")[0]}</td>
+ <td>{props.order.DateM}</td>
  <td>{props.order.ProductId.name} </td>
  <td>{ props.order.NumProd}</td>
  <td>{props.order.ProductId.price*props.order.NumProd} Din</td>

@@ -52,6 +52,7 @@ function UpdateProfileS() {
 
     
     }*/
+    SetSuccess(false)
   }
 
   function onChangeEmail(e)
@@ -67,6 +68,7 @@ function UpdateProfileS() {
     {
      setEmailErr(true)
     }*/
+    SetSuccess(false)
   }
 
   
@@ -85,7 +87,7 @@ else
 
   setImageErr(true)
 }*/
-
+SetSuccess(false)
 
   }
 
@@ -209,10 +211,16 @@ if(validate()==true)
     email:email
    }
   axios.post('https://servicetwo2.herokuapp.com/users/checkEmailExist',useremail).then(res=>
-  {
-        setExistsErr(res.data)   
-        console.log(res.data)
-        if(res.data!=false)
+  {  console.log(res.data)
+    var access=res.data.access
+            if(res.data.id==userState.id)
+            {
+               access=true
+       
+            }
+    
+            setExistsErr(access)  
+        if(access!=false)
         {
 
 
@@ -238,7 +246,7 @@ if(validate()==true)
 
   console.log("true")
 
-
+  SetSuccess(true)
   ///navigate("/ProfileS")
 }}
   )
@@ -248,7 +256,7 @@ if(validate()==true)
         }
         
         )
-SetSuccess(true)
+
 
 }
 else

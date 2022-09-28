@@ -39,6 +39,7 @@ function UpdateProfileD() {
     {
  setPasswordErr(true)
     }*/
+    SetSuccess(false)
   }
 
 
@@ -52,6 +53,7 @@ function UpdateProfileD() {
 
     
     }*/
+    SetSuccess(false)
   }
 
   function onChangeEmail(e)
@@ -67,6 +69,7 @@ function UpdateProfileD() {
     {
      setEmailErr(true)
     }*/
+    SetSuccess(false)
   }
 
   
@@ -74,7 +77,7 @@ function UpdateProfileD() {
   {
     setImage(e.target.files[0])
 
-
+    SetSuccess(false)
   /*  if(!image)
 {
   setImageErr(false)
@@ -212,9 +215,17 @@ if(validate()==true)
          }
         axios.post('https://servicethree3.herokuapp.com/users/checkEmailExist',useremail).then(res=>
         {
-              setExistsErr(res.data)   
+             
               console.log(res.data)
-              if(res.data!=false)
+              var access=res.data.access
+              if(res.data.id==userState.id)
+              {
+                 access=true
+         
+              }
+      
+              setExistsErr(access)  
+              if(access!=false)
               {
       
       
@@ -236,7 +247,7 @@ if(validate()==true)
       
         console.log("true")
       
-      
+        SetSuccess(true)
         //navigate("/ProfileD")
       }}
         )
@@ -249,7 +260,7 @@ if(validate()==true)
   
   )
 
-  SetSuccess(true)
+
 
 
 }

@@ -206,7 +206,7 @@ function UpdateNum(id,valNum,setNProd)
 {
 
 
-    if(!isNaN(valNum) && valNum){
+    if(!isNaN(valNum) ){
   let data=[]
   axios.post('https://servicetwo2.herokuapp.com/products/CardUpdate/'+id+'/'+valNum,data,{
     headers: {

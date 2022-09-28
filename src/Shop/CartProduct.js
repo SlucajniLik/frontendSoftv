@@ -176,7 +176,7 @@ function CartProduct() {
 
 
 
-    }, []);
+    }, [ordersA]);
 
 
 
@@ -267,7 +267,7 @@ function OrderProducts(orders){
 
 
 
-
+window.location.reload(false)
 
 
 
@@ -382,7 +382,7 @@ function OrderProducts(orders){
     {OrderList()}
     </Row>*/}
 
-    <Button className="w-100"    variant="secondary" type="submit"  onClick={()=>OrderProducts(ordersA)}>Poruci</Button> 
+    <Button className="w-100"    variant="secondary"  onClick={()=>OrderProducts(ordersA)}>Poruci</Button> 
 
     </div>
     </Container>

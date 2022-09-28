@@ -52,6 +52,7 @@ function UpdateProfile() {
 
     
     }*/
+    SetSuccess(false)
   }
 
   function onChangeEmail(e)
@@ -67,12 +68,14 @@ function UpdateProfile() {
     {
      setEmailErr(true)
     }*/
+    SetSuccess(false)
   }
 
   
   function onChangeImage(e)
   {
     setImage(e.target.files[0])
+    SetSuccess(false)
 
 
   /*  if(!image)
@@ -214,6 +217,7 @@ var access=res.data.access
         if(res.data.id==userState.id)
         {
            access=true
+           SetSuccess(true)
         }
 
 

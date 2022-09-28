@@ -211,7 +211,7 @@ if(validate()==true)
         setExistsErr(res.data)   
         console.log(res.data)
 var access=res.data.access
-        if(res.data.email==email)
+        if(res.data.id==userState.id)
         {
            access=true
         }

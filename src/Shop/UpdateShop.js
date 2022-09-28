@@ -270,7 +270,7 @@ console.log("Not validate")
         <Form.Control type="file" filename="image"   onChange={onChangeImage}/>
         {!imageErr && <p   style={{color:'red'}}   >Unesite sliku</p>}
       </Form.Group>
-      <Button className="w-100" variant="success">
+      <Button className="w-100" variant="success" type="submit" >
     Izmeni
       </Button>
     </Form>

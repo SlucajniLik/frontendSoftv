@@ -38,7 +38,7 @@ function ProfileA() {
                 id:res.data._id,
                 name:res.data.name+" "+res.data.surname,
              email:res.data.email,
-            image:res.data.image
+            image:res.data.UrlImg
               });
     
             }
@@ -77,7 +77,7 @@ function ProfileA() {
     <Card className='bg-light'  >
     <Card.Img
       variant="top"
-      src={`Images/${userProfile.image}`}
+      src={userProfile.image}
       height="200px"
       style={{ objectFit: "cover" }}
     />

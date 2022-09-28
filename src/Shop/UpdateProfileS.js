@@ -23,7 +23,7 @@ function UpdateProfileS() {
   const [passwordErr, setPasswordErr] = useState(true);
   const [password2Err, setPassword2Err] = useState(true);
   const [imageErr, setImageErr] = useState(true);
-
+  const [Success,SetSuccess]=useState(false)
   
 
   function onChangePass(e)
@@ -248,28 +248,7 @@ if(validate()==true)
         }
         
         )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+SetSuccess(true)
 
 }
 else
@@ -378,6 +357,7 @@ return(
         <Form.Label>Slika</Form.Label>
         <Form.Control type="file" filename="image"   onChange={onChangeImage}/>
         {!imageErr && <p   style={{color:'red'}}   >Izaberite sliku</p>}
+        {Success && <p   style={{color:'green'}}   >Uspesno ste izmenili podatke</p>}
       </Form.Group>
     
   

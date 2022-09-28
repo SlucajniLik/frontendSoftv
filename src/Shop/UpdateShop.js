@@ -26,7 +26,7 @@ function UpdateShop() {
   const [cityErr, setCityErr] = useState(true);
   const [imageErr, setImageErr] = useState(true);
   const [addressErr, setAddressErr] = useState(true);
-
+  const [Success,SetSuccess]=useState(false)
 
 
   function validate()
@@ -184,7 +184,7 @@ if(validate()){
                   {
       
                      
-                     navigate("/NewShop")
+                     //navigate("/NewShop")
                   }
       
              
@@ -208,7 +208,7 @@ if(validate()){
   )
 
 
-
+SetSuccess(true)
    
     //setImage("")
   
@@ -269,6 +269,7 @@ console.log("Not validate")
         <Form.Label>Slika</Form.Label>
         <Form.Control type="file" filename="image"   onChange={onChangeImage}/>
         {!imageErr && <p   style={{color:'red'}}   >Unesite sliku</p>}
+        {Success && <p   style={{color:'green'}}   >Uspesno ste izmenili podatke</p>}
       </Form.Group>
       <Button className="w-100" variant="success" type="submit" >
     Izmeni

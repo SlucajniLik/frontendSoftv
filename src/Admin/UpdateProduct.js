@@ -139,19 +139,6 @@ function UpdateProduct() {
 
 
 
-
-
-
-
-
-
-
-    axios.post('https://serviceone1.herokuapp.com/products/updateproduct/'+params.id,product,{
-      headers: {
-        access: localStorage.getItem("access"),
-      },
-    }).then(res=>console.log(res.data))  
-
    // navigate("/AllProducts")
    SetSuccess(true)
   }
@@ -192,7 +179,7 @@ function UpdateProduct() {
         <Form.Label>Unesite sliku</Form.Label>
         <Form.Control type="file" filename="image"   onChange={onChangeImage}/>
         {!imageErr && <p   style={{color:'red'}}   >Unesite sliku proizvoda</p>}
-        {Success && <p   style={{color:'green'}}   >Uspesno ste izmenili proizvod</p>}
+        {Success && <p   style={{color:'green'}}   >Uspesno ste izmenili podatke</p>}
       </Form.Group>
     
      

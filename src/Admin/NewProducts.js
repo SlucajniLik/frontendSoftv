@@ -19,7 +19,7 @@ function NewProducts() {
   const [nameErr, setNameErr] = useState(true);
   const [priceErr, setPriceErr] = useState(true);
   const [imageErr, setImageErr] = useState(true);
-
+  const [Success,SetSuccess]=useState(false)
 
 
   function onChangeName(e)
@@ -187,6 +187,7 @@ return error
         <Form.Label>Unesite sliku</Form.Label>
         <Form.Control type="file" filename="image"   onChange={onChangeImage}/>
         {!imageErr && <p   style={{color:'red'}}   >Unesite sliku proizvoda</p>}
+        {Success && <p   style={{color:'green'}}   >Uspesno ste uneli proizvod</p>}
       </Form.Group>
 
      

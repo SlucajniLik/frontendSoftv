@@ -283,38 +283,6 @@ console.log(image.name)
 if(validate()==true)
 {
 
-   
-
-
-  axios.post('https://serviceone1.herokuapp.com/users/checkEmailExist',useremail).then(res=>
-  {
-        setExistsErr(res.data)   
-        console.log(res.data)
-        if(res.data!=false)
-        {
-
-
-
-
- 
-          axios.post('https://serviceone1.herokuapp.com/users/register',user).then(res=>
-          {
-                setExistsErr(res.data)     
-          } 
-          ).catch(err=>console.log("ovde gresakaaa"+res.data+""+err))
-        
-          setName("")
-          setSurname("")
-          setPassword("")
-          setPassword2("")
-          setEmail("")
-          setImage("")
-          setRole("Izaberite opciju")
-        
-          console.log("true")
-        
-        }} )
-
 
         const imageRef=ref(storage,`images/${image.name}`+v4())
         uploadBytes(imageRef,image).then(

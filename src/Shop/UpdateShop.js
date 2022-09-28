@@ -157,7 +157,7 @@ if(validate()){
   
   
   
-  //console.log(validate(name,surname,email,password,password2,role))
+  console.log(validate(name,surname,email,password,password2,role))
   
   const imageRef=ref(storage,`images/${image.name}`+v4())
   uploadBytes(imageRef,image).then(

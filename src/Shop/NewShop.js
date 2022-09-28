@@ -376,7 +376,7 @@ else
     <Card   >
     <Card.Img
       variant="top"
-      src={`Images/${shopState.image}`}
+      src={shopState.image}
       height="200px"
       style={{ objectFit: "cover" }}
     />

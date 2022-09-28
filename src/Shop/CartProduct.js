@@ -267,7 +267,7 @@ function OrderProducts(orders){
 
 
 
-window.location.reload(false)
+
 
 
 

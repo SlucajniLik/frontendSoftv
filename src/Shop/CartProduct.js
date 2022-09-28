@@ -155,7 +155,7 @@ function CartProduct() {
 
     useEffect(() => {
   
-        axios.get('https://servicethree3.herokuapp.com/products/Card/'+userState.id, {
+        axios.get('https://servicetwo2.herokuapp.com/products/Cart/'+userState.id, {
             headers: {
               access: localStorage.getItem("access"),
             },

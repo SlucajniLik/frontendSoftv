@@ -136,7 +136,7 @@ function App() {
    <Route path="/NewShop" element={<NewShop/>} />
    <Route path="/ChoseProduct/:id" element={<ChoseProduct/>} />
    <Route path="/Drivers" element={<Drivers/>} />
-   <Route path="/Card" element={<CartProduct/>} />
+   <Route path="/Cart" element={<CartProduct/>} />
     <Route path="/ProfileS" element={<ProfileS/>} />
    <Route path="/UpdateProfileS/:id" element={<UpdateProfileS/>} />
    <Route path="/UpdateShop/:id" element={<UpdateShop/>} />

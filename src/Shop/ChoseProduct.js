@@ -145,7 +145,7 @@ function ChoseProduct() {
     function OrderProduct(SellerId,DriverId,ProductId,numProd,SetNumProd){
 
 
-      if(!isNaN(numProd) && numProd )
+      if(numProd )
       {
       let order=
       {

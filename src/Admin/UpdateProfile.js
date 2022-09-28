@@ -211,16 +211,16 @@ if(validate()==true)
    }
   axios.post('https://serviceone1.herokuapp.com/users/checkEmailExist',useremail).then(res=>
   {
-        setExistsErr(res.data)   
+        setExistsErr(res.data.access)   
         console.log(res.data)
 var access=res.data.access
         if(res.data.id==userState.id)
         {
            access=true
-           SetSuccess(true)
+   
         }
 
-
+        setExistsErr(access)  
         if(access!=false)
         {
 

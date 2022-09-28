@@ -210,7 +210,14 @@ if(validate()==true)
   {
         setExistsErr(res.data)   
         console.log(res.data)
-        if(res.data!=false)
+var access=res.data.access
+        if(res.data.email==email)
+        {
+           access=true
+        }
+
+
+        if(access!=false)
         {
 
           axios.post('https://serviceone1.herokuapp.com/users/updateProfile/'+params.id,user,{
@@ -230,7 +237,7 @@ if(validate()==true)
         
           console.log("true")
         
-        
+          SetSuccess(true)
         
 
         }
@@ -244,14 +251,14 @@ if(validate()==true)
   
   )
 
-SetSuccess(true)
+
 
 
 }
 else
 {
 
-  setExistsErr(true)
+
   console.log("false")
 }
 

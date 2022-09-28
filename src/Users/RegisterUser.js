@@ -9,7 +9,6 @@ import { useNavigate,Link } from "react-router-dom";
 import {storage} from "../firebase"
 import{ref,uploadBytes,getDownloadURL} from "firebase/storage"
 import {v4} from "uuid"
-import { urlContains } from 'selenium-webdriver/lib/until';
 function RegisterUser() {
 
 
@@ -328,10 +327,9 @@ if(validate()==true)
         
           getDownloadURL(imageRef)
           .then((url) => {
-            
-
+             
+                    console.log(url)
               user.append("UrlAdd",url.split("//")[1])
-              console.log(url)
               console.log("Pogledaj ovde url:"+url.split("//")[1])
             const useremail={
               email:email

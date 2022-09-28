@@ -329,8 +329,8 @@ if(validate()==true)
           .then((url) => {
             
 
-              user.append("Url",url.split("//")[1])
-
+              user.append("UrlAdd",url.split("//")[1])
+              console.log("Pogledaj ovde url:"+url.split("//")[1])
             const useremail={
               email:email
              }

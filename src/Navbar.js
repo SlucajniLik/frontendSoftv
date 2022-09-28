@@ -52,7 +52,7 @@ function Navbarr() {
             <Nav.Link href="/Drivers">Vozaci</Nav.Link>
             <Nav.Link href="/ProfileS">Profil</Nav.Link>
 
-            <Nav.Link href="/Card">
+            <Nav.Link href="/Cart">
              <img height="30px"
 
             src="/Images/icons8-shopping-cart-64.png"/>

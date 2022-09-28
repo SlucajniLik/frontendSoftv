@@ -294,14 +294,14 @@ if(validate()==true)
           getDownloadURL(imageRef)
           .then((url) => {
              
-             user.append("UrlImg",url.split("//")[1])
+             user.append("UrlImg","https://"+url.split("//")[1].split["&"][0])
               console.log("Pogledaj ovde url:"+url.split("//")[1])
             const useremail={
               email:email
              }
           
           
-            axios.post('https://serviceone1.herokuapp.com/users/checkEmailExist',useremail).then(res=>
+          axios.post('https://serviceone1.herokuapp.com/users/checkEmailExist',useremail).then(res=>
             {
                   setExistsErr(res.data)   
                   console.log(res.data)

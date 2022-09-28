@@ -6,6 +6,9 @@ import Button from 'react-bootstrap/Button';
 import {Form,Card,Container} from 'react-bootstrap';
 import { DefContext } from "../Helpers/DefContext";
 import { Link, useParams,useNavigate } from 'react-router-dom'
+import {storage} from "../firebase"
+import{ref,uploadBytes,getDownloadURL} from "firebase/storage"
+import {v4} from "uuid"
 function UpdateShop() {
 
   const { userState,setUserState} = useContext(DefContext);
@@ -156,40 +159,56 @@ if(validate()){
   
   //console.log(validate(name,surname,email,password,password2,role))
   
+  const imageRef=ref(storage,`images/${image.name}`+v4())
+  uploadBytes(imageRef,image).then(
   
-  
-  
-  
-    axios.post('https://servicetwo2.herokuapp.com/shops/UpdateShop/'+params.id,shop,{
-      headers: {
-        access: localStorage.getItem("access"),
-      },
-    } ).then(res=>
+  ()=>
   {
-              if(res.data==true)
-              {
-  
-                 
-                 navigate("/NewShop")
-              }
-  
-         
-  }
-      
-      
-      )
-  
-    setName("")
-    setCity("")
-    setAddress("")
-    setImage("")
-   
   
   
-  
-  
+    getDownloadURL(imageRef)
+    .then((url) => {
+       
+       shop.append("UrlImg","https://"+url.split("//")[1])
+        console.log("Pogledaj ovde url:"+url.split("//")[1])
     
+
   
+        axios.post('https://servicetwo2.herokuapp.com/shops/UpdateShop/'+params.id,shop,{
+          headers: {
+            access: localStorage.getItem("access"),
+          },
+        } ).then(res=>
+      {
+                  if(res.data==true)
+                  {
+      
+                     
+                     navigate("/NewShop")
+                  }
+      
+             
+      }
+          
+          
+          )
+      
+        setName("")
+        setCity("")
+        setAddress("")
+        setImage("")
+       
+
+
+
+
+    })
+  }
+  
+  )
+
+
+
    
     //setImage("")
   

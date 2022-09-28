@@ -17,7 +17,7 @@ return(
 
 <tr>
  <td>
- <img src={`Images/${props.user.image}`} width="100" height="50" />
+ <img src={props.user.UrlImg} width="100" height="50" />
  </td>
  <td>{props.user.name} {props.user.surname}</td>
  <td>{props.user.role} </td>

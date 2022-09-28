@@ -7,6 +7,9 @@ import jwt_decode from "jwt-decode";
 import { DefContext } from "../Helpers/DefContext";
 import { useNavigate } from "react-router-dom";
 import {  useParams } from "react-router-dom";
+import {storage} from "../firebase"
+import{ref,uploadBytes,getDownloadURL} from "firebase/storage"
+import {v4} from "uuid"
 function UpdateProduct() {
 
   const [name, setName] = useState("");
@@ -104,13 +107,52 @@ function UpdateProduct() {
 
   if(validate())
   {
+
+
+
+    const imageRef=ref(storage,`images/${image.name}`+v4())
+    uploadBytes(imageRef,image).then(
+    
+    ()=>
+    {
+    
+    
+      getDownloadURL(imageRef)
+      .then((url) => {
+         
+         product.append("UrlImg","https://"+url.split("//")[1])
+
+         
+         axios.post('https://serviceone1.herokuapp.com/products/updateproduct/'+params.id,product,{
+          headers: {
+            access: localStorage.getItem("access"),
+          },
+        }).then(res=>console.log(res.data))  
+
+
+    
+      })
+    }
+    
+    )
+
+
+
+
+
+
+
+
+
+
+
     axios.post('https://serviceone1.herokuapp.com/products/updateproduct/'+params.id,product,{
       headers: {
         access: localStorage.getItem("access"),
       },
     }).then(res=>console.log(res.data))  
 
-    navigate("/AllProducts")
+   // navigate("/AllProducts")
   }
 }
   

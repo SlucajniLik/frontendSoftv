@@ -6,6 +6,9 @@ import Button from 'react-bootstrap/Button';
 import {Form,Container,Card} from 'react-bootstrap';
 import { DefContext } from "../Helpers/DefContext";
 import {  useParams,useNavigate } from "react-router-dom";
+import {storage} from "../firebase"
+import{ref,uploadBytes,getDownloadURL} from "firebase/storage"
+import {v4} from "uuid"
 function UpdateProfileS() {
        const navigate=useNavigate()
     const params = useParams();
@@ -188,6 +191,19 @@ if(validate()==true)
 
 
 
+  const imageRef=ref(storage,`images/${image.name}`+v4())
+        uploadBytes(imageRef,image).then(
+        
+        ()=>
+        {
+        
+        
+          getDownloadURL(imageRef)
+          .then((url) => {
+             
+             user.append("UrlImg","https://"+url.split("//")[1])
+              console.log("Pogledaj ovde url:"+url.split("//")[1])
+           
 
   const useremail={
     email:email
@@ -223,9 +239,38 @@ if(validate()==true)
   console.log("true")
 
 
-  navigate("/ProfileS")
+  ///navigate("/ProfileS")
 }}
   )
+
+
+          })
+        }
+        
+        )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 else
 {

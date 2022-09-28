@@ -53,7 +53,7 @@ return (
   <Card className="h-100  ">
     <Card.Img
       variant="top"
-      src={`/Images/${props.product.image}`}
+      src={props.product.UrlImg}
       height="200px"
       style={{ objectFit: "cover" }}
     />

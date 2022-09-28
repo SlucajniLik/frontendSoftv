@@ -6,6 +6,9 @@ import Button from 'react-bootstrap/Button';
 import {Form,Card,Container} from 'react-bootstrap';
 import { DefContext } from "../Helpers/DefContext";
 import { Link } from 'react-router-dom'
+import {storage} from "../firebase"
+import{ref,uploadBytes,getDownloadURL} from "firebase/storage"
+import {v4} from "uuid"
 function NewShop() {
 
   const { userState,setUserState} = useContext(DefContext);
@@ -64,7 +67,7 @@ function NewShop() {
             nameSeller:res.data.nameSeller,
             city:res.data.city,
             address:res.data.address,
-            image:res.data.image,
+            image:res.data.UrlImg,
             exist:true
 
            }) 
@@ -214,22 +217,59 @@ shop.append("nameSeller",userState.name)
 //console.log(validate(name,surname,email,password,password2,role))
 
 
+const imageRef=ref(storage,`images/${image.name}`+v4())
+uploadBytes(imageRef,image).then(
+
+()=>
+{
+
+
+  getDownloadURL(imageRef)
+  .then((url) => {
+     
+     shop.append("UrlImg","https://"+url.split("//")[1])
+      console.log("Pogledaj ovde url:"+url.split("//")[1])
+
+      axios.post('https://servicetwo2.herokuapp.com/shops/addShop',shop,{
+        headers: {
+          access: localStorage.getItem("access"),
+        },
+      } ).then(res=>console.log(res.data))
+    
+      setName("")
+      setCity("")
+      setAddress("")
+      setImage("")
+     
+    
+    console.log(window.location.hostname)
 
 
 
-  axios.post('https://servicetwo2.herokuapp.com/shops/addShop',shop,{
-    headers: {
-      access: localStorage.getItem("access"),
-    },
-  } ).then(res=>console.log(res.data))
+  })
+}
 
-  setName("")
-  setCity("")
-  setAddress("")
-  setImage("")
- 
+)
 
-console.log(window.location.hostname)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   

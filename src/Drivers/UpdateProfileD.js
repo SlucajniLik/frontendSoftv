@@ -6,6 +6,9 @@ import Button from 'react-bootstrap/Button';
 import {Form,Container,Card} from 'react-bootstrap';
 import { DefContext } from "../Helpers/DefContext";
 import {  useParams,useNavigate } from "react-router-dom";
+import {storage} from "../firebase"
+import{ref,uploadBytes,getDownloadURL} from "firebase/storage"
+import {v4} from "uuid"
 function UpdateProfileD() {
        const navigate=useNavigate()
     const params = useParams();
@@ -188,38 +191,62 @@ if(validate()==true)
 
 
 
-  const useremail={
-    email:email
-   }
-  axios.post('https://servicethree3.herokuapp.com/users/checkEmailExist',useremail).then(res=>
+
+  const imageRef=ref(storage,`images/${image.name}`+v4())
+  uploadBytes(imageRef,image).then(
+  
+  ()=>
   {
-        setExistsErr(res.data)   
-        console.log(res.data)
-        if(res.data!=false)
+  
+  
+    getDownloadURL(imageRef)
+    .then((url) => {
+       
+       user.append("UrlImg","https://"+url.split("//")[1])
+        console.log("Pogledaj ovde url:"+url.split("//")[1])
+     
+
+
+        const useremail={
+          email:email
+         }
+        axios.post('https://servicethree3.herokuapp.com/users/checkEmailExist',useremail).then(res=>
         {
+              setExistsErr(res.data)   
+              console.log(res.data)
+              if(res.data!=false)
+              {
+      
+      
+      
+        axios.post('https://servicethree3.herokuapp.com/users/updateProfile/'+params.id,user,{
+          headers: {
+            access: localStorage.getItem("access"),
+          },
+        }
+        ).then(res=>console.log(res.data))
+      
+      
+      
+        setPassword("")
+        setPassword2("")
+        setEmail("")
+      
+      
+      
+        console.log("true")
+      
+      
+        //navigate("/ProfileD")
+      }}
+        )
 
 
 
-  axios.post('https://servicethree3.herokuapp.com/users/updateProfile/'+params.id,user,{
-    headers: {
-      access: localStorage.getItem("access"),
-    },
+
+    })
   }
-  ).then(res=>console.log(res.data))
-
-
-
-  setPassword("")
-  setPassword2("")
-  setEmail("")
-
-
-
-  console.log("true")
-
-
-  navigate("/ProfileD")
-}}
+  
   )
 }
 else

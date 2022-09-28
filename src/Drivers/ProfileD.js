@@ -38,7 +38,7 @@ function ProfileD() {
                 id:res.data._id,
                 name:res.data.name+" "+res.data.surname,
              email:res.data.email,
-            image:res.data.image
+            image:res.data.UrlImg
               });
     
             }
@@ -74,7 +74,7 @@ function ProfileD() {
     <Card   >
     <Card.Img
       variant="top"
-      src={`Images/${userProfile.image}`}
+      src={userProfile.UrlImg}
       height="200px"
       style={{ objectFit: "cover" }}
     />

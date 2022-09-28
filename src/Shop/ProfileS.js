@@ -6,7 +6,6 @@ import Button from 'react-bootstrap/Button';
 import {Form,Card,Container} from 'react-bootstrap';
 import { DefContext } from "../Helpers/DefContext";
 
-
 function ProfileS() {
   const { userState,setUserState} = useContext(DefContext);
   const  [userProfile,setUserProfile]=useState({
@@ -38,7 +37,7 @@ function ProfileS() {
                 id:res.data._id,
                 name:res.data.name+" "+res.data.surname,
              email:res.data.email,
-            image:res.data.image
+            image:res.data.UrlImg
               });
     
             }
@@ -74,7 +73,7 @@ function ProfileS() {
     <Card   >
     <Card.Img
       variant="top"
-      src={`Images/${userProfile.image}`}
+      src={userProfile.UrlImg}
       height="200px"
       style={{ objectFit: "cover" }}
     />

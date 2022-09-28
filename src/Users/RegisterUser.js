@@ -340,18 +340,6 @@ if(validate()==true)
         
         )
 
-
-
-
-
-
-
-
-
-
-
-
-
 }
 else
 {

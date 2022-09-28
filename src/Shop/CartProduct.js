@@ -60,7 +60,7 @@ return (
 
 <tr>
  <td>
- <img src={`Images/${props.order.ProductId.image}`} width="100" height="50"/>
+ <img src={props.order.ProductId.UrlImg} width="100" height="50"/>
  </td>
 
  <td>{props.order.ProductId.name}</td>

@@ -6,7 +6,9 @@ import Cookies from 'js-cookie';
 import jwt_decode from "jwt-decode";
 import { DefContext } from "../Helpers/DefContext";
 import { useNavigate } from "react-router-dom";
-
+import {storage} from "../firebase"
+import{ref,uploadBytes,getDownloadURL} from "firebase/storage"
+import {v4} from "uuid"
 function NewProducts() {
 
   const [name, setName] = useState("");
@@ -99,6 +101,21 @@ return error
     if(validate())
     {
 
+
+
+      const imageRef=ref(storage,`images/${image.name}`+v4())
+      uploadBytes(imageRef,image).then(
+      
+      ()=>
+      {
+      
+      
+        getDownloadURL(imageRef)
+        .then((url) => {
+           
+           product.append("UrlImg","https://"+url.split("//")[1])
+
+           
       axios.post('https://serviceone1.herokuapp.com/products/addproduct',product,{
         headers: {
           access: localStorage.getItem("access"),
@@ -107,11 +124,34 @@ return error
 
 
 
-    }
-     
+      
+        })
+      }
+      
+      )
 
-    
-   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
   }
   
   

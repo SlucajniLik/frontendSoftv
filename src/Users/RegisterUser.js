@@ -294,7 +294,7 @@ if(validate()==true)
           getDownloadURL(imageRef)
           .then((url) => {
              
-             user.append("UrlImg","https://"+url.split("//")[1].split["&"][0])
+             user.append("UrlImg","https://"+url.split("//")[1])
               console.log("Pogledaj ovde url:"+url.split("//")[1])
             const useremail={
               email:email

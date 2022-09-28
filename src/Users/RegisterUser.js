@@ -283,9 +283,7 @@ console.log(image.name)
 if(validate()==true)
 {
 
-   const useremail={
-    email:email
-   }
+   
 
 
   axios.post('https://serviceone1.herokuapp.com/users/checkEmailExist',useremail).then(res=>
@@ -328,8 +326,7 @@ if(validate()==true)
           getDownloadURL(imageRef)
           .then((url) => {
              
-                    console.log(url)
-              user.append("UrlAdd",url.split("//")[1])
+              user.append("UrlImg",url.split("//")[1])
               console.log("Pogledaj ovde url:"+url.split("//")[1])
             const useremail={
               email:email

@@ -41,7 +41,7 @@ const [userA,setUsers] = useState({
 
 const [SelectedUser,SetSelectedUser]=useState("")
 
-function onChangeSearch()
+function onChangeSearch(e)
 {
 
      SetSelectedUser(e.target.value)
@@ -175,7 +175,7 @@ background: "#f1f1f1"
 
 }
       }     onChange={onChangeSearch}   value={SelectedUser}  placeholder="Pretrazi" name="search"/>
-      <button type="submit"      style={
+      <button type="submit"   onClick={SearchUser}   style={
 
 {
   float:"left",

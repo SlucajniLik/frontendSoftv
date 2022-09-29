@@ -99,6 +99,24 @@ const [shopA,setShops] = useState({
 const { userState,setUserState} = useContext(DefContext);
 
 
+const [SelectedShop,SetSelectedShop]=useState({
+
+  name:""
+  
+  })
+  
+  function onChangeSearch(e)
+  {
+  
+       SetSelectedProduct(
+        {
+          price:e.target.value      
+        }
+       )
+  }
+
+
+
 
 
 
@@ -140,6 +158,38 @@ const { userState,setUserState} = useContext(DefContext);
 
 
     }
+
+
+    function SearchShop(e)
+    {  
+    
+      e.preventDefault()
+      console.log("Ovde je selected shop"+SelectedProduct.price)
+      var ShopSel=""
+      if(SelectedShop.name.length==0)
+      {
+        ShopSel="NoShop"
+      }
+      else
+      {
+        ShopSel=SelectedShop.price
+      }
+      axios.get('https://servicethree3.herokuapp.com/shops/SearchShop/'+id+'/'+ShopSel, {
+        headers: {
+          access: localStorage.getItem("access"),
+        },
+      }).then(response=>{
+    
+        setShops({shops:response.data})
+        console.log("ovfde SearchShop:"+response.data)
+        }
+        ).catch((error)=>{
+            console.log(error)
+           
+        })
+    
+    }
+
 
 
 
@@ -195,6 +245,49 @@ if(shopA.shops.length>0)
 {
   return (
     <>
+
+<form >
+      <input type="text"  style={
+{
+padding: "10px",
+fontSize: "17px",
+border: "1px solid grey",
+float: "left",
+width: "30vh",
+background: "#f1f1f1"
+
+}
+      }     onChange={onChangeSearch}   value={SelectedShop.name}  placeholder="Pretrazi radnju po imenu ili lokaciji" name="search"/>
+      <button type="submit"   onClick={SearchShop}   style={
+
+{
+  float:"left",
+  width: "5vh",
+  padding: "10px",
+  background: "#2196F3",
+  color: "white",
+  fontSize: "17px",
+  border: "1px solid grey",
+  borderLeft: "none",
+  cursor: "pointer",
+
+
+
+
+
+
+}
+
+      }    ><i class="fa fa-search"></i></button>
+    </form>
+<br/>
+
+
+
+
+
+
+
     <br/>
       <Container 
   

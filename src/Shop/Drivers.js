@@ -188,7 +188,7 @@ const [SelectedUser,SetSelectedUser]=useState({
       {
         UserSel=SelectedUser.name
       }
-      axios.get('https://serviceone1.herokuapp.com/users/SearchUser/'+UserSel, {
+      axios.get('https://servicetwo2.herokuapp.com/shops/SearchUser/'+UserSel, {
         headers: {
           access: localStorage.getItem("access"),
         },

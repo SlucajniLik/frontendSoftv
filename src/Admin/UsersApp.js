@@ -122,11 +122,20 @@ if(userA.users.length>0)
   
     <>
      
+
+
   <Container 
   
   className="d-flex align-items-center justify-content-center h-100 "
   style={{ minHeight: "90vh",minWidth:'150vh'}}
 >
+
+<form >
+      <input type="text" placeholder="Pretrazi" name="search"/>
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+
+
 
   <div className="w-100 h-100" style={{height:"100vh" }}>
 

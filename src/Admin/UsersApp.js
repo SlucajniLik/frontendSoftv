@@ -110,7 +110,7 @@ function SearchUser(e)
 {  
 
   e.preventDefault()
-
+  console.log("Ovde je selected user"+SelectedUser)
   axios.get('https://serviceone1.herokuapp.com/users/SearchUser/'+SelectedUser, {
     headers: {
       access: localStorage.getItem("access"),

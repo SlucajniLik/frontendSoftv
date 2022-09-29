@@ -139,7 +139,7 @@ padding: "10px",
 fontSize: "17px",
 border: "1px solid grey",
 float: "left",
-width: "80%",
+width: "10vh",
 background: "#f1f1f1"
 
 }
@@ -148,7 +148,7 @@ background: "#f1f1f1"
 
 {
   float:"left",
-  width: "20%",
+  width: "5vh",
   padding: "10px",
   background: "#2196F3",
   color: "white",
@@ -166,7 +166,7 @@ background: "#f1f1f1"
 
       }    ><i class="fa fa-search"></i></button>
     </form>
-
+<br/>
 
     <Table className={styles.tb}>
           <thead>

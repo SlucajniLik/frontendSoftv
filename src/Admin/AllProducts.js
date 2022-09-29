@@ -188,7 +188,7 @@ function AllProducts() {
       e.preventDefault()
       console.log("Ovde je selected product"+SelectedProduct.price)
       var ProductSel=""
-      if(SelectedProduct.price.length==0)
+      if(ProductSel.price.length==0)
       {
         ProductSel="NoProduct"
       }
@@ -267,8 +267,8 @@ function AllProducts() {
   </div>
   )*/
 
-//if(productA.products.length>0)
-//{
+if(productA.products.length>0)
+{
 
   return (
     <>
@@ -330,8 +330,8 @@ background: "#f1f1f1"
       </>
   )
 
-//}
-//else{
+}
+else{
   return(
     <Container 
     className="d-flex align-items-center justify-content-center"
@@ -347,6 +347,6 @@ background: "#f1f1f1"
 }
 
 
-//}
+}
 
 export default AllProducts

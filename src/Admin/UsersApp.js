@@ -119,6 +119,12 @@ function SearchUser(e)
 
   e.preventDefault()
   console.log("Ovde je selected user"+SelectedUser.name)
+  if(SelectedUser.name.length==0)
+  {
+    SetSelectedUser({
+      name:"NoUser"
+    })
+  }
   axios.get('https://serviceone1.herokuapp.com/users/SearchUser/'+SelectedUser.name, {
     headers: {
       access: localStorage.getItem("access"),

@@ -39,9 +39,13 @@ const [userA,setUsers] = useState({
      users:[]
 });
 
+const [SelectedUser,SetSelectedUser]=useState("")
 
+function onChangeSearch()
+{
 
-
+     SetSelectedUser(e.target.value)
+}
 
 
 
@@ -102,7 +106,34 @@ const [userA,setUsers] = useState({
 
 
 
+function SearchUser()
+{
 
+  axios.get('https://serviceone1.herokuapp.com/users/SearchUser'+SelectedUser, {
+    headers: {
+      access: localStorage.getItem("access"),
+    },
+  }).then(response=>{
+
+    setUsers({users:response.data})
+    console.log("ovfde SearchUser:"+response.data)
+    }
+    ).catch((error)=>{
+        console.log(error)
+       
+    })
+
+
+
+
+
+
+
+
+
+
+
+}
 
 
 
@@ -139,11 +170,11 @@ padding: "10px",
 fontSize: "17px",
 border: "1px solid grey",
 float: "left",
-width: "10vh",
+width: "30vh",
 background: "#f1f1f1"
 
 }
-      }    placeholder="Pretrazi" name="search"/>
+      }     onChange={onChangeSearch}   value={SelectedUser}  placeholder="Pretrazi" name="search"/>
       <button type="submit"      style={
 
 {

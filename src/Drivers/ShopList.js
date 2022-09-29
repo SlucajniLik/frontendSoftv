@@ -108,7 +108,7 @@ const [SelectedShop,SetSelectedShop]=useState({
   function onChangeSearch(e)
   {
   
-       SetSelectedProduct(
+       SetSelectedShop(
         {
           price:e.target.value      
         }
@@ -164,7 +164,8 @@ const [SelectedShop,SetSelectedShop]=useState({
     {  
     
       e.preventDefault()
-      console.log("Ovde je selected shop"+SelectedProduct.price)
+      const id= jwt_decode(localStorage.getItem("access")).id
+      console.log("Ovde je selected shop"+SelectedShop.price)
       var ShopSel=""
       if(SelectedShop.name.length==0)
       {

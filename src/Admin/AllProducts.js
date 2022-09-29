@@ -202,7 +202,7 @@ function AllProducts() {
         },
       }).then(response=>{
     
-        setProducts({users:response.data})
+        setProducts({products:response.data})
         console.log("ovfde SearchProduct:"+response.data)
         }
         ).catch((error)=>{

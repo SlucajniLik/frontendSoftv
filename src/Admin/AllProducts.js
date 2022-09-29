@@ -267,8 +267,8 @@ function AllProducts() {
   </div>
   )*/
 
-if(productA.products.length>0)
-{
+//if(productA.products.length>0)
+//{
 
   return (
     <>
@@ -330,8 +330,8 @@ background: "#f1f1f1"
       </>
   )
 
-}
-else{
+//}
+//else{
   return(
     <Container 
     className="d-flex align-items-center justify-content-center"
@@ -347,6 +347,6 @@ else{
 }
 
 
-}
+//}
 
 export default AllProducts

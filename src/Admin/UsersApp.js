@@ -130,16 +130,42 @@ if(userA.users.length>0)
   style={{ minHeight: "90vh",minWidth:'150vh'}}
 >
 
-<form >
-      <input type="text" placeholder="Pretrazi" name="search"/>
-      <button type="submit"><i class="fa fa-search"></i></button>
-    </form>
-
-
-
   <div className="w-100 h-100" style={{height:"100vh" }}>
 
+  <form >
+      <input type="text"  style={
+{
+padding: "10px",
+fontSize: "17px",
+border: "1px solid grey",
+float: "left",
+width: "80%",
+background: "#f1f1f1"
 
+}
+      }    placeholder="Pretrazi" name="search"/>
+      <button type="submit"      style={
+
+{
+  float:"left",
+  width: "20%",
+  padding: "10px",
+  background: "#2196F3",
+  color: "white",
+  fontSize: "17px",
+  border: "1px solid grey",
+  borderLeft: "none",
+  cursor: "pointer",
+
+
+
+
+
+
+}
+
+      }    ><i class="fa fa-search"></i></button>
+    </form>
 
 
     <Table className={styles.tb}>

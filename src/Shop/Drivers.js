@@ -106,6 +106,22 @@ const [userA,setUsers] = useState({
 
 
 
+const [SelectedUser,SetSelectedUser]=useState({
+
+  name:""
+  
+  })
+  
+  function onChangeSearch(e)
+  {
+  
+       SetSelectedUser(
+        {
+          name:e.target.value      
+        }
+       )
+  }
+  
 
 
 
@@ -158,6 +174,35 @@ const [userA,setUsers] = useState({
 
 
 
+    function SearchUser(e)
+    {  
+    
+      e.preventDefault()
+      console.log("Ovde je selected user"+SelectedUser.name)
+      var UserSel=""
+      if(SelectedUser.name.length==0)
+      {
+        UserSel="NoUser"
+      }
+      else
+      {
+        UserSel=SelectedUser.name
+      }
+      axios.get('https://serviceone1.herokuapp.com/users/SearchUser/'+UserSel, {
+        headers: {
+          access: localStorage.getItem("access"),
+        },
+      }).then(response=>{
+    
+        setUsers({users:response.data})
+        console.log("ovfde SearchUser:"+response.data)
+        }
+        ).catch((error)=>{
+            console.log(error)
+           
+        })
+    
+    }
 
 
 
@@ -220,6 +265,45 @@ if(userA.users.length>0)
 {
   return (
     <>
+
+
+<form >
+      <input type="text"  style={
+{
+padding: "10px",
+fontSize: "17px",
+border: "1px solid grey",
+float: "left",
+width: "30vh",
+background: "#f1f1f1"
+
+}
+      }     onChange={onChangeSearch}   value={SelectedUser.name}  placeholder="Pretraga korisnika po imenu ili prezimenu" name="search"/>
+      <button type="submit"   onClick={SearchUser}   style={
+
+{
+  float:"left",
+  width: "5vh",
+  padding: "10px",
+  background: "#2196F3",
+  color: "white",
+  fontSize: "17px",
+  border: "1px solid grey",
+  borderLeft: "none",
+  cursor: "pointer",
+
+
+
+
+
+
+}
+
+      }    ><i class="fa fa-search"></i></button>
+    </form>
+<br/>
+
+
    <br/>
   <Container 
   

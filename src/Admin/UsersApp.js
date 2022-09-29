@@ -183,7 +183,7 @@ width: "30vh",
 background: "#f1f1f1"
 
 }
-      }     onChange={onChangeSearch}   value={SelectedUser.name}  placeholder="Pretrazi" name="search"/>
+      }     onChange={onChangeSearch}   value={SelectedUser.name}  placeholder="Pretraga vozaca po imenu ili prezimenu" name="search"/>
       <button type="submit"   onClick={SearchUser}   style={
 
 {

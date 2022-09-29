@@ -111,7 +111,7 @@ function SearchUser(e)
 
   e.preventDefault()
 
-  axios.get('https://serviceone1.herokuapp.com/users/SearchUser'+SelectedUser, {
+  axios.get('https://serviceone1.herokuapp.com/users/SearchUser/'+SelectedUser, {
     headers: {
       access: localStorage.getItem("access"),
     },

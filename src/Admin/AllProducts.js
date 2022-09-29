@@ -188,7 +188,7 @@ function AllProducts() {
       e.preventDefault()
       console.log("Ovde je selected product"+SelectedProduct.price)
       var ProductSel=""
-      if(ProductSel.price.length==0)
+      if(SelectedProduct.price.length==0)
       {
         ProductSel="NoProduct"
       }

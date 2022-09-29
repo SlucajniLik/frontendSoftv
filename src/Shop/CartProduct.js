@@ -190,7 +190,7 @@ function CartProduct() {
 
 
 
-    }, [ordersA.orders]);
+    }, []);
 
 
 
@@ -305,14 +305,6 @@ function OrderProducts(orders){
          }
          );
         
-
-
-
-
-
-
-
-
 }
 
 

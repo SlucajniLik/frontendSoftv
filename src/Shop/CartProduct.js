@@ -263,7 +263,7 @@ function UpdateNum(id,valNum,setNProd)
       },
     }).then(response=>{
   
-      setProducts({products:response.data})
+      setOrders({orders:response.data})
       console.log("ovfde SearchProduct:"+response.data)
       }
       ).catch((error)=>{

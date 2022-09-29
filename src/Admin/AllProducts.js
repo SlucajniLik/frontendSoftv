@@ -76,24 +76,6 @@ return (
 </>
 )
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
 function AllProducts() {
@@ -101,6 +83,41 @@ function AllProducts() {
     const [productA,setProducts] = useState({
         products:[]
    });
+
+
+
+   const [SelectedProduct,SetSelectedProduct]=useState({
+
+    price:""
+    
+    })
+    
+    function onChangeSearch(e)
+    {
+    
+         SetSelectedProduct(
+          {
+            price:e.target.value      
+          }
+         )
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     useEffect(() => {
   
@@ -165,6 +182,36 @@ function AllProducts() {
 
     }
 
+    function SearchProduct(e)
+    {  
+    
+      e.preventDefault()
+      console.log("Ovde je selected product"+SelectedProduct.price)
+      var ProductSel=""
+      if(ProductSel.price.length==0)
+      {
+        ProductSel="NoProduct"
+      }
+      else
+      {
+        ProductSel=SelectedProduct.price
+      }
+      axios.get('https://serviceone1.herokuapp.com/products/SearchProduct/'+ProductSel, {
+        headers: {
+          access: localStorage.getItem("access"),
+        },
+      }).then(response=>{
+    
+        setProducts({users:response.data})
+        console.log("ovfde SearchProduct:"+response.data)
+        }
+        ).catch((error)=>{
+            console.log(error)
+           
+        })
+    
+    }
+    
 
 
 
@@ -226,7 +273,41 @@ if(productA.products.length>0)
   return (
     <>
 
+<form >
+      <input type="text"  style={
+{
+padding: "10px",
+fontSize: "17px",
+border: "1px solid grey",
+float: "left",
+width: "30vh",
+background: "#f1f1f1"
 
+}
+      }     onChange={onChangeSearch}   value={SelectedProduct.price}  placeholder="Pretrazi proizvod po ceni" name="search"/>
+      <button type="submit"   onClick={SearchProduct}   style={
+
+{
+  float:"left",
+  width: "5vh",
+  padding: "10px",
+  background: "#2196F3",
+  color: "white",
+  fontSize: "17px",
+  border: "1px solid grey",
+  borderLeft: "none",
+  cursor: "pointer",
+
+
+
+
+
+
+}
+
+      }    ><i class="fa fa-search"></i></button>
+    </form>
+<br/>
 
     <Container 
     

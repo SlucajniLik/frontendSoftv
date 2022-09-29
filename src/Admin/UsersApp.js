@@ -6,6 +6,7 @@ import {Form,Container,Row,Col,Card} from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 
 import styles from './mystyle.module.css'
+import { search } from '../../../ServiceOne/routes/User';
 
 
 
@@ -119,13 +120,19 @@ function SearchUser(e)
 
   e.preventDefault()
   console.log("Ovde je selected user"+SelectedUser.name)
+  var SerachUser=""
   if(SelectedUser.name.length==0)
   {
-    SetSelectedUser({
-      name:"NoUser"
-    })
+   SerachUser="No user"
   }
-  axios.get('https://serviceone1.herokuapp.com/users/SearchUser/'+SelectedUser.name, {
+  else
+  {
+
+    SerachUser=SelectedUser.name
+
+  }
+
+  axios.get('https://serviceone1.herokuapp.com/users/SearchUser/'+SearchUser, {
     headers: {
       access: localStorage.getItem("access"),
     },

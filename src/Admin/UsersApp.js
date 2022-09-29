@@ -39,12 +39,20 @@ const [userA,setUsers] = useState({
      users:[]
 });
 
-const [SelectedUser,SetSelectedUser]=useState("")
+const [SelectedUser,SetSelectedUser]=useState({
+
+name:""
+
+})
 
 function onChangeSearch(e)
 {
 
-     SetSelectedUser(e.target.value)
+     SetSelectedUser(
+      {
+        name:SelectedUser
+      }
+     )
 }
 
 
@@ -111,7 +119,7 @@ function SearchUser(e)
 
   e.preventDefault()
   console.log("Ovde je selected user"+SelectedUser)
-  axios.get('https://serviceone1.herokuapp.com/users/SearchUser/'+SelectedUser, {
+  axios.get('https://serviceone1.herokuapp.com/users/SearchUser/'+SelectedUser.name, {
     headers: {
       access: localStorage.getItem("access"),
     },
@@ -176,7 +184,7 @@ width: "30vh",
 background: "#f1f1f1"
 
 }
-      }     onChange={onChangeSearch}   value={SelectedUser}  placeholder="Pretrazi" name="search"/>
+      }     onChange={onChangeSearch}   value={SelectedUser.name}  placeholder="Pretrazi" name="search"/>
       <button type="submit"   onClick={SearchUser}   style={
 
 {

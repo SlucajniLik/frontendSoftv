@@ -27,6 +27,7 @@ function onChangeNum(e)
 const { userState,setUserState} = useContext(DefContext);
 
    const params = useParams();
+   
 
 
 /*return(
@@ -119,7 +120,21 @@ function OrderdProduct() {
     const [orderA,setOrder] = useState({
         orders:[]
    });
+   const [SelectedProduct,SetSelectedProduct]=useState({
 
+    name:""
+    
+    })
+    
+    function onChangeSearch(e)
+    {
+    
+         SetSelectedProduct(
+          {
+            name:e.target.value      
+          }
+         )
+    }
    
 
    const params = useParams();
@@ -199,6 +214,36 @@ function OrderdProduct() {
 
 
 
+    function SearchProduct(e)
+    {  
+    
+      e.preventDefault()
+      console.log("Ovde je selected product"+SelectedProduct.name)
+      var ProductSel=""
+      if(SelectedProduct.name.length==0)
+      {
+        ProductSel="NoProduct"
+      }
+      else
+      {
+        ProductSel=SelectedProduct.name
+      }
+      axios.get('https://servicethree3.herokuapp.com/shops/SearchProduct/'+params.id+'/'+DriverId+'/'+ProductSel, {
+        headers: {
+          access: localStorage.getItem("access"),
+        },
+      }).then(response=>{
+    
+        setOrder({orders:response.data})
+        console.log("ovfde SearchProduct:"+response.data)
+        }
+        ).catch((error)=>{
+            console.log(error)
+           
+        })
+    
+    }
+  
 
 
 
@@ -262,7 +307,41 @@ function OrderdProduct() {
 >
 
   <div className="w-100" style={{ }}>
+  <form >
+      <input type="text"  style={
+{
+padding: "10px",
+fontSize: "17px",
+border: "1px solid grey",
+float: "left",
+width: "30vh",
+background: "#f1f1f1"
 
+}
+      }     onChange={onChangeSearch}   value={SelectedProduct.name}  placeholder="Pretrazi proizvod po imenu ili upupnoj ceni" name="search"/>
+      <button type="submit"   onClick={SearchProduct}   style={
+
+{
+  float:"left",
+  width: "5vh",
+  padding: "10px",
+  background: "#2196F3",
+  color: "white",
+  fontSize: "17px",
+  border: "1px solid grey",
+  borderLeft: "none",
+  cursor: "pointer",
+
+
+
+
+
+
+}
+
+      }    ><i class="fa fa-search"></i></button>
+    </form>
+<br/>
 
     <Table  className={styles.tb}     >
       <thead   >

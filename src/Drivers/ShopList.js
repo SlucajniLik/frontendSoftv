@@ -110,7 +110,7 @@ const [SelectedShop,SetSelectedShop]=useState({
   
        SetSelectedShop(
         {
-          price:e.target.value      
+          name:e.target.value      
         }
        )
   }

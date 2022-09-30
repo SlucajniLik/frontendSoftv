@@ -218,6 +218,8 @@ function OrderdProduct() {
     {  
     
       e.preventDefault()
+
+      const DriverId=jwtDecode(localStorage.getItem("access")).id
       console.log("Ovde je selected product"+SelectedProduct.name)
       var ProductSel=""
       if(SelectedProduct.name.length==0)

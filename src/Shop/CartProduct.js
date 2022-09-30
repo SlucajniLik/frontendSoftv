@@ -300,7 +300,7 @@ function OrderProducts(orders){
         },
       }).then(
          res=>{
-            setOrders({orders:[]})
+            setOrders({orders:ordersA.orders})
          console.log(res.data)
          }
          );

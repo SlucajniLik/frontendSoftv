@@ -165,7 +165,7 @@ const [SelectedShop,SetSelectedShop]=useState({
     
       e.preventDefault()
       const id= jwt_decode(localStorage.getItem("access")).id
-      console.log("Ovde je selected shop"+SelectedShop.price)
+      console.log("Ovde je selected shop"+SelectedShop.name)
       var ShopSel=""
       if(SelectedShop.name.length==0)
       {
@@ -173,7 +173,7 @@ const [SelectedShop,SetSelectedShop]=useState({
       }
       else
       {
-        ShopSel=SelectedShop.price
+        ShopSel=SelectedShop.name
       }
       axios.get('https://servicethree3.herokuapp.com/shops/SearchShop/'+id+'/'+ShopSel, {
         headers: {

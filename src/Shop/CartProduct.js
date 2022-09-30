@@ -152,7 +152,7 @@ function CartProduct() {
    
    const [SelectedProduct,SetSelectedProduct]=useState({
 
-    price:""
+    name:""
     
     })
     
@@ -161,7 +161,7 @@ function CartProduct() {
     
          SetSelectedProduct(
           {
-            price:e.target.value      
+            name:e.target.value      
           }
          )
     }
@@ -247,15 +247,15 @@ function UpdateNum(id,valNum,setNProd)
   {  
   
     e.preventDefault()
-    console.log("Ovde je selected product"+SelectedProduct.price)
+    console.log("Ovde je selected product"+SelectedProduct.name)
     var ProductSel=""
-    if(SelectedProduct.price.length==0)
+    if(SelectedProduct.name.length==0)
     {
       ProductSel="NoProduct"
     }
     else
     {
-      ProductSel=SelectedProduct.price
+      ProductSel=SelectedProduct.name
     }
     axios.get('https://servicetwo2.herokuapp.com/products/SearchCart/'+userState.id+'/'+ProductSel, {
       headers: {
@@ -387,7 +387,7 @@ width: "30vh",
 background: "#f1f1f1"
 
 }
-      }     onChange={onChangeSearch}   value={SelectedProduct.price}  placeholder="Pretrazi proizvod po ceni" name="search"/>
+      }     onChange={onChangeSearch}   value={SelectedProduct.name}  placeholder="Pretrazi proizvod po imenu ili upupnoj ceni" name="search"/>
       <button type="submit"   onClick={SearchProduct}   style={
 
 {

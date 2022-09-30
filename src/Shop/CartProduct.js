@@ -243,7 +243,7 @@ function UpdateNum(id,valNum,setNProd)
 
 
 
- /* function SearchProduct(e)
+  function SearchProduct(e)
   {  
   
     e.preventDefault()
@@ -271,7 +271,7 @@ function UpdateNum(id,valNum,setNProd)
          
       })
   
-  }*/
+  }
 
 
 
@@ -376,7 +376,41 @@ function OrderProducts(orders){
   <div className="w-100" style={{ }}>
 
 
- 
+  <form >
+      <input type="text"  style={
+{
+padding: "10px",
+fontSize: "17px",
+border: "1px solid grey",
+float: "left",
+width: "30vh",
+background: "#f1f1f1"
+
+}
+      }     onChange={onChangeSearch}   value={SelectedProduct.price}  placeholder="Pretrazi proizvod po ceni" name="search"/>
+      <button type="submit"   onClick={SearchProduct}   style={
+
+{
+  float:"left",
+  width: "5vh",
+  padding: "10px",
+  background: "#2196F3",
+  color: "white",
+  fontSize: "17px",
+  border: "1px solid grey",
+  borderLeft: "none",
+  cursor: "pointer",
+
+
+
+
+
+
+}
+
+      }    ><i class="fa fa-search"></i></button>
+    </form>
+<br/>
 
 
 

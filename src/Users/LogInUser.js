@@ -18,11 +18,33 @@ function LogInUser() {
    const[valReg,setValReg]=useState(false)
    const params=useParams()
 
+
    
-   /*
-    setValReg(true)
-    console.log("Ovde pogledaj reg"+params.reg)
-   */
+
+
+    useEffect(() => {
+  
+     
+      setValReg(true)
+      console.log("Ovde pogledaj reg"+params.reg)
+    
+
+
+
+  }, []);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   let navigate = useNavigate();
   function onChangePass(e)

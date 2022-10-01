@@ -295,7 +295,7 @@ function UpdateNum(id,valNum,setNProd,SetNumProd)
 function OrderProducts(){
 
 
- axios.post('https://servicetwo2.herokuapp.com/shops/OrderProducts',ordersA,{
+ axios.post('https://servicetwo2.herokuapp.com/shops/OrderProducts'+userState.id,ordersA,{
         headers: {
           access: localStorage.getItem("access"),
         },

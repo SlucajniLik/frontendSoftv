@@ -302,7 +302,7 @@ function OrderProducts(){
       }).then(
          res=>{
                    setOrders({orders:[]})
-         
+         console.log(res.data)
          console.log('Ovde duzina'+ordersA.orders.length)
          }
          );

@@ -301,7 +301,7 @@ function OrderProducts(){
       }).then(
          res=>{
           setOrders(prevState => prevState.set([]))
-
+           console.log(res.data)
          console.log('Ovde duzina'+ordersA.orders.length)
          }
          );

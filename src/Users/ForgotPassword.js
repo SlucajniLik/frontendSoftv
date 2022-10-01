@@ -14,10 +14,11 @@ function ForgotPassword() {
 
   let navigate = useNavigate();
   const [emailErr, setEmailErr] = useState(true);
+  const [Success,SetSuccess]=useState(false)
   function onChangeEmail(e)
   {
     setEmail(e.target.value)
-    
+    SetSuccess(false)
 
 
   }
@@ -78,7 +79,12 @@ function onSubmit(e)
   axios.post('https://serviceone1.herokuapp.com/users/forgotPassword',user).then(res=>{
     //console.log(jwt_decode(res.data).email)
     console.log(res.data )
-    setEmail("")
+    if(res.data.succes==true)
+    {
+      SetSuccess(true)
+      setEmail("")
+    }
+
   })
 
 
@@ -120,6 +126,7 @@ if(localStorage.getItem("accessToken")!=null)
       <Form.Label>Email:</Form.Label>
       <Form.Control type="text" placeholder="Unesite email"    name={email}  onChange={onChangeEmail} />
       {!emailErr && <p   style={{color:'red'}}   >Vase email nije validan</p>}
+      {Success && <p   style={{color:'green'}}   >Uspesno ste poslali email</p>}
     </Form.Group>
 
     <Button variant="success"  className="w-100"  type="submit">

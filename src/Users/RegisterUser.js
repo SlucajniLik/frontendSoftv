@@ -5,7 +5,7 @@ import { useState,useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import {Form,Container,Card} from 'react-bootstrap';
 import { DefContext } from "../Helpers/DefContext";
-import { useNavigate,Link } from "react-router-dom";
+import { useNavigate,Link, Navigate } from "react-router-dom";
 import {storage} from "../firebase"
 import{ref,uploadBytes,getDownloadURL} from "firebase/storage"
 import {v4} from "uuid"
@@ -331,7 +331,7 @@ if(validate()==true)
                     setRole("Izaberite opciju")
                   
                     console.log("true")
-                  SetSuccess(true)
+              navigate("/")
                   }} )
 
 

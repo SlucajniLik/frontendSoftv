@@ -301,9 +301,9 @@ function OrderProducts(){
       }).then(
          res=>{
           setOrders({
-            orders:ordersA.orders.filter(el=>el._id==50)
+            orders:[]
         })
-         console.log(res.data)
+         console.log('Ovde duzina'+ordersA.orders.length)
          }
          );
         
@@ -456,7 +456,7 @@ background: "#f1f1f1"
     {OrderList()}
     </Row>*/}
 
-    <Button className="w-100"    variant="secondary"  onClick={()=>OrderProducts(ordersA)}>Poruci</Button> 
+    <Button className="w-100"    variant="secondary"  onClick={OrderProducts}>Poruci</Button> 
 
     </div>
     </Container>

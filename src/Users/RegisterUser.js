@@ -32,12 +32,12 @@ function RegisterUser() {
   const [password2Err, setPassword2Err] = useState(true);
   const [roleErr, setRoleErr] = useState(true);
   const [imageErr, setImageErr] = useState(true);
-
+  const [Success,SetSuccess]=useState(false)
   function onChangeName(e)
   {
     setName(e.target.value)
 
-
+    SetSuccess(false)
    /* const Namereg = new RegExp('[A-Z][a-z]{2}');   
 
     if(!Namereg.test(name))
@@ -55,7 +55,7 @@ function RegisterUser() {
   function onChangeSurname(e)
   {
     setSurname(e.target.value)
-
+    SetSuccess(false)
 
    /* const Surnamereg = new RegExp('[A-Z][a-z]{2}'); 
     if(!Surnamereg.test(surname))
@@ -82,6 +82,7 @@ function RegisterUser() {
     {
  setPasswordErr(true)
     }*/
+    SetSuccess(false)
   }
 
 
@@ -95,6 +96,7 @@ function RegisterUser() {
 
     
     }*/
+    SetSuccess(false)
   }
 
   function onChangeEmail(e)
@@ -110,6 +112,7 @@ function RegisterUser() {
     {
      setEmailErr(true)
     }*/
+    SetSuccess(false)
   }
 
   function onChangeRole(e)
@@ -126,6 +129,7 @@ function RegisterUser() {
     {
       setRoleErr(true)
     }*/
+    SetSuccess(false)
   }
 
   function onChangeImage(e)
@@ -144,7 +148,7 @@ else
 
   setImageErr(true)
 }*/
-
+SetSuccess(false)
 
   }
 
@@ -327,7 +331,7 @@ if(validate()==true)
                     setRole("Izaberite opciju")
                   
                     console.log("true")
-                  
+                  SetSuccess(true)
                   }} )
 
 
@@ -464,6 +468,7 @@ return(
       <option value="Vozac">Vozac</option>
     </Form.Select>
     {!roleErr && <p   style={{color:'red'}}   >Izaberite korisnika</p>}
+    {Success && <p   style={{color:'green'}}   >Uspesno ste poslali email</p>}
     <br/>
       <Button  variant="secondary"  className="w-100"   type="submit">
         Submit

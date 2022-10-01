@@ -17,10 +17,10 @@ function LogInUser() {
    const[valueErr2,setValuerErr2]=useState(null)
    const[valReg,setValReg]=useState(false)
    const params=useParams()
-   if(params.reg=="req")
-   {
+   
     setValReg(true)
-   }
+    console.log("Ovde pogledaj reg"+params.reg)
+   
 
   let navigate = useNavigate();
   function onChangePass(e)

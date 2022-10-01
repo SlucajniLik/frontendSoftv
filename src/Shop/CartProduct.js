@@ -303,9 +303,12 @@ function OrderProducts(){
           setOrders({
             orders:[]
         })
+        
          console.log('Ovde duzina'+ordersA.orders.length)
          }
          );
+
+         window.location.reload(false)
         
 }
 

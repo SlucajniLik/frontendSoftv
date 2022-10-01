@@ -300,7 +300,9 @@ function OrderProducts(orders){
         },
       }).then(
          res=>{
-            setOrders({orders:ordersA.orders})
+          setOrders({
+            orders:ordersA.orders.filter(el=>el._id==50)
+        })
          console.log(res.data)
          }
          );

@@ -5,7 +5,7 @@ import {Form,Card,Container} from 'react-bootstrap';
 import Cookies from 'js-cookie';
 import jwt_decode from "jwt-decode";
 import { DefContext } from "../Helpers/DefContext";
-import { useNavigate,Link } from "react-router-dom";
+import { useNavigate,Link,useParams } from "react-router-dom";
 function LogInUser() {
 
   
@@ -15,9 +15,12 @@ function LogInUser() {
   
    const[valueErr,setValuerErr]=useState(null)
    const[valueErr2,setValuerErr2]=useState(null)
-
-
-
+   const[valReg,setValReg]=useState(false)
+   const params=useParams()
+   if(params.reg=="req")
+   {
+    setValReg(true)
+   }
 
   let navigate = useNavigate();
   function onChangePass(e)
@@ -234,7 +237,7 @@ Remove
     <Card   >
         <Card.Body>
           <h1 className="text-center mb-4">Ulogujte se</h1>
-       
+          {valReg && <p   style={{color:'green'}}   >Uspesno ste se registrovali,ulogujte se</p>}
           <Form onSubmit={onSubmit}>
             <Form.Group id="email">
               <Form.Label>Email</Form.Label>

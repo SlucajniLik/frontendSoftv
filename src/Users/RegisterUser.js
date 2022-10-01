@@ -331,7 +331,7 @@ if(validate()==true)
                     setRole("Izaberite opciju")
                   
                     console.log("true")
-              navigate("/admin")
+              navigate("/reg")
                   }} )
 
 

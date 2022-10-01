@@ -13,7 +13,7 @@ function Navbarr() {
     localStorage.removeItem("access");
     setUserState({ email: "", id: 0, status: false });
       
-       window.location.href="/login"
+       window.location.href="/"
   };
 
 

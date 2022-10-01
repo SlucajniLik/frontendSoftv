@@ -300,15 +300,13 @@ function OrderProducts(){
         },
       }).then(
          res=>{
-          setOrders({
-            orders:[]
-        })
-        
+          setOrders(prevState => prevState.set([]))
+
          console.log('Ovde duzina'+ordersA.orders.length)
          }
          );
 
-         window.location.reload(false)
+      
         
 }
 

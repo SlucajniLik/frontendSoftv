@@ -291,10 +291,10 @@ function UpdateNum(id,valNum,setNProd)
     }
 
 
-function OrderProducts(orders){
+function OrderProducts(){
 
 
-    axios.post('https://servicetwo2.herokuapp.com/shops/OrderProducts',orders,{
+    axios.post('https://servicetwo2.herokuapp.com/shops/OrderProducts',ordersA,{
         headers: {
           access: localStorage.getItem("access"),
         },

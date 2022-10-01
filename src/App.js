@@ -111,7 +111,7 @@ function App() {
    { 
            !userState.status &&
            <>
-   <Route path="/:reg?" element={<LogInUser/>}/>
+   <Route path="/*" element={<LogInUser/>}/>
    <Route path="/Register" element={<RegisterUser/>} />
    <Route path="/ForgotPassword" element={<ForgotPassword/>} />
    <Route path="/ResetPassword/:token" element={<ResetPassword/>} />

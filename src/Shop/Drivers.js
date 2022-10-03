@@ -30,19 +30,19 @@ function Users(props)
 )*/
 
 return (
-
-  <Card style={{width:"30vh",height:"33.5vh"}}  >
-   <div  style={{  textAlign:"center", height:"20vh",width:"30vh" }}    > 
+<>
+  <Card style={{width:"40vh",height:"31.5vh"}}  >
+    <div  style={{  textAlign:"center", height:"20vh",width:"40vh" }}   >
     <Card.Img
       variant="top"
       src={props.user.UrlImg}
-
-      style={{  textAlign:"center", height:"20vh",width:"30vh" }}
+      height="200px"
+      style={{  textAlign:"center", height:"20vh",width:"40vh" }}
     />
- </div>
-    <Card.Body className="d-flex flex-column"     style={{height:"13.5vh",width:"30vh"}}  > 
-      <Card.Title  className="d-flex justify-content-between align-items-baseline mb-4">
-        <span  className="fs-5"  ><b>Ime vozaca:</b>{props.user.name} {props.user.surname}</span>
+    </div>
+    <Card.Body className="d-flex flex-column"  style={{height:"13.5vh",width:"40vh"}}  > 
+      <Card.Title className="d-flex justify-content-between align-items-baseline mb-4">
+        <span   ><b>Ime vozaca:</b>{props.user.name} {props.user.surname}</span>
       </Card.Title>
       <div className="mt-auto">
       
@@ -67,8 +67,8 @@ return (
       </div>
     </Card.Body>
   </Card>
-
-
+  <br/>
+  </>
 )
 
 
@@ -166,7 +166,7 @@ const [SelectedUser,SetSelectedUser]=useState({
     {
       
        return userA.users.map(currentUser=>{
-        return <Col  key={currentUser._id+"s"}     ><Users  user={currentUser}    key={currentUser._id}   ></Users></Col>
+        return <Col><Users  user={currentUser}    key={currentUser._id}   ></Users></Col>
        })
 
 
@@ -304,21 +304,20 @@ background: "#f1f1f1"
 <br/>
 
 
-
+   <br/>
   <Container 
   
-
-  style={{ display:"flex", marginTop:"50px", justifyContent:"center", minHeight: "90vh",minWidth:'180vh'}}
+  style={{ display:"flex",justifyContent:"center",marginTop:"50px" ,minHeight: "89vh",minWidth:'180vh'}}
 >
 
 
     
-    <Row  md={3} xs={1} lg={3} className="g-0" >
+    <Row  md={3} xs={1} lg={3}    >
     {UsersList()}
     </Row>
     
     
-
+    
  
 
     </Container>
@@ -330,7 +329,8 @@ else
   
   return(
     <Container 
-    style={{ display:"flex", marginTop:"50px", justifyContent:"center", minHeight: "90vh",minWidth:'180vh'}}
+    className="d-flex align-items-center justify-content-center"
+    style={{ minHeight: "90vh"}}
   >
     <div className="w-100" style={{ maxWidth: "400px" }}>
 

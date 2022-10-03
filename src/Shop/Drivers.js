@@ -31,17 +31,17 @@ function Users(props)
 
 return (
 
-  <Card className="h-100 "  >
-   
+  <Card style={{width:"30vh",height:"33.5vh"}}  >
+   <div  style={{  textAlign:"center", height:"20vh",width:"30vh" }}    > 
     <Card.Img
       variant="top"
       src={props.user.UrlImg}
-      height="200px"
-      style={{objectFit:"cover"}}
+
+      style={{  textAlign:"center", height:"20vh",width:"30vh" }}
     />
- 
-    <Card.Body className="d-flex flex-column"  > 
-      <Card.Title style={{display:"flex", flexDirection:"column"  }}>
+ </div>
+    <Card.Body className="d-flex flex-column"     style={{height:"13.5vh",width:"30vh"}}  > 
+      <Card.Title  className="d-flex justify-content-between align-items-baseline mb-4">
         <span  className="fs-5"  ><b>Ime vozaca:</b>{props.user.name} {props.user.surname}</span>
       </Card.Title>
       <div className="mt-auto">
@@ -311,14 +311,14 @@ background: "#f1f1f1"
   style={{ minHeight: "90vh",minWidth:'10vh',marginTop:"50px",background:"red"}}
 >
 
-<div className="w-100" style={{ }}></div>
+
     
     <Row  md={3} xs={1} lg={3}  >
     {UsersList()}
     </Row>
     
     
-    <div/>
+
  
 
     </Container>
@@ -330,8 +330,7 @@ else
   
   return(
     <Container 
-    className="d-flex align-items-center justify-content-center"
-    style={{ minHeight: "90vh"}}
+    style={{ display:"flex", marginTop:"50px", justifyContent:"center", minHeight: "90vh",minWidth:'180vh'}}
   >
     <div className="w-100" style={{ maxWidth: "400px" }}>
 

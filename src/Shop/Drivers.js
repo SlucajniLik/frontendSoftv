@@ -32,14 +32,14 @@ function Users(props)
 return (
 <>
   <Card className="h-100"  >
-    <div  style={{  textAlign:"center", height:"20vh",width:"40vh" }}   >
+
     <Card.Img
       variant="top"
       src={props.user.UrlImg}
       height="200px"
       style={{ objectFit: "cover" }}
     />
-    </div>
+ 
     <Card.Body className="d-flex flex-column" > 
       <Card.Title style={{display:"flex", flexDirection:"column"}}>
         <span className="fs-5"  ><b>Ime vozaca:</b>{props.user.name} {props.user.surname}</span>

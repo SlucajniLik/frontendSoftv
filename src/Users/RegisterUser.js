@@ -309,7 +309,7 @@ if(validate()==true)
             {
                   setExistsErr(res.data)   
                   console.log(res.data)
-                  if(res.data!=false)
+                  if(res.data.access!=false)
                   {
           
                       
@@ -331,7 +331,7 @@ if(validate()==true)
                     setRole("Izaberite opciju")
                   
                     console.log("true")
-              //navigate("/reg")
+              navigate("/reg")
                   }} )
 
 

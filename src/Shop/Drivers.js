@@ -166,7 +166,7 @@ const [SelectedUser,SetSelectedUser]=useState({
     {
       
        return userA.users.map(currentUser=>{
-        return <Col><Users  user={currentUser}    key={currentUser._id}   ></Users></Col>
+        return <Col style={{margin:"5px"}}  ><Users  user={currentUser}    key={currentUser._id}   ></Users></Col>
        })
 
 
@@ -312,7 +312,7 @@ background: "#f1f1f1"
 
 
     
-    <Row  md={3} xs={1} lg={3} className="gx-5"   >
+    <Row  md={3} xs={1} lg={3}  >
     {UsersList()}
     </Row>
     

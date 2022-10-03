@@ -50,7 +50,7 @@ const { userState,setUserState} = useContext(DefContext);
 
 
 return (
-  <Card className="h-100">
+  <Card >
     <Card.Img
       variant="top"
       src={props.product.UrlImg}
@@ -357,7 +357,7 @@ background: "#f1f1f1"
   style={{ minHeight: "90vh",minWidth:'10vh',marginTop:"50px",background:"red"}}
 >
 
-  <div className="w-100" style={{ }}>
+  
     
     <Row  md={3} xs={1} lg={3} >
     {ProductList()}
@@ -366,7 +366,7 @@ background: "#f1f1f1"
     
     
    
-</div>
+
     </Container>
     </>
     )

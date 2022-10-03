@@ -307,7 +307,7 @@ if(validate()==true)
           
           axios.post('https://serviceone1.herokuapp.com/users/checkEmailExist',useremail).then(res=>
             {
-                  setExistsErr(res.data)   
+                  setExistsErr(res.data.access)   
                   console.log(res.data)
                   if(res.data.access!=false)
                   {

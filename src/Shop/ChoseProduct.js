@@ -362,7 +362,7 @@ background: "#f1f1f1"
 
   <div className="w-100" style={{ }}>
     
-    <Row  md={3} xs={1} lg={3}    >
+    <Row  md={3} xs={1} lg={3} >
     {ProductList()}
     </Row>
     

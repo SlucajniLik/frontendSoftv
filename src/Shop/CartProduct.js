@@ -220,7 +220,7 @@ function UpdateNum(id,valNum,setNProd,SetNumProd)
 {
 
 
-    if(!isNaN(valNum)&& valNum.length!=0 ){
+    if(valNum!="" ){
   let data=[]
   axios.post('https://servicetwo2.herokuapp.com/products/CardUpdate/'+id+'/'+valNum,data,{
     headers: {
@@ -381,7 +381,7 @@ width: "33vh",
 background: "#f1f1f1"
 
 }
-      }     onChange={onChangeSearch}   value={SelectedProduct.name}  placeholder="Pretrazi proizvod po imenu ili datumu" name="search"/>
+      }     onChange={onChangeSearch}   value={SelectedProduct.name}  placeholder="Pretrazi proizvod po imenu ili ceni" name="search"/>
       <button type="submit"   onClick={SearchProduct}   style={
 
 {

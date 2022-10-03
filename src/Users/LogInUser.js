@@ -274,7 +274,7 @@ Remove
               <Form.Control type="password"  placeholder='Unesite lozinku'  value={password}  onChange={onChangePass} name="lozinka"  />
             </Form.Group>
             <br/>
-            <Button  className="w-100"  variant="success"  type="submit" name="login"  >
+            <Button  className="w-100"  variant="dark"  type="submit" name="login"  >
               Ulogujte se
             </Button>
           </Form>

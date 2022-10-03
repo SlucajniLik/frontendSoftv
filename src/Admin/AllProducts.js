@@ -34,7 +34,7 @@ return (
 
 
 <>
-  <Card   style={{width:"30vh",height:"33.5vh"}}   >
+  <Card    className="h-100">
     
     <Card.Img
       variant="top"
@@ -45,7 +45,7 @@ return (
     />
 
     <Card.Body className="d-flex flex-column" >
-      <Card.Title style={{display:"flex", flexDirection:"row"}}>
+      <Card.Title className="d-flex justify-content-between align-items-baseline mb-4">
         <span className="ms-2 text-muted">{props.product.name}</span>
         <span className="ms-4 text-muted">{props.product.price} Din</span>
       </Card.Title>

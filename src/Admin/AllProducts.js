@@ -34,7 +34,7 @@ return (
 
 
 <>
-  <Card   style={{width:"30vh",height:"31.5vh"}}   >
+  <Card   style={{width:"30vh",height:"41.5vh"}}   >
     <div   style={{  textAlign:"center", height:"20vh",width:"30vh" }}  >
     <Card.Img
       variant="top"
@@ -312,7 +312,7 @@ background: "#f1f1f1"
     <Container 
     
     
-    style={{ display:"flex", marginTop:"50px", justifyContent:"center", minHeight: "100vh",minWidth:'180vh'}}
+    style={{ display:"flex", marginTop:"50px", justifyContent:"center", minHeight: "90vh",minWidth:'180vh'}}
   >
   
    

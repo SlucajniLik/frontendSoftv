@@ -32,11 +32,11 @@ function Users(props)
 return (
 <>
   <Card style={{width:"40vh",height:"31.5vh"}}  >
-    <div  style={{  textAlign:"center", height:"20vh",width:"30vh" }}   >
+    <div  style={{  textAlign:"center", height:"20vh",width:"40vh" }}   >
     <Card.Img
       variant="top"
       src={props.user.UrlImg}
-      height="210px"
+      height="200px"
       style={{  textAlign:"center", height:"20vh",width:"30vh" }}
     />
     </div>

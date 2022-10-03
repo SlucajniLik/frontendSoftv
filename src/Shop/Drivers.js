@@ -307,12 +307,12 @@ background: "#f1f1f1"
    <br/>
   <Container 
   
-  style={{ display:"flex",minHeight: "89vh",minWidth:'180vh'}}
+  style={{ display:"flex",justifyContent:"center",marginTop:"50px" ,minHeight: "89vh",minWidth:'180vh'}}
 >
 
 
     
-    <Row  md={3} xs={1} lg={5}   className="g-7" >
+    <Row  md={3} xs={1} lg={3}    >
     {UsersList()}
     </Row>
     

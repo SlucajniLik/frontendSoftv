@@ -356,8 +356,8 @@ background: "#f1f1f1"
 
   <Container 
   
-  className="d-flex align-items-center justify-content-center  "
-  style={{ minHeight: "90vh",minWidth:'10vh'}}
+  className="d-flex  justify-content-center  "
+  style={{ minHeight: "90vh",minWidth:'10vh',marginTop:"50px"}}
 >
 
   <div className="w-100" style={{ }}>

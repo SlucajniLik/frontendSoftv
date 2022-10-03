@@ -178,9 +178,9 @@ background: "#f1f1f1"
 
 {
   float:"left",
-  width: "5vh",
+  width: "7vh",
   padding: "10px",
-  background: "#2196F3",
+  background: "##262626",
   color: "white",
   fontSize: "17px",
   border: "1px solid grey",

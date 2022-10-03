@@ -30,7 +30,7 @@ function Users(props)
 )*/
 
 return (
-<>
+
   <Card className="h-100 "  >
    
     <Card.Img
@@ -67,8 +67,8 @@ return (
       </div>
     </Card.Body>
   </Card>
-  <br/>
-  </>
+
+
 )
 
 

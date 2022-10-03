@@ -42,21 +42,21 @@ console.log(props.shop.SellerId)
 
 return (
   <>
-  <Card style={{width:"30vh",height:"33.5vh"}}>
+  <Card style={{width:"40vh",height:"31.5vh"}} >
     <div   style={{  textAlign:"center", height:"20vh",width:"30vh" }}  >
     <Card.Img
       variant="top"
       src={props.shop.UrlImg}
   
-      style={{  textAlign:"center", height:"20vh",width:"30vh" }}
+      style={{  textAlign:"center", height:"20vh",width:"40vh" }}
     />
     </div>
-    <Card.Body className="d-flex flex-column">
-      <Card.Title  style={{display:'flex',flexDirection:'column'}} >
+    <Card.Body className="d-flex flex-column"  style={{height:"13.5vh",width:"40vh"}}>
+      <Card.Title  className="d-flex justify-content-between align-items-baseline mb-4" >
      
         <span className="fs-5  "><b>Ime radnje:</b>{props.shop.name}</span>
-        <span className="fs-5 "><b>Lokacija:</b>{props.shop.address},{props.shop.city} </span>
-       
+        <span className="fs-5 "><b>Grad:</b>{props.shop.city} </span>
+        <span className="fs-5 "><b>Adresa:</b>{props.shop.address}</span>
       </Card.Title>
       <div className="mt-auto">
       

@@ -312,7 +312,7 @@ background: "#f1f1f1"
     <Container 
     
     
-     className="d-flex align-items-center justify-content-center"
+     className="d-flex align-items-center justify-content-center w-100"
     style={{ minHeight: "90vh"}}
   >
   

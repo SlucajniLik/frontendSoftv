@@ -31,16 +31,16 @@ function Users(props)
 
 return (
 <>
-  <Card style={{width:"40vh",height:"31.5vh"}}  >
-    <div  style={{  textAlign:"center", height:"20vh",width:"40vh" }}   >
+  <Card className="h-100 "  >
+   
     <Card.Img
       variant="top"
       src={props.user.UrlImg}
       height="200px"
-      style={{  textAlign:"center", height:"20vh",width:"40vh" }}
+      style={{objectFit:"cover"}}
     />
-    </div>
-    <Card.Body className="d-flex flex-column"  style={{height:"13.5vh",width:"40vh"}}  > 
+ 
+    <Card.Body className="d-flex flex-column"  > 
       <Card.Title className="d-flex justify-content-between align-items-baseline mb-4">
         <span   ><b>Ime vozaca:</b>{props.user.name} {props.user.surname}</span>
       </Card.Title>

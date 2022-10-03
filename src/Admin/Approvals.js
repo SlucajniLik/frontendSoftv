@@ -229,8 +229,8 @@ background: "#f1f1f1"
     </form>
   <Container 
   
-  className="d-flex align-items-center justify-content-center  "
-  style={{ minHeight: "90vh",minWidth:'150vh'}}
+  className="d-flex  justify-content-center  "
+  style={{ minHeight: "90vh",minWidth:'150vh',marginTop:"10px"}}
 >
 
   <div className="w-100" style={{ }}>

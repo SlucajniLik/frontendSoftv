@@ -291,7 +291,6 @@ background: "#f1f1f1"
   float:"left",
   width: "5vh",
   padding: "10px",
-  background:"black",
   color: "white",
   fontSize: "17px",
   border: "1px solid grey",
@@ -305,7 +304,7 @@ background: "#f1f1f1"
 
 }
 
-      }    ><i class="fa fa-search"></i></button>
+      }    ><i class="fa fa-search" variant="dark"  ></i></button>
     </form>
 <br/>
 

@@ -42,7 +42,7 @@ return (
  
     <Card.Body className="d-flex flex-column"  > 
       <Card.Title style={{display:"flex", flexDirection:"column"  }}>
-        <span   ><b>Ime vozaca:</b>{props.user.name} {props.user.surname}</span>
+        <span  className="fs-5"  ><b>Ime vozaca:</b>{props.user.name} {props.user.surname}</span>
       </Card.Title>
       <div className="mt-auto">
       

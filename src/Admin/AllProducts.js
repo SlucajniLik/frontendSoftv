@@ -319,7 +319,7 @@ background: "#f1f1f1"
   
   
   
-  <Row  md={3} xs={1} lg={4}   className="g-7" >
+  <Row  md={3} xs={1} lg={4}   className="g-4" >
   {ProductList()}
   </Row>
   

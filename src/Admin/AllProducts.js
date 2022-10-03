@@ -312,14 +312,14 @@ background: "#f1f1f1"
     <Container 
     
     
-    style={{ display:"flex" , justifyContent:"center", minHeight: "90vh",minWidth:'180vh',background:"red"}}
+    style={{ display:"flex", marginTop:"50px", justifyContent:"center", minHeight: "90vh",minWidth:'180vh',background:"red"}}
   >
   
    
   
   
   
-  <Row  md={3} xs={1} lg={3}   className="g-7" >
+  <Row  md={3} xs={1} lg={4}   className="g-7" >
   {ProductList()}
   </Row>
   

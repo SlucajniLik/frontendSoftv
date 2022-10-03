@@ -52,7 +52,7 @@ return (
     />
     </div>
     <Card.Body className="d-flex flex-column"  style={{height:"13.5vh",width:"40vh"}}>
-      <Card.Title  className="d-flex justify-content-between align-items-baseline mb-4" >
+      <Card.Title  style={{display:'flex',flexDirection:'column'}} >
      
         <span className="fs-5  "><b>Ime radnje:</b>{props.shop.name}</span>
         <span className="fs-5 "><b>Grad:</b>{props.shop.city} </span>

@@ -50,7 +50,7 @@ const { userState,setUserState} = useContext(DefContext);
 
 
 return (
-  <Card className="h-100 ">
+  <Card className="h-100">
     <Card.Img
       variant="top"
       src={props.product.UrlImg}

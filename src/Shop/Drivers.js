@@ -312,7 +312,7 @@ background: "#f1f1f1"
 
 
     
-    <Row  md={3} xs={1} lg={3}    >
+    <Row  md={3} xs={1} lg={3} className="gx-5"   >
     {UsersList()}
     </Row>
     

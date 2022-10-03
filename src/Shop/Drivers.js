@@ -31,18 +31,18 @@ function Users(props)
 
 return (
 <>
-  <Card style={{width:"40vh",height:"31.5vh"}}  >
+  <Card className="h-100"  >
     <div  style={{  textAlign:"center", height:"20vh",width:"40vh" }}   >
     <Card.Img
       variant="top"
       src={props.user.UrlImg}
       height="200px"
-      style={{  textAlign:"center", height:"20vh",width:"40vh" }}
+      style={{ objectFit: "cover" }}
     />
     </div>
-    <Card.Body className="d-flex flex-column"  style={{height:"13.5vh",width:"40vh"}}  > 
-      <Card.Title className="d-flex justify-content-between align-items-baseline mb-4">
-        <span   ><b>Ime vozaca:</b>{props.user.name} {props.user.surname}</span>
+    <Card.Body className="d-flex flex-column" > 
+      <Card.Title style={{display:"flex", flexDirection:"column"}}>
+        <span className="fs-5"  ><b>Ime vozaca:</b>{props.user.name} {props.user.surname}</span>
       </Card.Title>
       <div className="mt-auto">
       
@@ -311,12 +311,12 @@ background: "#f1f1f1"
   style={{ minHeight: "90vh",minWidth:'10vh',marginTop:"50px",background:"red"}}
 >
 
-
+<div className="w-100" style={{ }}>
     
     <Row  md={3} xs={1} lg={3}  >
     {UsersList()}
     </Row>
-    
+    </div>
     
     
  

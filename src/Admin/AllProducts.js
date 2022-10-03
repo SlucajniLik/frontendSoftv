@@ -291,7 +291,6 @@ background: "#f1f1f1"
   float:"left",
   width: "5vh",
   padding: "10px",
-  color: "white",
   fontSize: "17px",
   border: "1px solid grey",
   borderLeft: "none",

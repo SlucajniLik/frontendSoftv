@@ -169,7 +169,7 @@ padding: "10px",
 fontSize: "17px",
 border: "1px solid grey",
 float: "left",
-width: "30vh",
+width: "33vh",
 background: "#f1f1f1"
 
 }
@@ -178,9 +178,9 @@ background: "#f1f1f1"
 
 {
   float:"left",
-  width: "7vh",
+  width: "5vh",
   padding: "10px",
-  background: "##262626",
+  background: "#262626",
   color: "white",
   fontSize: "17px",
   border: "1px solid grey",

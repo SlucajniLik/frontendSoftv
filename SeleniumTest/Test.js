@@ -14,7 +14,7 @@ const{Builder,By,Key,until}=require('selenium-webdriver')
        await driver.sleep(1000);
        await driver.findElement(By.name("login")).click()
        await driver.sleep(1000);
-       await driver.findElement(By.name("updateProfle")).click()
+      /* await driver.findElement(By.name("updateProfle")).click()
       // await driver.get("http://localhost:3000/Profile")
     await driver.sleep(2000);
    
@@ -29,7 +29,9 @@ const{Builder,By,Key,until}=require('selenium-webdriver')
        await driver.sleep(1000);
        await driver.findElement(By.name("izmeniPod")).click()
        await driver.sleep(3000);
-       await driver.findElement(By.name("logOut")).click()
+       await driver.findElement(By.name("logOut")).click()*/
+
+       console.log("zavrsen je test")
 }
 
 

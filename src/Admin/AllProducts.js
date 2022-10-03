@@ -319,7 +319,7 @@ background: "#f1f1f1"
   
   
   
-  <Row  md={3} xs={1} lg={5}   className="g-7" >
+  <Row  md={3} xs={1} lg={3}   className="g-7" >
   {ProductList()}
   </Row>
   
@@ -335,7 +335,7 @@ else{
   return(
     <Container 
     className="d-flex align-items-center justify-content-center"
-    style={{ minHeight: "90vh"}}
+    style={{ minHeight: "90vh",background:"red"}}
   >
     <div className="w-100" style={{ maxWidth: "400px" }}>
 

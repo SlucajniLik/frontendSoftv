@@ -45,7 +45,7 @@ return (
     />
 
     <Card.Body className="d-flex flex-column" >
-      <Card.Title style={{display:"flex", flexDirection:"column"}}>
+      <Card.Title style={{display:"flex", flexDirection:"row"}}>
         <span className="ms-2 text-muted">{props.product.name}</span>
         <span className="ms-4 text-muted">{props.product.price} Din</span>
       </Card.Title>

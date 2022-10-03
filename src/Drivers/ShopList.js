@@ -293,12 +293,12 @@ background: "#f1f1f1"
       <Container 
   
   
-  style={{ minHeight: "90vh",minWidth:'150vh'}}
+  style={{ display:"flex",justifyContent:"center",marginTop:"50px" ,minHeight: "89vh",minWidth:'180vh'}}
 >
 
  
     
-    <Row  md={3} xs={1} lg={5}   className="g-7" >
+    <Row  md={3} xs={1} lg={3}   >
     {ShopListt()}
     </Row>
     

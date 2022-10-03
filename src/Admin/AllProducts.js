@@ -312,7 +312,7 @@ background: "#f1f1f1"
     <Container 
     
     
-    style={{ display:"flex" ,alignItems:"center",minHeight: "90vh",minWidth:'180vh'}}
+    style={{ display:"flex" ,alignItems:"center",minHeight: "90vh",minWidth:'180vh',background:"red"}}
   >
   
    
@@ -335,7 +335,7 @@ else{
   return(
     <Container 
     className="d-flex align-items-center justify-content-center"
-    style={{ minHeight: "90vh",background:"red"}}
+    style={{ minHeight: "90vh"}}
   >
     <div className="w-100" style={{ maxWidth: "400px" }}>
 

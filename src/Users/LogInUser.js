@@ -24,9 +24,11 @@ function LogInUser() {
 
     useEffect(() => {
   
-     
+       if(params.reg=="reg")
+       {
       setValReg(true)
-      console.log("Ovde pogledaj reg"+params.reg)
+       }
+      
     
 
 

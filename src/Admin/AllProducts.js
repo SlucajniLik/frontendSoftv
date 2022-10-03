@@ -35,14 +35,14 @@ return (
 
 <>
   <Card  className="h-100"    >
-    <div   style={{  textAlign:"center", height:"20vh",width:"30vh" }}  >
+
     <Card.Img
       variant="top"
       src={props.product.UrlImg}
        
       style={{ objectFit: "cover" }}
     />
-    </div>
+
     <Card.Body className="d-flex flex-column" >
       <Card.Title style={{display:"flex", flexDirection:"column"}}>
         <span className="ms-2 text-muted">{props.product.name}</span>

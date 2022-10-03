@@ -34,17 +34,17 @@ return (
 
 
 <>
-  <Card   style={{width:"30vh",height:"33.5vh"}}   >
+  <Card  className="h-100"    >
     <div   style={{  textAlign:"center", height:"20vh",width:"30vh" }}  >
     <Card.Img
       variant="top"
       src={props.product.UrlImg}
        
-      style={{  textAlign:"center", height:"20vh",width:"30vh" }}
+      style={{ objectFit: "cover" }}
     />
     </div>
-    <Card.Body className="d-flex flex-column"     style={{height:"13.5vh",width:"30vh"}}>
-      <Card.Title className="d-flex justify-content-between align-items-baseline mb-4">
+    <Card.Body className="d-flex flex-column" >
+      <Card.Title style={{display:"flex", flexDirection:"column"}}>
         <span className="ms-2 text-muted">{props.product.name}</span>
         <span className="ms-4 text-muted">{props.product.price} Din</span>
       </Card.Title>
@@ -312,19 +312,20 @@ background: "#f1f1f1"
     <Container 
     
     
-    style={{ display:"flex", marginTop:"50px", justifyContent:"center", minHeight: "90vh",minWidth:'180vh'}}
+    className="d-flex  justify-content-center  "
+  style={{ minHeight: "90vh",minWidth:'10vh',marginTop:"50px"}}
   >
   
    
   
-  
+  <div className="w-100" >
   
   <Row  md={3} xs={1} lg={3}  >
   {ProductList()}
   </Row>
   
   
-  
+  </div>
  
       </Container>
       </>

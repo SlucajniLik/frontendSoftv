@@ -40,7 +40,7 @@ return (
       style={{  textAlign:"center", height:"20vh",width:"40vh" }}
     />
     </div>
-    <Card.Body className="d-flex flex-column"  style={{height:"13.5vh",width:"30vh"}}  > 
+    <Card.Body className="d-flex flex-column"  style={{height:"13.5vh",width:"40vh"}}  > 
       <Card.Title className="d-flex justify-content-between align-items-baseline mb-4">
         <span   ><b>Ime vozaca:</b>{props.user.name} {props.user.surname}</span>
       </Card.Title>

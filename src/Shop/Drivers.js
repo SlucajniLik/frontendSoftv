@@ -36,7 +36,7 @@ return (
     <Card.Img
       variant="top"
       src={props.user.UrlImg}
-      height="200px"
+      height="210px"
       style={{  textAlign:"center", height:"20vh",width:"30vh" }}
     />
     </div>

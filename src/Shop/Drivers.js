@@ -307,7 +307,8 @@ background: "#f1f1f1"
    <br/>
   <Container 
   
-  style={{ display:"flex",justifyContent:"center",marginTop:"50px" ,minHeight: "89vh",minWidth:'10vh',background:"red"}}
+  className="d-flex  justify-content-center  "
+  style={{ minHeight: "90vh",minWidth:'10vh',marginTop:"50px"}}
 >
 
 

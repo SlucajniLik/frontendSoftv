@@ -36,8 +36,8 @@ return (
     <Card.Img
       variant="top"
       src={props.user.UrlImg}
-      height="210px"
-      style={{  textAlign:"center", height:"20vh",width:"30vh" }}
+      height="200px"
+      style={{  textAlign:"center", height:"20vh",width:"40vh" }}
     />
     </div>
     <Card.Body className="d-flex flex-column"  style={{height:"13.5vh",width:"30vh"}}  > 

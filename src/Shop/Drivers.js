@@ -31,7 +31,7 @@ function Users(props)
 
 return (
 <>
-  <Card style={{width:"30vh",height:"31.5vh"}}  >
+  <Card className="h-100" >
     <div  style={{  textAlign:"center", height:"20vh",width:"30vh" }}   >
     <Card.Img
       variant="top"

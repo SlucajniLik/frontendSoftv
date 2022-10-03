@@ -34,7 +34,7 @@ return (
 
 
 <>
-  <Card   style={{width:"30vh",height:"36.5vh"}}   >
+  <Card   style={{width:"30vh",height:"33.5vh"}}   >
     <div   style={{  textAlign:"center", height:"20vh",width:"30vh" }}  >
     <Card.Img
       variant="top"
@@ -285,13 +285,12 @@ background: "#f1f1f1"
 
 }
       }     onChange={onChangeSearch}   value={SelectedProduct.price}  placeholder="Pretrazi proizvod po ceni" name="search"/>
-      <button type="submit"   onClick={SearchProduct}   style={
+      <button type="submit" variant="dark"   onClick={SearchProduct}   style={
 
 {
   float:"left",
   width: "5vh",
   padding: "10px",
-  background: "#2196F3",
   color: "white",
   fontSize: "17px",
   border: "1px solid grey",

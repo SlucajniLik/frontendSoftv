@@ -41,7 +41,7 @@ return (
     />
  
     <Card.Body className="d-flex flex-column"  > 
-      <Card.Title className="d-flex justify-content-between align-items-baseline mb-4">
+      <Card.Title style={{display:"flex", flexDirection:"column"  }}>
         <span   ><b>Ime vozaca:</b>{props.user.name} {props.user.surname}</span>
       </Card.Title>
       <div className="mt-auto">

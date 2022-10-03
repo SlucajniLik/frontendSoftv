@@ -377,11 +377,11 @@ padding: "10px",
 fontSize: "17px",
 border: "1px solid grey",
 float: "left",
-width: "30vh",
+width: "33vh",
 background: "#f1f1f1"
 
 }
-      }     onChange={onChangeSearch}   value={SelectedProduct.name}  placeholder="Pretrazi proizvod po imenu ili upupnoj ceni" name="search"/>
+      }     onChange={onChangeSearch}   value={SelectedProduct.name}  placeholder="Pretrazi proizvod po imenu ili datumu" name="search"/>
       <button type="submit"   onClick={SearchProduct}   style={
 
 {

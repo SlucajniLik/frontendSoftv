@@ -312,7 +312,7 @@ background: "#f1f1f1"
     <Container 
     
     
-    style={{ display:"flex" ,alignItems:"center", justifyContent:"center", minHeight: "90vh",minWidth:'180vh',background:"red"}}
+    style={{ display:"flex" , justifyContent:"center", minHeight: "90vh",minWidth:'180vh',background:"red"}}
   >
   
    

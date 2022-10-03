@@ -303,7 +303,7 @@ background: "#f1f1f1"
 
 }
 
-      }    ><i class="fa fa-search" variant="dark"  ></i></button>
+      }    ><i class="fa fa-search" variant="dark"  bg="dark" ></i></button>
     </form>
 <br/>
 

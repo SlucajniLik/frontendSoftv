@@ -285,7 +285,7 @@ background: "#f1f1f1"
 
 }
       }     onChange={onChangeSearch}   value={SelectedProduct.price}  placeholder="Pretrazi proizvod po ceni" name="search"/>
-      <button type="submit"    onClick={SearchProduct}   style={
+      <button type="submit"  bg="dark"  onClick={SearchProduct}   style={
 
 {
   float:"left",
@@ -303,7 +303,7 @@ background: "#f1f1f1"
 
 }
 
-      }    ><i class="fa fa-search" variant="dark"  bg="dark" ></i></button>
+      }    ><i class="fa fa-search"    ></i></button>
     </form>
 <br/>
 

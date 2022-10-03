@@ -370,17 +370,7 @@ function OrderProducts(){
   {
   return (
     <>
-   
-  <Container 
-  
-  className="d-flex align-items-center justify-content-center  "
-  style={{ minHeight: "84.6vh",minWidth:'150vh'}}
->
-
-  <div className="w-100" style={{ }}>
-
-
-  <form >
+    <form >
       <input type="text"  style={
 {
 padding: "10px",
@@ -414,6 +404,16 @@ background: "#f1f1f1"
 
       }    ><i class="fa fa-search"></i></button>
     </form>
+  <Container 
+  
+  className="d-flex justify-content-center  "
+  style={{ minHeight: "84.6vh",minWidth:'150vh',marginTop:"50px"}}
+>
+
+  <div className="w-100" style={{ }}>
+
+
+ 
 <br/>
 
 

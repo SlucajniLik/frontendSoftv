@@ -120,7 +120,12 @@ return error
         headers: {
           access: localStorage.getItem("access"),
         },
-      }).then(res=>console.log(res.data))  
+      }).then(res=>
+        
+        {console.log(res.data)
+        
+        SetSuccess(true)
+        })  
 
 
 
@@ -129,24 +134,6 @@ return error
       }
       
       )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

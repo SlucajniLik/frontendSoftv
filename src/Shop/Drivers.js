@@ -304,11 +304,11 @@ background: "#f1f1f1"
 <br/>
 
 
-   <br/>
+
   <Container 
   
   className="d-flex  justify-content-center  "
-  style={{ minHeight: "90vh",minWidth:'10vh',marginTop:"50px"}}
+  style={{ minHeight: "90vh",minWidth:'10vh',marginTop:"50px",background:"red"}}
 >
 
 <div className="w-100" style={{ }}></div>

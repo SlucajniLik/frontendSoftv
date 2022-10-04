@@ -331,7 +331,7 @@ if(shopState.exist==false)
         {Success && <p   style={{color:'green'}}   >Uspesno ste uneli podatke</p>}
       </Form.Group>
       <Button className="w-100" variant="success" type="submit">
-       Izmeni
+       Unesite podatke
       </Button>
     </Form>
 

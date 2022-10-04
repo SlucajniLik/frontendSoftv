@@ -347,7 +347,7 @@ background: "#f1f1f1"
  
 
 
-    <Table  className={styles.tb}    striped bordered hover >
+    <Table  className={styles.tb}    striped bordered hover responsive>
       <thead   >
         <tr >
      <th >Slika</th>      

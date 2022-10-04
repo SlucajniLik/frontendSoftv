@@ -255,11 +255,11 @@ padding: "10px",
 fontSize: "17px",
 border: "1px solid grey",
 float: "left",
-width: "37vh",
+width: "40vh",
 background: "#f1f1f1"
 
 }
-      }     onChange={onChangeSearch}   value={SelectedShop.name}  placeholder="Pretrazi radnju po imenu ili lokaciji" name="search"/>
+      }     onChange={onChangeSearch}   value={SelectedShop.name}  placeholder="Pretrazi radnju po gradu ili adresi" name="search"/>
       <Button type="submit"   onClick={SearchShop}   style={
 
 {

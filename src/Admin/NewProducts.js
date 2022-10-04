@@ -25,16 +25,18 @@ function NewProducts() {
   function onChangeName(e)
   {
     setName(e.target.value)
+    SetSuccess(false)
   }
 
   function onChangePrice(e)
   {
     setPrice(e.target.value)
-
+    SetSuccess(false)
   }
   function onChangeImage(e)
   {
     setImage(e.target.files[0])
+    SetSuccess(false)
   }
 
 

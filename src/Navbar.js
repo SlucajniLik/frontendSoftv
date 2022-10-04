@@ -23,9 +23,10 @@ function Navbarr() {
   
        <Navbar collapseOnSelect expand="sm" bg="dark" variant="dark"  >
         <Container>
-    <Navbar.Toggle aria-controls="navbarScroll" data-bs-target="#navbarScroll"/>
-      <Navbar.Collapse  id="navbarScroll"  >
-      <Navbar.Brand href="#">Moja firma</Navbar.Brand>
+        <Navbar.Brand href="#">Moja firma</Navbar.Brand>
+    <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
+      <Navbar.Collapse  id="responsive-navbar-nav" >
+      
           <Nav className="me-auto">
            { 
            !userState.status &&
@@ -74,8 +75,9 @@ function Navbarr() {
 
 }
                       
-              {userState.status &&<Nav><Nav.Link><Button className='loggedInContainer'    onClick={logout} name="logOut"  > Logout</Button></Nav.Link></Nav>}
+             
           </Nav>
+          {userState.status &&<Nav><Nav.Link><Button className='loggedInContainer'    onClick={logout} name="logOut"  > Logout</Button></Nav.Link></Nav>}
           </Navbar.Collapse>
           </Container>
       </Navbar>

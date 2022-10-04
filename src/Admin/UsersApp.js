@@ -162,8 +162,18 @@ if(userA.users.length>0)
   
     <>
      <br/>
-     <form  style={{backgrond:"red",width:"100%",display:"flex",alignItems:"center",justifyContent:"center"}}  >
-      <input type="text"     onChange={onChangeSearch}   value={SelectedUser.name}  placeholder="Pretraga vozaca po imenu ili prezimenu" name="search"/>
+     <form  style={{width:"100%",display:"flex",alignItems:"center",justifyContent:"center"}}  >
+      <input type="text"  style={
+{
+padding: "10px",
+fontSize: "17px",
+border: "1px solid grey",
+float: "left",
+width: "33vh",
+background: "#f1f1f1"
+
+}
+      }     onChange={onChangeSearch}   value={SelectedUser.name}  placeholder="Pretraga vozaca po imenu ili prezimenu" name="search"/>
       <button type="submit"   onClick={SearchUser}   style={
 
 {

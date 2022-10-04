@@ -307,25 +307,25 @@ if(shopState.exist==false)
     <Form onSubmit={onSubmit}   encType="multipart/form-data">
 <Form.Group className="mb-3" controlId="formBasicName">
         <Form.Label>Ime: </Form.Label>
-        <Form.Control type="text" placeholder="Enter ime"   value={name} onChange={onChangeName} />
-        {!nameErr && <p   style={{color:'red'}}   >Unesite ime radnje</p>}
+        <Form.Control type="text" placeholder="Unesite ime prodavnice"   value={name} onChange={onChangeName} />
+        {!nameErr && <p   style={{color:'red'}}   >Unesite ime prodavnice</p>}
        
       </Form.Group>
       <Form.Group className="mb-3" controlId="formBasicSurname">
         <Form.Label>Grad</Form.Label>
-        <Form.Control type="text" placeholder="Enter prezime"value={city} onChange={onChangeCity} />
+        <Form.Control type="text" placeholder="Unesite ime grada"value={city} onChange={onChangeCity} />
         {!cityErr && <p   style={{color:'red'}}   >Unesite ime grada</p>}
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Adresa</Form.Label>
-        <Form.Control type="text" placeholder="Enter email"   value={address} onChange={onChangeAddress}  />
+        <Form.Control type="text" placeholder="Unesite adresu"   value={address} onChange={onChangeAddress}  />
         {!addressErr && <p   style={{color:'red'}}   >Unesite adresu</p>}
       </Form.Group>
 
     
       <Form.Group controlId="formFile" className="mb-3">
-        <Form.Label>Default file input example</Form.Label>
+        <Form.Label>Izaberite sliku</Form.Label>
         <Form.Control type="file" filename="image"   onChange={onChangeImage}/>
         {!imageErr && <p   style={{color:'red'}}   >Unesite sliku</p>}
         {Success && <p   style={{color:'green'}}   >Uspesno ste uneli podatke</p>}
@@ -388,7 +388,7 @@ else
       </Card.Title>
         
   
-      <Button   className="w-100" variant="success"><Link   style={{color:"white", textDecoration: "none" }} to={"/UpdateShop/"+shopState.id}   >Izmeni</Link></Button> 
+      <Button   className="w-100" variant="success"><Link   style={{color:"white", textDecoration: "none" }} to={"/UpdateShop/"+shopState.id}   >Azuriraj</Link></Button> 
         </Card.Body>
         
       </Card>

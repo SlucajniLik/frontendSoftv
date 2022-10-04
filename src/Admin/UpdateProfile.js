@@ -339,7 +339,7 @@ return(
 
       <Card>
         <Card.Body>
-        <span className="ms-2 text-muted"  style={{fontSize:"4vh"}}  >Izmenite profil</span>
+        <span className="text-center mb-4"  >Izmenite profil</span>
       <br/>
           <Form onSubmit={onSubmit}   encType="multipart/form-data">
 

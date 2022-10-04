@@ -188,7 +188,7 @@ return error
 
 
       <Button className="w-100"  variant="success"  type="submit">
-       Klikni
+       Unesite proizvod
       </Button>
     </Form>
 

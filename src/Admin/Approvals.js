@@ -289,7 +289,7 @@ return(
   <div className="w-100" style={{ maxWidth: "400px" }}>
 
 
-<h1>Nema korisnika</h1>
+<h1>Nema zahteva za registraciju</h1>
     </div>
     </Container>
 )

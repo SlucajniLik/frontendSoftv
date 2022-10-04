@@ -43,7 +43,7 @@ console.log(props.shop.SellerId)
 return (
   <>
   <Card className="h-100" >
-    <div   style={{  textAlign:"center", height:"20vh",width:"30vh" }}  >
+  
     <Card.Img
       variant="top"
       src={props.shop.UrlImg}
@@ -51,7 +51,7 @@ return (
       height="200px"
       style={{ objectFit: "cover" }}
     />
-    </div>
+    
     <Card.Body className="d-flex flex-column" >
       <Card.Title  style={{display:'flex',flexDirection:'column'}} >
      

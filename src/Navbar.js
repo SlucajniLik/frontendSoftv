@@ -23,7 +23,9 @@ function Navbarr() {
   
        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark"  >
         <Container>
+          <>
         <Navbar.Brand href="#">My-Company</Navbar.Brand>
+        </>
     <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
       <Navbar.Collapse  id="responsive-navbar-nav" >
       

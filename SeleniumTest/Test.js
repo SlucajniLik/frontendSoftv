@@ -15,21 +15,21 @@ const{Builder,By,Key,until}=require('selenium-webdriver')
        await driver.findElement(By.name("login")).click()
        await driver.sleep(1000);
      await driver.findElement(By.name("updateProfle")).click()
-     /* // await driver.get("http://localhost:3000/Profile")
-    await driver.sleep(2000);
+      
+    await driver.sleep(1000);
    
        await driver.sleep(1000);
-       await driver.findElement(By.name("emailU")).sendKeys("aminmelic555@gmail.com1")
+       await driver.findElement(By.name("emailU")).sendKeys("aminmelic555@gmail.com")
        await driver.sleep(1000);
-       await driver.findElement(By.name("lozinkaU")).sendKeys("Amin1234")
+       await driver.findElement(By.name("lozinkaU")).sendKeys("123456789")
        await driver.sleep(1000);
-       await driver.findElement(By.name("lozinkaPU")).sendKeys("Amin1234")
+       await driver.findElement(By.name("lozinkaPU")).sendKeys("123456789")
      await driver.sleep(1000);
-       await driver.findElement(By.name("slikaU")).sendKeys("C:\\Users\\Korisnik\\Desktop\\tetris.png ")
+       await driver.findElement(By.name("slikaU")).sendKeys("C:\\Users\\Amin\\Desktop\\SlikeSi\\Crisitiano.jpg ")
        await driver.sleep(1000);
        await driver.findElement(By.name("izmeniPod")).click()
        await driver.sleep(3000);
-       await driver.findElement(By.name("logOut")).click()*/
+       await driver.findElement(By.name("logOut")).click()
 
        console.log("zavrsen je test")
 }

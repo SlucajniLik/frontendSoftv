@@ -1,4 +1,5 @@
 import React, { useState,useContext } from 'react';
+import { Button } from 'react-bootstrap';
 
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -70,7 +71,7 @@ function Navbarr() {
 
 }
         
-              {userState.status && <button className='loggedInContainer'    onClick={logout} name="logOut"  > Logout</button>}
+              {userState.status && <Button className='loggedInContainer'    onClick={logout} name="logOut"  > Logout</Button>}
           </Nav>
         </Container>
       </Navbar>

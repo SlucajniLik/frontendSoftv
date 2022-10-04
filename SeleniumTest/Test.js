@@ -13,7 +13,7 @@ const{Builder,By,Key,until}=require('selenium-webdriver')
        await driver.findElement(By.name("lozinka")).sendKeys("123456789")
        await driver.sleep(1000);
        await driver.findElement(By.name("login")).click()
-       await driver.sleep(1000);
+       await driver.sleep(5000);
      await driver.findElement(By.name("updateProfle")).click()
       
     await driver.sleep(1000);
@@ -25,11 +25,12 @@ const{Builder,By,Key,until}=require('selenium-webdriver')
        await driver.sleep(1000);
        await driver.findElement(By.name("lozinkaPU")).sendKeys("123456789")
      await driver.sleep(1000);
-       await driver.findElement(By.name("slikaU")).sendKeys("C:\\Users\\Amin\\Desktop\\SlikeSi\\Crisitiano.jpg ")
+       await driver.findElement(By.name("slikaU")).sendKeys("C:\\Users\\Amin\\Desktop\\SlikeSi\\Cristiano.jpg ")
        await driver.sleep(1000);
        await driver.findElement(By.name("izmeniPod")).click()
-       await driver.sleep(3000);
-       await driver.findElement(By.name("logOut")).click()
+       await driver.sleep(5000);
+       await driver.get("https://resplendent-croquembouche-6e983e.netlify.app/Profile")
+      // await driver.findElement(By.name("logOut")).click()
 
        console.log("zavrsen je test")
 }

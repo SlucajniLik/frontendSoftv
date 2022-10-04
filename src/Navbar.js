@@ -22,6 +22,7 @@ function Navbarr() {
   return (
   
        <Navbar collapseOnSelect expand="sm" bg="dark" variant="dark"  >
+        <Container>
     <Navbar.Toggle aria-controls="navbarScroll" data-bs-target="#navbarScroll"/>
       <Navbar.Collapse  id="navbarScroll"  >
       <Navbar.Brand href="#">Moja firma</Navbar.Brand>
@@ -76,6 +77,7 @@ function Navbarr() {
               {userState.status &&<Nav.Link><Button className='loggedInContainer'    onClick={logout} name="logOut"  > Logout</Button></Nav.Link>}
           </Nav>
           </Navbar.Collapse>
+          </Container>
       </Navbar>
 
   )

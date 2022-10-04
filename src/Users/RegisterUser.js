@@ -449,7 +449,7 @@ return(
       <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Label>Lozinka</Form.Label>
         <Form.Control type="password" placeholder="Unesite vasu lozinku" value={password} onChange={onChangePass}    />
-        {!passwordErr&& <p   style={{color:'red'}}   >Vase sifra nije validna</p>}
+        {!passwordErr&& <p   style={{color:'red'}}   >Vasa sifra mora sadrzati 8 karaktera najmanje</p>}
       </Form.Group>
       <Form.Group className="mb-3" controlId="formConfirmPassword">
         <Form.Label>Potvrda lozinke</Form.Label>

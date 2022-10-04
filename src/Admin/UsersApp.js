@@ -206,7 +206,7 @@ background: "#f1f1f1"
   
 
   
-
+<div className="w-100" >
 
     <Table className={styles.tb}  striped bordered hover>
           <thead>
@@ -228,7 +228,7 @@ background: "#f1f1f1"
           </tbody>
         </Table>
      
-
+</div>
     </Container>
     </>
     

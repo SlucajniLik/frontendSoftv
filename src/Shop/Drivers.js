@@ -166,7 +166,7 @@ const [SelectedUser,SetSelectedUser]=useState({
     {
       
        return userA.users.map(currentUser=>{
-        return <Col ><Users  user={currentUser}    key={currentUser._id}   ></Users></Col>
+        return <Col  style={{marginBottom:"1rem"}} key={currentUser._id+"d"}    ><Users  user={currentUser}    key={currentUser._id}   ></Users></Col>
        })
 
 

@@ -177,7 +177,7 @@ function AllProducts() {
     {
       
        return productA.products.map(currentProduct=>{
-        return <Col key={currentProduct._id+"123"}   ><Products product={currentProduct}  deleteProduct={deleteProduct}  key={currentProduct._id}   ></Products></Col>
+        return <Col key={currentProduct._id+"123"} style={{marginBottom:"1rem"}}  ><Products product={currentProduct}  deleteProduct={deleteProduct}  key={currentProduct._id}   ></Products></Col>
        })
 
 

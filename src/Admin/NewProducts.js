@@ -125,6 +125,9 @@ return error
         {console.log(res.data)
         
         SetSuccess(true)
+        setImage("")
+        setName("")
+        setPrice("")
         })  
 
 

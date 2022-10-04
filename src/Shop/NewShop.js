@@ -279,7 +279,7 @@ uploadBytes(imageRef,image).then(
 
 
   }
-window.location.reload()
+
 
 }
 

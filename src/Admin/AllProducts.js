@@ -273,8 +273,8 @@ if(productA.products.length>0)
 
   return (
     <>
-
-<form >
+<br/>
+<form   style={{width:"90%",display:"flex",alignItems:"center",justifyContent:"center"}}  >
       <input type="text"  style={
 {
 padding: "10px",

@@ -265,9 +265,9 @@ if(userA.users.length>0)
 {
   return (
     <>
+<br/>
 
-
-<form >
+<form  style={{width:"90%",display:"flex",alignItems:"center",justifyContent:"center"}}  >
       <input type="text"  style={
 {
 padding: "10px",

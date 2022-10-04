@@ -207,7 +207,7 @@ background: "#f1f1f1"
   
 
 
-    <Table className={styles.tb}>
+    <Table className={styles.tb}    striped bordered hover>
           <thead>
             
             <tr>

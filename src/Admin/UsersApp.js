@@ -196,11 +196,11 @@ background: "#f1f1f1"
 
       }    ><i class="fa fa-search"></i></button>
     </form>
-<br/>
+
   <Container 
   
   className="d-flex  justify-content-center h-100 "
-
+  style={{ minHeight: "90vh",minWidth:'10vh',marginTop:"50px"}}
 >
 
   

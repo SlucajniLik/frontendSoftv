@@ -417,9 +417,9 @@ else
 return(
   <Container 
   className="d-flex align-items-center justify-content-center"
-  style={{ minHeight: "90vh",background:'red'}}
+  style={{ minHeight: "40vh"}}
 >
-  <div className="w-100" style={{ maxWidth: "400px",height:"30vh",background:"yellow" }}>
+  <div className="w-100" style={{ maxWidth: "400px" }}>
 
 
       <Card>

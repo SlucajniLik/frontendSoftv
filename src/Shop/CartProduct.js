@@ -441,24 +441,6 @@ background: "#f1f1f1"
       </tbody>
     </Table>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-  { /*<Row  md={2} xs={1} lg={3}   className="g-3" >
-    {OrderList()}
-    </Row>*/}
-
     <Button className="w-100"    variant="dark"  onClick={OrderProducts}>Poruci</Button> 
 
     </div>

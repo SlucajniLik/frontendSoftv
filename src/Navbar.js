@@ -33,8 +33,8 @@ function Navbarr() {
            { 
            !userState.status &&
            <>
-           <Nav.Link href="/">Login</Nav.Link>
-            <Nav.Link href="/register">Register</Nav.Link>
+           <Nav.Link href="/">Ulogujte se</Nav.Link>
+            <Nav.Link href="/register">Registrujte se</Nav.Link>
             </>
                } 
         

@@ -470,8 +470,8 @@ return(
     {!roleErr && <p   style={{color:'red'}}   >Izaberite korisnika</p>}
     {Success && <p   style={{color:'green'}}   >Uspesno ste poslali email</p>}
     <br/>
-      <Button  variant="secondary"  className="w-100"   type="submit">
-        Submit
+      <Button  variant="success"  className="w-100"   type="submit">
+        Registrujte se
       </Button>
     </Form>
         </Card.Body>

@@ -77,7 +77,7 @@ function ProfileA() {
     <Card.Img
       variant="top"
       src={userProfile.image}
-      height="300px"
+      height="400px"
       
     />
         <Card.Body>

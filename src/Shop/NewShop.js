@@ -244,7 +244,7 @@ uploadBytes(imageRef,image).then(
     
     console.log(window.location.hostname)
 
-
+    window.location.reload(false)
 
   })
 }
@@ -252,34 +252,8 @@ uploadBytes(imageRef,image).then(
 )
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
- 
-  //setImage("")
-
-
   }
-window.location.reload()
+
 
 }
 
@@ -306,7 +280,7 @@ if(shopState.exist==false)
 
     <Form onSubmit={onSubmit}   encType="multipart/form-data">
 <Form.Group className="mb-3" controlId="formBasicName">
-        <Form.Label>Ime:{userState.email}  </Form.Label>
+        <Form.Label>Ime:</Form.Label>
         <Form.Control type="text" placeholder="Enter ime"   value={name} onChange={onChangeName} />
         {!nameErr && <p   style={{color:'red'}}   >Unesite ime radnje</p>}
        

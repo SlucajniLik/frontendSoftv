@@ -21,9 +21,9 @@ function Navbarr() {
 
   return (
   
-       <Navbar collapseOnSelect expand="sm" bg="dark" variant="dark"  >
+       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark"  >
         <Container>
-        <Navbar.Brand href="#">Moja firma</Navbar.Brand>
+        <Navbar.Brand href="#">My-Company</Navbar.Brand>
     <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
       <Navbar.Collapse  id="responsive-navbar-nav" >
       

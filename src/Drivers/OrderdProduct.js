@@ -339,7 +339,7 @@ background: "#f1f1f1"
   <Container 
   
   className="d-flex  justify-content-center h-100 "
-  style={{ minHeight: "85vh",minWidth:'10vh',marginTop:"50px"}}
+  style={{ minHeight: window.innerHeight-10,minWidth:'10vh',marginTop:"50px"}}
 >
 
 <div className="w-100" >

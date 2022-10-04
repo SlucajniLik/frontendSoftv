@@ -419,7 +419,7 @@ return(
   className="d-flex align-items-center justify-content-center"
   style={{ minHeight: "90vh"}}
 >
-  <div className="w-100" style={{ maxWidth: "400px",background:"red"}}>
+  <div className="w-100" style={{ maxWidth: "400px",background:"red",height:"30vh"}}>
 
 
       <Card>

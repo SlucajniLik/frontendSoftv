@@ -102,7 +102,7 @@ function App() {
   };
   return (
     <div className="App">
-     <Container>
+ 
      <DefContext.Provider   value={{userState,setUserState}} >
  
 
@@ -160,7 +160,7 @@ function App() {
 <Footers/>
 
 
-</Container>
+
     </div>
   );
 }

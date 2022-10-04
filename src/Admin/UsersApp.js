@@ -203,12 +203,12 @@ background: "#f1f1f1"
   style={{ minHeight: "90vh",minWidth:'150vh',marginTop:"50px"}}
 >
 
-
+  <div className="w-100 h-100" style={{height:"100vh" }}>
 
   
 <br/>
-<div className="w-100" >
-    <Table className={styles.tb}>
+
+    <Table className={styles.tb} responsive>
           <thead>
             
             <tr>
@@ -227,8 +227,8 @@ background: "#f1f1f1"
     
           </tbody>
         </Table>
-     </div>
-   
+     
+        </div>
     </Container>
     </>
     

@@ -67,7 +67,7 @@ return (
  <td>{ props.order.ProductId.price} Din</td>
  <td>{nProd}</td>
  <td>{props.order.ProductId.price*nProd} Din</td>
- <td><input type="text" id="fname" name="fname" onChange={onChangeNum} value={numProd}   placeholder="Broj komada" /></td>
+ <td><Form.Control type="text" id="fname" name="fname" onChange={onChangeNum} value={numProd}   placeholder="Broj komada" /></td>
  <td><Button className="w-100"    variant="success"   onClick={()=>props.UpdateNum(props.order._id,numProd,setNProd,SetNumProd)}>Izmeni</Button> </td>
  <td><Button className="w-100"    variant="danger"   onClick={()=>props.DeleteOrder(props.order._id)}>Odustani</Button> </td>
 </tr>

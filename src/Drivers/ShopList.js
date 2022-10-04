@@ -42,16 +42,17 @@ console.log(props.shop.SellerId)
 
 return (
   <>
-  <Card style={{width:"40vh",height:"36.5vh"}} >
+  <Card className="h-100" >
     <div   style={{  textAlign:"center", height:"20vh",width:"30vh" }}  >
     <Card.Img
       variant="top"
       src={props.shop.UrlImg}
   
-      style={{  textAlign:"center", height:"20vh",width:"40vh" }}
+      height="200px"
+      style={{ objectFit: "cover" }}
     />
     </div>
-    <Card.Body className="d-flex flex-column"  style={{height:"13.5vh",width:"40vh"}}>
+    <Card.Body className="d-flex flex-column" >
       <Card.Title  style={{display:'flex',flexDirection:'column'}} >
      
         <span className="fs-5  "><b>Ime radnje:</b>{props.shop.name}</span>
@@ -153,7 +154,7 @@ const [SelectedShop,SetSelectedShop]=useState({
     {
       
        return shopA.shops.map(currentShop=>{
-        return <Col   key={currentShop._id+"b"} ><Shops  shop={currentShop}    key={currentShop._id}   ></Shops></Col>
+        return <Col style={{marginBottom:"1rem"}}  key={currentShop._id+"b"} ><Shops  shop={currentShop}    key={currentShop._id}   ></Shops></Col>
        })
 
 
@@ -293,16 +294,17 @@ background: "#f1f1f1"
       <Container 
   
   
-  style={{ display:"flex",justifyContent:"center",marginTop:"50px" ,minHeight: "89vh",minWidth:'180vh'}}
+  className="d-flex  justify-content-center "
+  style={{ minHeight: "90vh",minWidth:'10vh',marginTop:"50px"}}
 >
 
- 
+<div className="w-100" >
     
     <Row  md={3} xs={1} lg={3}   >
     {ShopListt()}
     </Row>
     
-    
+    </div>
     
 
     </Container>

@@ -24,6 +24,7 @@ function Navbarr() {
        <Navbar collapseOnSelect expand="sm" bg="dark" variant="dark"  >
     <Navbar.Toggle aria-controls="navbarScroll" data-bs-target="#navbarScroll"/>
       <Navbar.Collapse  id="navbarScroll"  >
+      <Navbar.Brand href="#">Moja firma</Navbar.Brand>
           <Nav className="me-auto">
            { 
            !userState.status &&

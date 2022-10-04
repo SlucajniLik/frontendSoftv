@@ -201,7 +201,7 @@ padding: "10px",
 fontSize: "17px",
 border: "1px solid grey",
 float: "left",
-width: "35vh",
+width: "37vh",
 background: "#f1f1f1"
 
 }

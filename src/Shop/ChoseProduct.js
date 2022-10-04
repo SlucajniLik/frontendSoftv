@@ -75,7 +75,7 @@ return (
               style={{ gap: ".5rem" }}
             >
             
-            <Button className="w-100"    variant="success"   onClick={()=>props.OrderProduct(userState.id,params.id,props.product._id,numProd,SetNumProd )}>Porucite</Button> 
+            <Button className="w-100"    variant="success"   onClick={()=>props.OrderProduct(userState.id,params.id,props.product._id,numProd,SetNumProd )}>Dodaj u korpu</Button> 
               
            <input type="text" id="fname" name="fname" onChange={onChangeNum} value={numProd} placeholder="Broj artikala"   />
             {(isNaN(numProd) || !numProd) &&  <p   style={{color:'blue'}}   >Unesite broj artikala</p>}  

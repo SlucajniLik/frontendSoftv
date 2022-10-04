@@ -140,6 +140,9 @@ function UpdateProduct() {
 
 
    // navigate("/AllProducts")
+   setPrice("")
+   setImage("")
+   setName("")
    SetSuccess(true)
   }
 }
@@ -188,7 +191,7 @@ function UpdateProduct() {
 
 
       <Button  className="w-100"  variant="success"  type="submit">
-        Izmeni
+        Azuriraj
       </Button>
     </Form>
 

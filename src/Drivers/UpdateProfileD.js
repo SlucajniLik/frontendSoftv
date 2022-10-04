@@ -375,7 +375,7 @@ return(
     
   
       <Button className="w-100"    variant="success" type="submit">
-        Submit
+        Azuriraj
       </Button>
     </Form>
         </Card.Body>

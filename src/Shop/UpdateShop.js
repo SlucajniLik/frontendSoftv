@@ -272,7 +272,7 @@ console.log("Not validate")
         {Success && <p   style={{color:'green'}}   >Uspesno ste izmenili podatke</p>}
       </Form.Group>
       <Button className="w-100" variant="success" type="submit" >
-    Izmeni
+    Azuriraj
       </Button>
     </Form>
 

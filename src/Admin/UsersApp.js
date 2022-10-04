@@ -215,7 +215,7 @@ background: "#f1f1f1"
           <th>Slika</th>      
         <th>Ime i prezime </th>
         <th>Uloga</th>
-        <th>Odbij</th>
+        <th>Odbiti</th>
     
       </tr>
           </thead>

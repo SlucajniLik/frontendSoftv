@@ -34,7 +34,7 @@ function NewShop() {
   const [imageErr, setImageErr] = useState(true);
   const [addressErr, setAddressErr] = useState(true);
 
-
+  const [Success,SetSuccess]=useState(false)
 
 
 
@@ -241,7 +241,7 @@ uploadBytes(imageRef,image).then(
       setAddress("")
       setImage("")
      
-    
+    SetSuccess(true)
     console.log(window.location.hostname)
 
 
@@ -328,6 +328,7 @@ if(shopState.exist==false)
         <Form.Label>Default file input example</Form.Label>
         <Form.Control type="file" filename="image"   onChange={onChangeImage}/>
         {!imageErr && <p   style={{color:'red'}}   >Unesite sliku</p>}
+        {Success && <p   style={{color:'green'}}   >Uspesno ste uneli podatke</p>}
       </Form.Group>
       <Button className="w-100" variant="success" type="submit">
        Izmeni

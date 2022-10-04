@@ -161,8 +161,8 @@ if(userA.users.length>0)
   return (
   
     <>
-     
-     <form  style={{backgrond:"red",height:"200px",width:"200px"}}  >
+     <br/>
+     <form  style={{backgrond:"red",height:"200px",width:"800px"}}  >
       <input type="text"  style={
 {
 padding: "10px",

@@ -160,8 +160,20 @@ if(userA.users.length>0)
 {
   return (
   
+   
 
-    <Table  striped bordered hover>
+  <Container 
+  
+  className="d-flex  justify-content-center h-100 "
+  style={{ minHeight: "90vh",minWidth:'150vh',marginTop:"50px"}}
+>
+
+  <div className="w-100 h-100" style={{height:"100vh" }}>
+
+  
+
+
+    <Table className={styles.tb}>
           <thead>
             
             <tr>
@@ -181,8 +193,8 @@ if(userA.users.length>0)
           </tbody>
         </Table>
      
-    
-
+        </div>
+    </Container>
 
     
     

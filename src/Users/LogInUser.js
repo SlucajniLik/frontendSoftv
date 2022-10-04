@@ -263,7 +263,7 @@ Remove
     <Card   >
         <Card.Body>
           <h1 className="text-center mb-4">Ulogujte se</h1>
-          {valReg && <p   style={{color:'green'}}   >Uspesno ste se registrovali,ulogujte se</p>}
+          {valReg && <p   style={{color:'green'}}   >Uspesno ste se registrovali,veritifikujte se da biste se ulogovali</p>}
           <Form onSubmit={onSubmit}>
             <Form.Group id="email">
               <Form.Label>Email</Form.Label>

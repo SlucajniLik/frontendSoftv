@@ -372,8 +372,8 @@ function OrderProducts(){
   return (
     <>
     <br/>
-    <form  style={{width:"90%",display:"flex",alignItems:"center",justifyContent:"center"}}   >
-      <input type="text"  style={
+    <Form  style={{width:"90%",display:"flex",alignItems:"center",justifyContent:"center"}}   >
+      <Form.Control type="text"  style={
 {
 padding: "10px",
 fontSize: "17px",
@@ -384,7 +384,7 @@ background: "#f1f1f1"
 
 }
       }     onChange={onChangeSearch}   value={SelectedProduct.name}  placeholder="Pretrazi proizvod po imenu ili ceni" name="search"/>
-      <button type="submit"   onClick={SearchProduct}   style={
+      <Button type="submit"   onClick={SearchProduct}   style={
 
 {
   float:"left",
@@ -404,8 +404,8 @@ background: "#f1f1f1"
 
 }
 
-      }    ><i class="fa fa-search"></i></button>
-    </form>
+      }    ><i class="fa fa-search"></i></Button>
+    </Form>
     <br/>
   <Container 
   

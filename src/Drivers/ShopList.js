@@ -248,8 +248,8 @@ if(shopA.shops.length>0)
   return (
     <>
 <br/>
-<form  style={{width:"90%",display:"flex",alignItems:"center",justifyContent:"center"}}  >
-      <input type="text"  style={
+<Form  style={{width:"90%",display:"flex",alignItems:"center",justifyContent:"center"}}  >
+      <Form.Control type="text"  style={
 {
 padding: "10px",
 fontSize: "17px",
@@ -260,7 +260,7 @@ background: "#f1f1f1"
 
 }
       }     onChange={onChangeSearch}   value={SelectedShop.name}  placeholder="Pretrazi radnju po imenu ili lokaciji" name="search"/>
-      <button type="submit"   onClick={SearchShop}   style={
+      <Button type="submit"   onClick={SearchShop}   style={
 
 {
   float:"left",
@@ -280,8 +280,8 @@ background: "#f1f1f1"
 
 }
 
-      }    ><i class="fa fa-search"></i></button>
-    </form>
+      }    ><i class="fa fa-search"></i></Button>
+    </Form>
 <br/>
 
 

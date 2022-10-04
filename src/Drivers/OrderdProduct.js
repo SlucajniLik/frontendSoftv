@@ -302,14 +302,14 @@ function OrderdProduct() {
   return (
     <>
     <br/>
-    <form  style={{width:"90%",display:"flex",alignItems:"center",justifyContent:"center"}}   >
-      <input type="text"  style={
+    <Form style={{width:"90%",display:"flex",alignItems:"center",justifyContent:"center"}}   >
+      <Form.Control type="text"  style={
 {
 padding: "10px",
 fontSize: "17px",
 border: "1px solid grey",
 float: "left",
-width: "33vh",
+width: "35vh",
 background: "#f1f1f1"
 
 }
@@ -335,7 +335,7 @@ background: "#f1f1f1"
 }
 
       }    ><i class="fa fa-search"></i></button>
-    </form>
+    </Form>
     <br/>
   <Container 
   

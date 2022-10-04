@@ -162,7 +162,7 @@ if(userA.users.length>0)
   
     <>
      <br/>
-     <form  style={{backgrond:"red",height:"200px",width:"800px"}}  >
+     <form  style={{backgrond:"red",width:"800px"}}  >
       <input type="text"  style={
 {
 padding: "10px",

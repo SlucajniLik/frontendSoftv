@@ -417,7 +417,7 @@ else
 return(
   <Container 
   className="d-flex align-items-center justify-content-center"
-  style={{ minHeight: "90vh"}}
+  style={{ minHeight: "90vh",background:'red'}}
 >
   <div className="w-100" style={{ maxWidth: "400px" }}>
 
@@ -426,7 +426,7 @@ return(
         <Card.Body>
           <h2 className="text-center mb-4">Registrujte se</h2>
       
-          <Form onSubmit={onSubmit} style={{marginTop:"50px"}}  encType="multipart/form-data">
+          <Form onSubmit={onSubmit}   encType="multipart/form-data">
 <Form.Group className="mb-3" controlId="formBasicName">
         <Form.Label>Ime:</Form.Label>
         <Form.Control type="text" placeholder="Unesite vase ime"   value={name} onChange={onChangeName} />

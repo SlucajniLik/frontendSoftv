@@ -200,7 +200,7 @@ background: "#f1f1f1"
   <Container 
   
   className="d-flex  justify-content-center h-100 "
-  style={{ minHeight: "90vh",minWidth:'10vh',marginTop:"50px"}}
+  style={{ minHeight: "80vh",minWidth:'10vh',marginTop:"50px"}}
 >
 
   

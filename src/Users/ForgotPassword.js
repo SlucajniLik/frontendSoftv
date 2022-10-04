@@ -130,7 +130,7 @@ if(localStorage.getItem("accessToken")!=null)
     </Form.Group>
 
     <Button variant="success"  className="w-100"  type="submit">
-      Klikni
+      Posalji email
     </Button>
    
    

@@ -405,21 +405,21 @@ background: "#f1f1f1"
 
       }    ><i class="fa fa-search"></i></button>
     </form>
+    <br/>
   <Container 
   
-  className="d-flex justify-content-center  "
-  style={{ minHeight: "84.6vh",minWidth:'150vh',marginTop:"50px"}}
+  className="d-flex  justify-content-center h-100 "
+  style={{ minHeight:window.innerHeight,minWidth:'10vh',marginTop:"50px"}}
 >
 
-  <div className="w-100" style={{ }}>
+<div className="w-100" >
 
 
  
-<br/>
 
 
 
-    <Table  className={styles.tb}     >
+    <Table  className={styles.tb}     striped bordered hover>
       <thead   >
         <tr >
      <th >Slika</th>      

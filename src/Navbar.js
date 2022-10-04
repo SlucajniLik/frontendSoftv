@@ -20,9 +20,10 @@ function Navbarr() {
 
 
   return (
-    <div>
-       <Navbar sticky='top'  bg="dark" variant="dark"  >
-        <Container>
+  
+       <Navbar collapseOnSelect expand="sm" bg="dark" variant="dark"  >
+    <Navbar.Toggle aria-controls="navbarScroll" data-bs-target="#navbarScroll">
+      <Navbar.Collapse  id="navbarScroll"  >
           <Nav className="me-auto">
            { 
            !userState.status &&
@@ -73,9 +74,10 @@ function Navbarr() {
         
               {userState.status && <Button className='loggedInContainer'    onClick={logout} name="logOut"  > Logout</Button>}
           </Nav>
-        </Container>
+          </Navbar.Collapse>
+     </Navbar.Toggle>
       </Navbar>
-    </div>
+
   )
 }
 

@@ -77,8 +77,8 @@ function ProfileA() {
     <Card.Img
       variant="top"
       src={userProfile.image}
-      height="200px"
-      style={{ objectFit: "cover" }}
+      height="300px"
+      
     />
         <Card.Body>
           <Card.Title   style={{display:'flex',flexDirection:'column'}}   >

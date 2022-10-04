@@ -162,8 +162,8 @@ if(userA.users.length>0)
   
     <>
      
-     <form  style={{backgrond:"red"}}  >
-      <input type="text"  style={
+     <Form  style={{background:"green"}}  >
+      <Form.Control type="text"  style={
 {
 padding: "10px",
 fontSize: "17px",
@@ -174,7 +174,7 @@ background: "#f1f1f1"
 
 }
       }     onChange={onChangeSearch}   value={SelectedUser.name}  placeholder="Pretraga vozaca po imenu ili prezimenu" name="search"/>
-      <button type="submit"   onClick={SearchUser}   style={
+      <Button type="submit"   onClick={SearchUser}   style={
 
 {
   float:"left",
@@ -194,8 +194,8 @@ background: "#f1f1f1"
 
 }
 
-      }    ><i class="fa fa-search"></i></button>
-    </form>
+      }    ><i class="fa fa-search"></i></Button>
+    </Form>
 <br/>
   <Container 
   

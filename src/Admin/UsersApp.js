@@ -162,7 +162,7 @@ if(userA.users.length>0)
   
     <>
      
-     <Form  style={{background:"green"}}  >
+     <Form  style={{background:"green",width:"100vh"}}  >
       <Form.Control type="text"  style={
 {
 padding: "10px",

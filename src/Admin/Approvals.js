@@ -229,11 +229,11 @@ background: "#f1f1f1"
     </form>
   <Container 
   
-  className="d-flex  justify-content-center  "
-  style={{ minHeight: "90vh",minWidth:'150vh',marginTop:"50px"}}
+  className="d-flex  justify-content-center h-100 "
+  style={{ minHeight: "85vh",minWidth:'10vh',marginTop:"50px"}}
 >
 
-  <div className="w-100" style={{ }}>
+
 
   
 <br/>
@@ -241,11 +241,11 @@ background: "#f1f1f1"
 
 
 
+<div className="w-100" >
 
 
 
-
-    <Table  className={styles.tb}   >
+    <Table  className={styles.tb}   striped bordered hover>
           <thead>
             
             <tr>

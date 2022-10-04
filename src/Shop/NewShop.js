@@ -80,7 +80,7 @@ function NewShop() {
         }
 
       );
-  }, [shopState.exist]);
+  }, []);
 
 
 
@@ -279,7 +279,7 @@ uploadBytes(imageRef,image).then(
 
 
   }
-
+window.location.reload()
 
 }
 

@@ -30,7 +30,8 @@ const{Builder,By,Key,until}=require('selenium-webdriver')
        await driver.findElement(By.name("izmeniPod")).click()
        await driver.sleep(5000);
        await driver.get("https://resplendent-croquembouche-6e983e.netlify.app/Profile")
-       await driver.findElement(By.name("logOutLink")).click()
+       await driver.sleep(5000);
+       await driver.findElement(By.name("logOut")).click()
 
        console.log("zavrsen je test")
 }

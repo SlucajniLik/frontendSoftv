@@ -80,7 +80,7 @@ function NewShop() {
         }
 
       );
-  }, [exist]);
+  }, [shopState.exist]);
 
 
 

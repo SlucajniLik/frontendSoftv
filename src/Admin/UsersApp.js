@@ -208,7 +208,7 @@ background: "#f1f1f1"
   
 <br/>
 
-    <Table className={styles.tb} responsive>
+    <Table className={styles.tb} striped bordered hover>
           <thead>
             
             <tr>

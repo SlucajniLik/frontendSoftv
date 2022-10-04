@@ -6,16 +6,16 @@ const{Builder,By,Key,until}=require('selenium-webdriver')
 
    let driver=await new Builder().forBrowser('chrome').build()
 
-       await driver.get("http://localhost:3000/login")
+       await driver.get("https://resplendent-croquembouche-6e983e.netlify.app/")
 
        await driver.findElement(By.name("email")).sendKeys("aminmelic555@gmail.com")
        await driver.sleep(1000);
-       await driver.findElement(By.name("lozinka")).sendKeys("Amin")
+       await driver.findElement(By.name("lozinka")).sendKeys("123456789")
        await driver.sleep(1000);
        await driver.findElement(By.name("login")).click()
        await driver.sleep(1000);
-      /* await driver.findElement(By.name("updateProfle")).click()
-      // await driver.get("http://localhost:3000/Profile")
+     await driver.findElement(By.name("updateProfle")).click()
+     /* // await driver.get("http://localhost:3000/Profile")
     await driver.sleep(2000);
    
        await driver.sleep(1000);

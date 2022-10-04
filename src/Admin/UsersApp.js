@@ -196,10 +196,11 @@ background: "#f1f1f1"
 
       }    ><i class="fa fa-search"></i></button>
     </form>
-
+<br/>
   <Container 
   
-  
+  className="d-flex  justify-content-center h-100 "
+
 >
 
   
@@ -207,7 +208,7 @@ background: "#f1f1f1"
   
 
 
-    <Table className={styles.tb}    striped bordered hover>
+    <Table className={styles.tb}  striped bordered hover>
           <thead>
             
             <tr>

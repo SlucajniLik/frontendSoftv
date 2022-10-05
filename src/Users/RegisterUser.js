@@ -33,6 +33,10 @@ function RegisterUser() {
   const [roleErr, setRoleErr] = useState(true);
   const [imageErr, setImageErr] = useState(true);
   const [Success,SetSuccess]=useState(false)
+  const [passwordShown, setPasswordShown] = useState(false);
+  const togglePassword = () => {
+    setPasswordShown(!passwordShown);
+  };
   function onChangeName(e)
   {
     setName(e.target.value)
@@ -448,7 +452,8 @@ return(
 
       <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Label>Lozinka</Form.Label>
-        <Form.Control type="password" placeholder="Unesite vasu lozinku" value={password} onChange={onChangePass}    />
+        <Form.Control type={passwordShown ?"text":"password"} placeholder="Unesite vasu lozinku" value={password} onChange={onChangePass}    />
+        <button onClick={togglePassword}>Prikazi lozinku</button>
         {!passwordErr&& <p   style={{color:'red'}}   >Vasa sifra mora sadrzati 8 karaktera najmanje</p>}
       </Form.Group>
       <Form.Group className="mb-3" controlId="formConfirmPassword">

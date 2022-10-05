@@ -464,7 +464,7 @@ return(
       </Form.Group>
       <Form.Group className="mb-3" controlId="formConfirmPassword">
         <Form.Label>Potvrda lozinke</Form.Label>
-        <Form.Control type="password" placeholder="Potvrdite vasu lozinku"     value={password2} onChange={onChangePass2}      />
+        <Form.Control type={passwordShown ?"text":"password"} placeholder="Potvrdite vasu lozinku"     value={password2} onChange={onChangePass2}      />
         <label><input type="checkbox" onClick={togglePassword2}  value=""/>Prikazi lozinku</label>
    
         {!password2Err && <p   style={{color:'red'}}   >Uneli ste pogresnu sifru</p>}

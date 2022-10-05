@@ -37,6 +37,12 @@ function RegisterUser() {
   const togglePassword = () => {
     setPasswordShown(!passwordShown);
   };
+
+
+  const [passwordShown2, setPasswordShown2] = useState(false);
+  const togglePassword2 = () => {
+    setPasswordShown2(!passwordShown2);
+  };
   function onChangeName(e)
   {
     setName(e.target.value)
@@ -459,7 +465,7 @@ return(
       <Form.Group className="mb-3" controlId="formConfirmPassword">
         <Form.Label>Potvrda lozinke</Form.Label>
         <Form.Control type="password" placeholder="Potvrdite vasu lozinku"     value={password2} onChange={onChangePass2}      />
-        <label><input type="checkbox" onClick={togglePassword}  value=""/>Prikazi lozinku</label>
+        <label><input type="checkbox" onClick={togglePassword2}  value=""/>Prikazi lozinku</label>
    
         {!password2Err && <p   style={{color:'red'}}   >Uneli ste pogresnu sifru</p>}
       </Form.Group>

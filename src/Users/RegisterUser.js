@@ -47,7 +47,7 @@ function RegisterUser() {
   const togglePassword2 = () => {
     setPasswordShown2(!passwordShown2);
   };
-
+  const eye = <FontAwesomeIcon icon={faEye} />;
   function onChangeName(e)
   {
     setName(e.target.value)
@@ -473,7 +473,7 @@ return(
         <Form.Label>Potvrda lozinke</Form.Label>
         <div   className='pass-wrapper'>
         <Form.Control type={passwordShown2 ? "text" : "password"} placeholder="Potvrdite vasu lozinku"     value={password2} onChange={onChangePass2}      />
-        <i onClick={togglePassword}>{eye}</i>{" "}
+        <i onClick={togglePassword2}>{eye}</i>{" "}
               </div>
         {!password2Err && <p   style={{color:'red'}}   >Uneli ste pogresnu lozinku</p>}
       </Form.Group>

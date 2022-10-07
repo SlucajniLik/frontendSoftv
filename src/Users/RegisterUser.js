@@ -413,7 +413,26 @@ else
     </Form>
   )*/
 
+  const [passwordShown, setPasswordShown] = useState(false);
 
+  // Password toggle handler
+  const togglePassword = () => {
+    // When the handler is invoked
+    // inverse the boolean state of passwordShown
+    setPasswordShown(!passwordShown);
+  };
+
+
+
+
+  const [passwordShown2, setPasswordShown2] = useState(false);
+
+  // Password toggle handler
+  const togglePassword2 = () => {
+    // When the handler is invoked
+    // inverse the boolean state of passwordShown
+    setPasswordShown2(!passwordShown2);
+  };
 return(
   <Container 
   className="d-flex align-items-center justify-content-center"
@@ -448,12 +467,16 @@ return(
 
       <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Label>Lozinka</Form.Label>
-        <Form.Control type="password" placeholder="Unesite vasu lozinku" value={password} onChange={onChangePass}    />
+        <Form.Control type={passwordShown ? "text" : "password"}  placeholder="Unesite vasu lozinku" value={password} onChange={onChangePass}    />
+       
+        <label><input type="checkbox"   onClick={togglePassword} name="" value=""/>Prikazi lozinku</label><br />
         {!passwordErr&& <p   style={{color:'red'}}   >Vase lozinka mora sadrzati makar 8 karaktera</p>}
       </Form.Group>
       <Form.Group className="mb-3" controlId="formConfirmPassword">
         <Form.Label>Potvrda lozinke</Form.Label>
-        <Form.Control type="password" placeholder="Potvrdite vasu lozinku"     value={password2} onChange={onChangePass2}      />
+        <Form.Control type={passwordShown2 ? "text" : "password"} placeholder="Potvrdite vasu lozinku"     value={password2} onChange={onChangePass2}      />
+        <label><input type="checkbox"   onClick={togglePassword2} name="" value=""/>Prikazi lozinku</label><br />
+
         {!password2Err && <p   style={{color:'red'}}   >Uneli ste pogresnu lozinku</p>}
       </Form.Group>
       <Form.Group controlId="formFile" className="mb-3">

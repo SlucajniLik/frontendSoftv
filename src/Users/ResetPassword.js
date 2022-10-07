@@ -203,7 +203,7 @@ else
         {!password2Err && <p   style={{color:'red'}}   >Uneli ste pogresnu sifru</p>}
       </Form.Group>
      
-      <Button variant="secondary"  className="w-100"  type="submit">
+      <Button variant="dark"  className="w-100"  type="submit">
         Resetuj lozinku
       </Button>
     </Form>

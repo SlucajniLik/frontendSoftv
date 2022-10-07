@@ -376,7 +376,7 @@ return(
       <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Label>Lozinka</Form.Label>
         <div   className='pass-wrapper'>
-        <Form.Control type="checkbox" onClick={togglePassword} placeholder="Unesite lozinku" value={password} onChange={onChangePass}    />
+        <Form.Control  onClick={togglePassword} placeholder="Unesite lozinku" value={password} onChange={onChangePass}    />
         <i onClick={togglePassword}>{eye}</i>{" "}
               </div>
         {!passwordErr&& <p   style={{color:'red'}}   >Vase sifra nije validna</p>}
@@ -384,7 +384,7 @@ return(
       <Form.Group className="mb-3" controlId="formConfirmPassword">
         <Form.Label>Potvrda lozinke</Form.Label>
         <div   className='pass-wrapper'>
-        <Form.Control type="checkbox" onClick={togglePassword2} placeholder="Potvrdite lozinku"     value={password2} onChange={onChangePass2}      />
+        <Form.Control onClick={togglePassword2} placeholder="Potvrdite lozinku"     value={password2} onChange={onChangePass2}      />
         <i onClick={togglePassword2}>{eye}</i>{" "}
               </div>
         {!password2Err && <p   style={{color:'red'}}   >Uneli ste pogresnu sifru</p>}

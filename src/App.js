@@ -139,7 +139,7 @@ function App() {
    <Route path="/ChoseProduct/:id" element={<ChoseProduct/>} />
    <Route path="/Drivers" element={<Drivers/>} />
    <Route path="/Cart" element={<CartProduct/>} />
-    <Route path="/" element={<ProfileS/>} />
+   <Route path="/" element={<ProfileS/>} />
    <Route path="/UpdateProfileS/:id" element={<UpdateProfileS/>} />
    <Route path="/UpdateShop/:id" element={<UpdateShop/>} />
    </>
@@ -166,3 +166,4 @@ function App() {
 }
 
 export default App;
+hgjjghj

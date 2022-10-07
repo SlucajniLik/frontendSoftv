@@ -281,7 +281,7 @@ Remove
             </Form.Group>
             <Form.Group id="password">
               <Form.Label>Lozinka</Form.Label>
-              <div>
+              <div   className='pass-wrapper'>
               <Form.Control type="password"  placeholder='Unesite lozinku'  value={password}  onChange={onChangePass} name="lozinka"  />
               <i onClick={togglePassword}>{eye}</i>{" "}
               </div>

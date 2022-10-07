@@ -113,7 +113,7 @@ function LogInUser() {
       setEmail("")
       setPassword("") 
   
-      if(res.data.role=="Admin")
+     /* if(res.data.role=="Admin")
       {
       
       
@@ -133,9 +133,9 @@ function LogInUser() {
       
       
         navigate("/ProfileD")
-      }
+      }*/
 
-
+navigate("/")
 
 
 

@@ -9,6 +9,9 @@ import { useNavigate,Link, Navigate } from "react-router-dom";
 import {storage} from "../firebase"
 import{ref,uploadBytes,getDownloadURL} from "firebase/storage"
 import {v4} from "uuid"
+
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+import { faEye } from "@fortawesome/free-solid-svg-icons";
 function RegisterUser() {
 
 
@@ -460,16 +463,18 @@ return(
 
       <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Label>Lozinka</Form.Label>
+        <div   className='pass-wrapper'>
         <Form.Control type={passwordShown ? "text" : "password"}  placeholder="Unesite vasu lozinku" value={password} onChange={onChangePass}    />
-       
-        <label><input type="checkbox"   onClick={togglePassword} name="" value=""/> Prikazi lozinku</label><br />
+        <i onClick={togglePassword}>{eye}</i>{" "}
+              </div>
         {!passwordErr&& <p   style={{color:'red'}}   >Vase lozinka mora sadrzati makar 8 karaktera</p>}
       </Form.Group>
       <Form.Group className="mb-3" controlId="formConfirmPassword">
         <Form.Label>Potvrda lozinke</Form.Label>
+        <div   className='pass-wrapper'>
         <Form.Control type={passwordShown2 ? "text" : "password"} placeholder="Potvrdite vasu lozinku"     value={password2} onChange={onChangePass2}      />
-        <label><input type="checkbox"   onClick={togglePassword2} name="" value=""/> Prikazi lozinku</label><br />
-
+        <i onClick={togglePassword}>{eye}</i>{" "}
+              </div>
         {!password2Err && <p   style={{color:'red'}}   >Uneli ste pogresnu lozinku</p>}
       </Form.Group>
       <Form.Group controlId="formFile" className="mb-3">

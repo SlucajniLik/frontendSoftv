@@ -449,12 +449,12 @@ return(
       <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Label>Lozinka</Form.Label>
         <Form.Control type="password" placeholder="Unesite vasu lozinku" value={password} onChange={onChangePass}    />
-        {!passwordErr&& <p   style={{color:'red'}}   >Vase sifra nije validna</p>}
+        {!passwordErr&& <p   style={{color:'red'}}   >Vase lozinka mora sadrzati makar 8 karaktera</p>}
       </Form.Group>
       <Form.Group className="mb-3" controlId="formConfirmPassword">
         <Form.Label>Potvrda lozinke</Form.Label>
         <Form.Control type="password" placeholder="Potvrdite vasu lozinku"     value={password2} onChange={onChangePass2}      />
-        {!password2Err && <p   style={{color:'red'}}   >Uneli ste pogresnu sifru</p>}
+        {!password2Err && <p   style={{color:'red'}}   >Uneli ste pogresnu lozinku</p>}
       </Form.Group>
       <Form.Group controlId="formFile" className="mb-3">
         <Form.Label>Slika</Form.Label>

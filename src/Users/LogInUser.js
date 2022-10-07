@@ -4,10 +4,11 @@ import Button from 'react-bootstrap/Button';
 import {Form,Card,Container} from 'react-bootstrap';
 import Cookies from 'js-cookie';
 import jwt_decode from "jwt-decode";
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import { DefContext } from "../Helpers/DefContext";
 import { useNavigate,Link,useParams } from "react-router-dom";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+
 function LogInUser() {
 
   

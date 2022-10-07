@@ -150,7 +150,7 @@ if(validate()==true)
   console.log("true")
 
 
-  navigate("/login")
+  navigate("/")
 }
 else
 {

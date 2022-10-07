@@ -5,10 +5,10 @@
   }
   i {
     position: absolute;
-    top: 38%;
-    right: 16%;
+    top: 42%;
+    right: 10%;
   }
   i:hover {
-    color: #00fcb6;
+    color: lightblue;
     cursor: pointer;
   }

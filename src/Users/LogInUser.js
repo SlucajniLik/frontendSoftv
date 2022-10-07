@@ -6,6 +6,7 @@ import Cookies from 'js-cookie';
 import jwt_decode from "jwt-decode";
 import { DefContext } from "../Helpers/DefContext";
 import { useNavigate,Link,useParams } from "react-router-dom";
+import { faEye } from "@fortawesome/free-solid-svg-icons";
 function LogInUser() {
 
   
@@ -18,8 +19,19 @@ function LogInUser() {
    const[valReg,setValReg]=useState(false)
    const params=useParams()
 
+   const [passwordShown, setPasswordShown] = useState(false);
+   const togglePassword = () => {
+     setPasswordShown(!passwordShown);
+   };
+ 
+ 
+   const [passwordShown2, setPasswordShown2] = useState(false);
+   const togglePassword2 = () => {
+     setPasswordShown2(!passwordShown2);
+   };
 
-   
+
+    const eye = <FontAwesomeIcon icon={faEye} />;
 
 
     useEffect(() => {
@@ -266,7 +278,10 @@ Remove
             </Form.Group>
             <Form.Group id="password">
               <Form.Label>Lozinka</Form.Label>
+              <div>
               <Form.Control type="password"  placeholder='Unesite lozinku'  value={password}  onChange={onChangePass} name="lozinka"  />
+              <i onClick={togglePassword}>{eye}</i>{" "}
+              </div>
             </Form.Group>
             <br/>
             <Button  className="w-100"  variant="dark"  type="submit" name="login"  >

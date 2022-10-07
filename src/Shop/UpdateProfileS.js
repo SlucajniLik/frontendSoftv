@@ -375,13 +375,13 @@ return(
       <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Label>Lozinka</Form.Label>
         <Form.Control type={passwordShown ?"text":"password"} placeholder="Unesite lozinku" value={password} onChange={onChangePass}    />
-        <label><input type="checkbox" onClick={togglePassword}  value=""/>Prikazi lozinku</label>
+        <label><input type="checkbox" onClick={togglePassword}  value=""/> Prikazi lozinku</label>
         {!passwordErr&& <p   style={{color:'red'}}   >Vase sifra nije validna</p>}
       </Form.Group>
       <Form.Group className="mb-3" controlId="formConfirmPassword">
         <Form.Label>Potvrda lozinke</Form.Label>
         <Form.Control type={passwordShown2 ?"text":"password"} placeholder="Potvrdite lozinku"     value={password2} onChange={onChangePass2}      />
-        <label><input type="checkbox" onClick={togglePassword2}  value=""/>Prikazi lozinku</label>
+        <label><input type="checkbox" onClick={togglePassword2}  value=""/> Prikazi lozinku</label>
         {!password2Err && <p   style={{color:'red'}}   >Uneli ste pogresnu sifru</p>}
       </Form.Group>
       <Form.Group controlId="formFile" className="mb-3">

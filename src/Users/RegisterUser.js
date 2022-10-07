@@ -33,6 +33,7 @@ function RegisterUser() {
   const [roleErr, setRoleErr] = useState(true);
   const [imageErr, setImageErr] = useState(true);
   const [Success,SetSuccess]=useState(false)
+<<<<<<< HEAD
   
   const [passwordShown, setPasswordShown] = useState(false);
   const togglePassword = () => {
@@ -44,6 +45,8 @@ function RegisterUser() {
   const togglePassword2 = () => {
     setPasswordShown2(!passwordShown2);
   };
+=======
+>>>>>>> 69517492ed99a0653a6b95d76cdc0efe31958072
   function onChangeName(e)
   {
     setName(e.target.value)
@@ -424,7 +427,26 @@ else
     </Form>
   )*/
 
+  const [passwordShown, setPasswordShown] = useState(false);
 
+  // Password toggle handler
+  const togglePassword = () => {
+    // When the handler is invoked
+    // inverse the boolean state of passwordShown
+    setPasswordShown(!passwordShown);
+  };
+
+
+
+
+  const [passwordShown2, setPasswordShown2] = useState(false);
+
+  // Password toggle handler
+  const togglePassword2 = () => {
+    // When the handler is invoked
+    // inverse the boolean state of passwordShown
+    setPasswordShown2(!passwordShown2);
+  };
 return(
   <Container 
   className="d-flex align-items-center justify-content-center"
@@ -459,16 +481,17 @@ return(
 
       <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Label>Lozinka</Form.Label>
-        <Form.Control type={passwordShown ?"text":"password"} placeholder="Unesite vasu lozinku" value={password} onChange={onChangePass}    />
-        <label><input type="checkbox" onClick={togglePassword}  value=""/>Prikazi lozinku</label>
-        {!passwordErr&& <p   style={{color:'red'}}   >Vasa sifra mora sadrzati 8 karaktera najmanje</p>}
+        <Form.Control type={passwordShown ? "text" : "password"}  placeholder="Unesite vasu lozinku" value={password} onChange={onChangePass}    />
+       
+        <label><input type="checkbox"   onClick={togglePassword} name="" value=""/> Prikazi lozinku</label><br />
+        {!passwordErr&& <p   style={{color:'red'}}   >Vase lozinka mora sadrzati makar 8 karaktera</p>}
       </Form.Group>
       <Form.Group className="mb-3" controlId="formConfirmPassword">
         <Form.Label>Potvrda lozinke</Form.Label>
-        <Form.Control type={passwordShown2 ?"text":"password"} placeholder="Potvrdite vasu lozinku"     value={password2} onChange={onChangePass2}      />
-        <label><input type="checkbox" onClick={togglePassword2}  value=""/>Prikazi lozinku</label>
-   
-        {!password2Err && <p   style={{color:'red'}}   >Uneli ste pogresnu sifru</p>}
+        <Form.Control type={passwordShown2 ? "text" : "password"} placeholder="Potvrdite vasu lozinku"     value={password2} onChange={onChangePass2}      />
+        <label><input type="checkbox"   onClick={togglePassword2} name="" value=""/> Prikazi lozinku</label><br />
+
+        {!password2Err && <p   style={{color:'red'}}   >Uneli ste pogresnu lozinku</p>}
       </Form.Group>
       <Form.Group controlId="formFile" className="mb-3">
         <Form.Label>Slika</Form.Label>

@@ -139,7 +139,11 @@ function App() {
    <Route path="/ChoseProduct/:id" element={<ChoseProduct/>} />
    <Route path="/Drivers" element={<Drivers/>} />
    <Route path="/Cart" element={<CartProduct/>} />
+<<<<<<< HEAD
     <Route path="/" element={<ProfileS/>} />
+=======
+   <Route path="/" element={<ProfileS/>} />
+>>>>>>> 69517492ed99a0653a6b95d76cdc0efe31958072
    <Route path="/UpdateProfileS/:id" element={<UpdateProfileS/>} />
    <Route path="/UpdateShop/:id" element={<UpdateShop/>} />
    </>

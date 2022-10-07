@@ -47,7 +47,7 @@ function Navbarr() {
             <Nav.Link href="/NewProducts">Novi proizvod</Nav.Link>
             <Nav.Link href="/AllProducts"> Svi proizvodi</Nav.Link>
             <Nav.Link href="/UsersApp"> Svi korisnici</Nav.Link>
-            <Nav.Link href="/Profile"> Profil</Nav.Link>
+            <Nav.Link href="/"> Profil</Nav.Link>
            </>
            }
             
@@ -57,7 +57,7 @@ function Navbarr() {
            <>
             <Nav.Link href="/NewShop">Moja radnja</Nav.Link>
             <Nav.Link href="/Drivers">Vozaci</Nav.Link>
-            <Nav.Link href="/ProfileS">Profil</Nav.Link>
+            <Nav.Link href="/">Profil</Nav.Link>
 
             <Nav.Link href="/Cart">
              <img height="30px"
@@ -72,7 +72,7 @@ function Navbarr() {
  userState.role=="Vozac" &&
  <>
 <Nav.Link href="/ShopList">Radnje</Nav.Link>
-<Nav.Link href="/ProfileD"> Profil</Nav.Link>
+<Nav.Link href="/"> Profil</Nav.Link>
 </>
 
 }

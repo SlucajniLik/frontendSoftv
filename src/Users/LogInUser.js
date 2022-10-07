@@ -135,7 +135,11 @@ function LogInUser() {
         navigate("/ProfileD")
       }*/
 
+<<<<<<< HEAD
       navigate("/")
+=======
+navigate("/")
+>>>>>>> 69517492ed99a0653a6b95d76cdc0efe31958072
 
 
 

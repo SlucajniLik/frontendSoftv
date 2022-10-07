@@ -102,7 +102,7 @@ const Namereg = new RegExp('[A-Z][a-z]{2}');
 const Surnamereg = new RegExp('[A-Z][a-z]{2}'); 
 const Emailreg = new RegExp('[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+');    
 const Passreg = new RegExp('[a-zA-Z0-9+_.-]{8,}'); 
-const Imagereg=new RegExp('[A-Za-z].(jpg|jpeg|png|gif|JPG|JPEG|PNG|GIF)')
+const Imagereg=new RegExp('[A-Za-z0-9].(jpg|jpeg|png|gif|JPG|JPEG|PNG|GIF)')
 
 
 

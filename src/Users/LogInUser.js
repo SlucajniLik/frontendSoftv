@@ -282,7 +282,7 @@ Remove
             <Form.Group id="password">
               <Form.Label>Lozinka</Form.Label>
               <div   className='pass-wrapper'>
-              <Form.Control type={passwordShown2 ? "text" : "password"}  placeholder='Unesite lozinku'  value={password}  onChange={onChangePass} name="lozinka"  />
+              <Form.Control type={passwordShown ? "text" : "password"}  placeholder='Unesite lozinku'  value={password}  onChange={onChangePass} name="lozinka"  />
               <i onClick={togglePassword}>{eye}</i>{" "}
               </div>
             </Form.Group>

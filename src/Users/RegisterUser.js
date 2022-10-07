@@ -33,6 +33,16 @@ function RegisterUser() {
   const [roleErr, setRoleErr] = useState(true);
   const [imageErr, setImageErr] = useState(true);
   const [Success,SetSuccess]=useState(false)
+  const [passwordShown, setPasswordShown] = useState(false);
+  const togglePassword = () => {
+    setPasswordShown(!passwordShown);
+  };
+
+
+  const [passwordShown2, setPasswordShown2] = useState(false);
+  const togglePassword2 = () => {
+    setPasswordShown2(!passwordShown2);
+  };
   function onChangeName(e)
   {
     setName(e.target.value)
@@ -448,12 +458,15 @@ return(
 
       <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Label>Lozinka</Form.Label>
-        <Form.Control type="password" placeholder="Unesite vasu lozinku" value={password} onChange={onChangePass}    />
-        {!passwordErr&& <p   style={{color:'red'}}   >Vase sifra nije validna</p>}
+        <Form.Control type={passwordShown ?"text":"password"} placeholder="Unesite vasu lozinku" value={password} onChange={onChangePass}    />
+        <label><input type="checkbox" onClick={togglePassword}  value=""/>Prikazi lozinku</label>
+        {!passwordErr&& <p   style={{color:'red'}}   >Vasa sifra mora sadrzati 8 karaktera najmanje</p>}
       </Form.Group>
       <Form.Group className="mb-3" controlId="formConfirmPassword">
         <Form.Label>Potvrda lozinke</Form.Label>
-        <Form.Control type="password" placeholder="Potvrdite vasu lozinku"     value={password2} onChange={onChangePass2}      />
+        <Form.Control type={passwordShown2 ?"text":"password"} placeholder="Potvrdite vasu lozinku"     value={password2} onChange={onChangePass2}      />
+        <label><input type="checkbox" onClick={togglePassword2}  value=""/>Prikazi lozinku</label>
+   
         {!password2Err && <p   style={{color:'red'}}   >Uneli ste pogresnu sifru</p>}
       </Form.Group>
       <Form.Group controlId="formFile" className="mb-3">

@@ -7,6 +7,8 @@ import Form from 'react-bootstrap/Form';
 import { DefContext } from "../Helpers/DefContext";
 import { useParams,useNavigate } from 'react-router-dom';
 import {Card,Container} from 'react-bootstrap';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+import { faEye } from "@fortawesome/free-solid-svg-icons";
 function ResetPassword() {
 
 const {token}=useParams()
@@ -20,6 +22,7 @@ const navigate=useNavigate()
   const [passwordErr, setPasswordErr] = useState(true);
   const [password2Err, setPassword2Err] = useState(true);
   const [passwordShown, setPasswordShown] = useState(false);
+  const eye = <FontAwesomeIcon icon={faEye} />;
   const togglePassword = () => {
     setPasswordShown(!passwordShown);
   };
@@ -185,14 +188,18 @@ else
 
       <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Label>Lozinka</Form.Label>
+        <div   className='pass-wrapper'>
         <Form.Control type={passwordShown ?"text":"password"} placeholder="Unesite lozinku" value={password} onChange={onChangePass}    />
-        <label><input type="checkbox" onClick={togglePassword}  value=""/>Prikazi lozinku</label>
+        <i onClick={togglePassword}>{eye}</i>{" "}
+              </div>
         {!passwordErr&& <p   style={{color:'red'}}   >Vase sifra nije validna</p>}
       </Form.Group>
       <Form.Group className="mb-3" controlId="formConfirmPassword">
         <Form.Label>Lozinka</Form.Label>
+        <div   className='pass-wrapper'>
         <Form.Control type={passwordShown2 ?"text":"password"} placeholder="Potvrdite lozinku"     value={password2} onChange={onChangePass2}      />
-        <label><input type="checkbox" onClick={togglePassword2}  value=""/>Prikazi lozinku</label>
+        <i onClick={togglePassword2}>{eye}</i>{" "}
+              </div>
         {!password2Err && <p   style={{color:'red'}}   >Uneli ste pogresnu sifru</p>}
       </Form.Group>
      

@@ -491,7 +491,7 @@ return(
     {!roleErr && <p   style={{color:'red'}}   >Izaberite korisnika</p>}
     {Success && <p   style={{color:'green'}}   >Uspesno ste poslali email</p>}
     <br/>
-      <Button  variant="success"  className="w-100"   type="submit">
+      <Button  variant="dark"  className="w-100"   type="submit">
         Registrujte se
       </Button>
     </Form>

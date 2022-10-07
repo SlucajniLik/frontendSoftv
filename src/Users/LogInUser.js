@@ -7,6 +7,7 @@ import jwt_decode from "jwt-decode";
 import { DefContext } from "../Helpers/DefContext";
 import { useNavigate,Link,useParams } from "react-router-dom";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 function LogInUser() {
 
   

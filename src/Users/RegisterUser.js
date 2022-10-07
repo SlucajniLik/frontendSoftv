@@ -33,6 +33,7 @@ function RegisterUser() {
   const [roleErr, setRoleErr] = useState(true);
   const [imageErr, setImageErr] = useState(true);
   const [Success,SetSuccess]=useState(false)
+  
   const [passwordShown, setPasswordShown] = useState(false);
   const togglePassword = () => {
     setPasswordShown(!passwordShown);
@@ -172,7 +173,7 @@ const Namereg = new RegExp('[a-zA-z]{3,}');
 const Surnamereg = new RegExp('[a-zA-z]{3,}'); 
 const Emailreg = new RegExp('[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+');    
 const Passreg = new RegExp('[a-zA-Z0-9+_.-]{8,}'); 
-const Imagereg=new RegExp('[A-Za-z].(jpg|jpeg|png|gif|JPG|JPEG|PNG|GIF)')
+const Imagereg=new RegExp('[A-Za-z0-9].(jpg|jpeg|png|gif|JPG|JPEG|PNG|GIF)')
 
 
 

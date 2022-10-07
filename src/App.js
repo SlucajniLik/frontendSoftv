@@ -127,7 +127,7 @@ function App() {
    <Route path="/AllProducts" element={<AllProducts/>} />
    <Route path="/UsersApp" element={<UsersApp/>} />
    <Route path="/UpdateProduct/:id" element={<UpdateProduct/>} />
-   <Route path="/Profile" element={<ProfileA/>} />
+   <Route path="/" element={<ProfileA/>} />
    <Route path="/UpdateProfile/:id" element={<UpdateProfile/>} />
 
    </>
@@ -139,7 +139,7 @@ function App() {
    <Route path="/ChoseProduct/:id" element={<ChoseProduct/>} />
    <Route path="/Drivers" element={<Drivers/>} />
    <Route path="/Cart" element={<CartProduct/>} />
-    <Route path="/ProfileS" element={<ProfileS/>} />
+    <Route path="/" element={<ProfileS/>} />
    <Route path="/UpdateProfileS/:id" element={<UpdateProfileS/>} />
    <Route path="/UpdateShop/:id" element={<UpdateShop/>} />
    </>
@@ -149,7 +149,7 @@ function App() {
  <>
    <Route path="/ShopList" element={<ShopList/>} />
    <Route path="/OrderdProduct/:id" element={<OrderdProduct/>} />
-   <Route path="/ProfileD" element={<ProfileD/>} />
+   <Route path="/" element={<ProfileD/>} />
    <Route path="/UpdateProfileD/:id" element={<UpdateProfileD/>} />
    </>
 }

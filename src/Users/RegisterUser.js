@@ -33,7 +33,6 @@ function RegisterUser() {
   const [roleErr, setRoleErr] = useState(true);
   const [imageErr, setImageErr] = useState(true);
   const [Success,SetSuccess]=useState(false)
-<<<<<<< HEAD
   
   const [passwordShown, setPasswordShown] = useState(false);
   const togglePassword = () => {
@@ -45,8 +44,7 @@ function RegisterUser() {
   const togglePassword2 = () => {
     setPasswordShown2(!passwordShown2);
   };
-=======
->>>>>>> 69517492ed99a0653a6b95d76cdc0efe31958072
+
   function onChangeName(e)
   {
     setName(e.target.value)
@@ -427,26 +425,7 @@ else
     </Form>
   )*/
 
-  const [passwordShown, setPasswordShown] = useState(false);
-
-  // Password toggle handler
-  const togglePassword = () => {
-    // When the handler is invoked
-    // inverse the boolean state of passwordShown
-    setPasswordShown(!passwordShown);
-  };
-
-
-
-
-  const [passwordShown2, setPasswordShown2] = useState(false);
-
-  // Password toggle handler
-  const togglePassword2 = () => {
-    // When the handler is invoked
-    // inverse the boolean state of passwordShown
-    setPasswordShown2(!passwordShown2);
-  };
+  
 return(
   <Container 
   className="d-flex align-items-center justify-content-center"

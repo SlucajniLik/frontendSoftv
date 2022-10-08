@@ -21,7 +21,7 @@ function UpdateProfileD() {
   const [password, setPassword] = useState("");
   const [password2, setPassword2] = useState("");
   const [image, setImage] = useState("");
-  const refImage=useRef()
+  const refImage=useRef(null)
   const [emailErr, setEmailErr] = useState(true);
   const [passwordErr, setPasswordErr] = useState(true);
   const [password2Err, setPassword2Err] = useState(true);
@@ -260,7 +260,7 @@ if(validate()==true)
         setPassword("")
         setPassword2("")
         setEmail("")
-      refImage.current.value=""
+      refImage.current.value=null
       
       
         console.log("true")

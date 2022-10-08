@@ -64,7 +64,7 @@ return (
               <Button   variant="danger"
               className="w-100"  onClick={()=>props.deleteProduct(props.product._id)}>Izbrisi</Button>
               
-           <Link   style={{color:"white", textDecoration: "none" }}  to={"/UpdateProduct/"+props.product._id}  ><Button   className="w-100"    variant="success">Izmeni</Button></Link>
+           <Link  className="w-100"  style={{color:"white", textDecoration: "none" }}  to={"/UpdateProduct/"+props.product._id}  ><Button   className="w-100"    variant="success">Izmeni</Button></Link>
             </div>
          
           </div>

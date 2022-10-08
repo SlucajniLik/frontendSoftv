@@ -390,9 +390,9 @@ return(
               </div>
         {!password2Err && <p   style={{color:'red'}}   >Uneli ste pogresnu sifru</p>}
       </Form.Group>
-      <Form.Group  ref={refImage} controlId="formFile" className="mb-3">
+      <Form.Group   controlId="formFile" className="mb-3">
         <Form.Label>Slika</Form.Label>
-        <Form.Control type="file" filename="image"   onChange={onChangeImage}/>
+        <Form.Control  ref={refImage}   type="file" filename="image"   onChange={onChangeImage}/>
         {!imageErr && <p   style={{color:'red'}}   >Izaberite sliku</p>}
         {Success && <p   style={{color:'green'}}   >Uspesno ste izmenili podatke</p>}
       </Form.Group>

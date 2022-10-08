@@ -1,7 +1,7 @@
 import React from 'react';
 import  axios from 'axios'
 
-import { useState,useContext } from 'react';
+import { useState,useContext,useRef } from 'react';
 import Button from 'react-bootstrap/Button';
 import {Form,Container,Card} from 'react-bootstrap';
 import { DefContext } from "../Helpers/DefContext";
@@ -20,7 +20,8 @@ function UpdateProfileD() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [password2, setPassword2] = useState("");
-  const [image, setImage] = useState("");
+  //const [image, setImage] = useState("");
+   const refImage=useRef()
   const [emailErr, setEmailErr] = useState(true);
   const [passwordErr, setPasswordErr] = useState(true);
   const [password2Err, setPassword2Err] = useState(true);
@@ -92,8 +93,8 @@ function UpdateProfileD() {
   
   function onChangeImage(e)
   {
-    setImage(e.target.files[0])
-
+    //setImage(e.target.files[0])
+       refImage.current.value=""
     SetSuccess(false)
   /*  if(!image)
 {
@@ -391,7 +392,7 @@ return(
       </Form.Group>
       <Form.Group controlId="formFile" className="mb-3">
         <Form.Label>Slika</Form.Label>
-        <Form.Control type="file" filename="image"   onChange={onChangeImage}/>
+        <Form.Control type="file" filename="image" ref={refImage}  onChange={onChangeImage}/>
         {!imageErr && <p   style={{color:'red'}}   >Izaberite sliku</p>}
         {Success && <p   style={{color:'green'}}   >Uspesno ste izmenili podatke</p>}
       </Form.Group>

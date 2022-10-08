@@ -164,7 +164,7 @@ return error
 
   <Card   >
       <Card.Body>
-      <span className="ms-2 text-muted"  style={{fontSize:"4vh"}}  >Unesite podatke</span>
+      <h2 className="text-center mb-4">Unesite podatke</h2>
     <Form onSubmit={onSubmit}   encType="multipart/form-data">
 <Form.Group className="mb-3" controlId="formBasicName">
         <Form.Label>Ime proizvoda:  </Form.Label>

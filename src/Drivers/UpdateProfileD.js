@@ -360,7 +360,7 @@ return(
 
       <Card>
         <Card.Body>
-          <h2 className="text-center mb-4"  style={{fontSize:"5vh"}} >Izmenite profil</h2>
+          <h2 className="text-center mb-4"  >Izmenite profil</h2>
       
           <Form onSubmit={onSubmit}   encType="multipart/form-data">
 

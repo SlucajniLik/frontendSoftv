@@ -83,7 +83,7 @@ function ProfileD() {
        <span   className='fs-5 fw-bolder ' >Ime: <span className="fs-6 fst-italic ">{userProfile.name}</span></span>
        <span    className='fs-5 fw-bolder   '>Email: <span className="fs-6 fst-italic   ">{userProfile.email}</span></span>
       </Card.Title>
-      <Button     className="w-100"    variant="success"    ><Link   style={{color:"white", textDecoration: "none" }} to={"/UpdateProfileD/"+userProfile.id}   >Azururaj</Link></Button> 
+    <Link   style={{color:"white", textDecoration: "none" }} to={"/UpdateProfileD/"+userProfile.id}   >  <Button     className="w-100"    variant="success"    >Azururaj</Button></Link> 
         </Card.Body>
       </Card>
      

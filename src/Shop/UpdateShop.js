@@ -241,7 +241,7 @@ console.log("Not validate")
 
   <Card   >
       <Card.Body>
-        <h1 className="text-center mb-4"  style={{fontSize:"4vh"}} >Unesite podatke o prodavnici</h1>
+        <h2 className="text-center mb-4"  >Unesite podatke o prodavnici</h2>
 
 
 

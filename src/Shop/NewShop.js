@@ -300,7 +300,7 @@ if(shopState.exist==false)
 
   <Card   >
       <Card.Body>
-      <span   style={{fontSize:"4vh"}}  >Unesite podatke o prodavnici</span>
+      <h2   className="text-center mb-4"  >Unesite podatke o prodavnici</h2>
 
 
 
@@ -388,7 +388,7 @@ else
       </Card.Title>
         
   
-      <Button   className="w-100" variant="success"><Link   style={{color:"white", textDecoration: "none" }} to={"/UpdateShop/"+shopState.id}   >Azuriraj</Link></Button> 
+     <Link   style={{color:"white", textDecoration: "none" }} to={"/UpdateShop/"+shopState.id}   > <Button   className="w-100" variant="success">Azuriraj</Button></Link> 
         </Card.Body>
         
       </Card>

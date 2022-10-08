@@ -163,7 +163,7 @@ const refImage=useRef(null)
 
   <Card   >
       <Card.Body>
-      <span className="ms-2 text-muted"  style={{fontSize:"4vh"}}  >Izmenite proizvod</span>
+      <h2 className="text-center mb-4">Izmenite proizvod</h2>
      
 
     <Form onSubmit={onSubmit}   encType="multipart/form-data">

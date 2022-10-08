@@ -20,8 +20,8 @@ function UpdateProfileD() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [password2, setPassword2] = useState("");
-  //const [image, setImage] = useState("");
-   const refImage=useRef()
+  const [image, setImage] = useState("");
+  const refImage=useRef()
   const [emailErr, setEmailErr] = useState(true);
   const [passwordErr, setPasswordErr] = useState(true);
   const [password2Err, setPassword2Err] = useState(true);
@@ -93,8 +93,8 @@ function UpdateProfileD() {
   
   function onChangeImage(e)
   {
-    //setImage(e.target.files[0])
-       refImage.current.value=""
+    setImage(e.target.files[0])
+
     SetSuccess(false)
   /*  if(!image)
 {
@@ -260,7 +260,7 @@ if(validate()==true)
         setPassword("")
         setPassword2("")
         setEmail("")
-      
+      refImage.current.value-""
       
       
         console.log("true")
@@ -390,9 +390,9 @@ return(
               </div>
         {!password2Err && <p   style={{color:'red'}}   >Uneli ste pogresnu sifru</p>}
       </Form.Group>
-      <Form.Group controlId="formFile" className="mb-3">
+      <Form.Group  ref={refImage} controlId="formFile" className="mb-3">
         <Form.Label>Slika</Form.Label>
-        <Form.Control type="file" filename="image" ref={refImage}  onChange={onChangeImage}/>
+        <Form.Control type="file" filename="image"   onChange={onChangeImage}/>
         {!imageErr && <p   style={{color:'red'}}   >Izaberite sliku</p>}
         {Success && <p   style={{color:'green'}}   >Uspesno ste izmenili podatke</p>}
       </Form.Group>

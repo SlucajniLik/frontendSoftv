@@ -260,7 +260,7 @@ if(validate()==true)
         setPassword("")
         setPassword2("")
         setEmail("")
-      refImage.current.value-""
+      refImage.current.value=""
       
       
         console.log("true")

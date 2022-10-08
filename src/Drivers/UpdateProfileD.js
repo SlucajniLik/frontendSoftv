@@ -261,7 +261,7 @@ if(validate()==true)
         setPassword2("")
         setEmail("")
       refImage.current.value=null
-      
+      setImage("")
       
         console.log("true")
       

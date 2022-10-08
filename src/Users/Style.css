@@ -3,12 +3,12 @@
     display: flex;
     margin-bottom: 14px;
   }
-  i .pass-wrapper{
+  .pass-wrapper i{
     position: absolute;
     top: 20%;
     right: 4%;
   }
-  i:hover .pass-wrapper {
+  .pass-wrapper i:hover  {
     color: lightblue;
     cursor: pointer;
   }

@@ -3,7 +3,7 @@
     display: flex;
     margin-bottom: 14px;
   }
-  i {
+  /*i {
     position: absolute;
     top: 20%;
     right: 4%;
@@ -11,4 +11,4 @@
   i:hover {
     color: lightblue;
     cursor: pointer;
-  }
+  }*/

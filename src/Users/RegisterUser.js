@@ -445,13 +445,13 @@ return(
 <Form.Group className="mb-3" controlId="formBasicName">
         <Form.Label>Ime:</Form.Label>
         <Form.Control type="text" placeholder="Unesite vase ime"   value={name} onChange={onChangeName} />
-        {!nameErr && <p   style={{color:'red'}}   >Vase ime nije validno</p>}
+        {!nameErr && <p   style={{color:'red'}}   >Ime mora da pocinje velikim slovom</p>}
        
       </Form.Group>
       <Form.Group className="mb-3" controlId="formBasicSurname">
         <Form.Label>Prezime</Form.Label>
         <Form.Control type="text" placeholder="Unesite vase prezime"value={surname} onChange={onChangeSurname} />
-        {!surnameErr && <p   style={{color:'red'}}   >Vase prezime nije validno</p>}
+        {!surnameErr && <p   style={{color:'red'}}   >Prezime mora da pocinje velikim slovom</p>}
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicEmail">

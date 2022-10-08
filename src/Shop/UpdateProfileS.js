@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import  axios from 'axios'
 
 import { useState,useContext } from 'react';
@@ -27,7 +27,7 @@ function UpdateProfileS() {
   const [imageErr, setImageErr] = useState(true);
   const [Success,SetSuccess]=useState(false)
   
-
+const refImage=useRef(null)
 
   const [passwordShown, setPasswordShown] = useState(false);
   const togglePassword = () => {
@@ -265,7 +265,8 @@ if(validate()==true)
   setPassword("")
   setPassword2("")
   setEmail("")
-
+setImage("")
+refImage.current.value=null
 
 
   console.log("true")
@@ -394,7 +395,7 @@ return(
       </Form.Group>
       <Form.Group controlId="formFile" className="mb-3">
         <Form.Label>Slika</Form.Label>
-        <Form.Control type="file" filename="image"   onChange={onChangeImage}/>
+        <Form.Control   refImage={refImage} type="file" filename="image"   onChange={onChangeImage}/>
         {!imageErr && <p   style={{color:'red'}}   >Izaberite sliku</p>}
         {Success && <p   style={{color:'green'}}   >Uspesno ste izmenili podatke</p>}
       </Form.Group>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import  axios from 'axios'
 
 import { useState,useContext,useEffect } from 'react';
@@ -18,7 +18,7 @@ function UpdateShop() {
   const [city, setCity] = useState("");
   const [image, setImage] = useState("");
   const [address, setAddress] = useState("");
- 
+ const refImage=useRef(null)
 
 
 
@@ -197,7 +197,7 @@ if(validate()){
         setCity("")
         setAddress("")
         setImage("")
-       
+       refImage.current.value=null
 
 
 
@@ -267,7 +267,7 @@ console.log("Not validate")
     
       <Form.Group controlId="formFile" className="mb-3">
         <Form.Label>Slika</Form.Label>
-        <Form.Control type="file" filename="image"   onChange={onChangeImage}/>
+        <Form.Control  ref={refImage} type="file" filename="image"   onChange={onChangeImage}/>
         {!imageErr && <p   style={{color:'red'}}   >Unesite sliku</p>}
         {Success && <p   style={{color:'green'}}   >Uspesno ste izmenili podatke</p>}
       </Form.Group>

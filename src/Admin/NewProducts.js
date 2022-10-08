@@ -1,4 +1,4 @@
-import React ,{useState,useContext}from 'react'
+import React ,{useState,useContext,useRef}from 'react'
 import axios from "axios"
 import Button from 'react-bootstrap/Button';
 import {Form,Card,Container} from 'react-bootstrap';
@@ -14,7 +14,7 @@ function NewProducts() {
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [image, setImage] = useState("");
-
+ const refImage=useRef(null) 
 
   const [nameErr, setNameErr] = useState(true);
   const [priceErr, setPriceErr] = useState(true);
@@ -127,9 +127,11 @@ return error
         {console.log(res.data)
         
         SetSuccess(true)
+        refImage.current.value=null
         setImage("")
         setName("")
         setPrice("")
+
         })  
 
 
@@ -177,7 +179,7 @@ return error
 
       <Form.Group controlId="formFile" className="mb-3">
         <Form.Label>Unesite sliku</Form.Label>
-        <Form.Control type="file" filename="image"   onChange={onChangeImage}/>
+        <Form.Control  ref={refImage}  type="file" filename="image"   onChange={onChangeImage}/>
         {!imageErr && <p   style={{color:'red'}}   >Unesite sliku proizvoda</p>}
         {Success && <p   style={{color:'green'}}   >Uspesno ste uneli proizvod</p>}
       </Form.Group>

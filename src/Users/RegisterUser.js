@@ -434,14 +434,14 @@ return(
   className="d-flex align-items-center justify-content-center"
   style={{ minHeight: "90vh"}}
 >
-  
+  <div className="w-100" style={{ maxWidth: "400px",marginTop:"12px",marginBottom:"14px" }}>
 
 
-      <Card  style={{background:'red',height:"25vh"}} >
-        <Card.Body    style={{background:'green',height:"25vh"}}>
+      <Card>
+        <Card.Body>
           <h2 className="text-center mb-4">Registrujte se</h2>
       
-          <Form onSubmit={onSubmit}  style={{background:'yellow',height:"25vh"}} encType="multipart/form-data">
+          <Form onSubmit={onSubmit}   encType="multipart/form-data">
 <Form.Group className="mb-3" controlId="formBasicName">
         <Form.Label>Ime:</Form.Label>
         <Form.Control type="text" placeholder="Unesite vase ime"   value={name} onChange={onChangeName} />
@@ -497,7 +497,7 @@ return(
     </Form>
         </Card.Body>
       </Card>
-    
+      </div>
     </Container>
 
 )

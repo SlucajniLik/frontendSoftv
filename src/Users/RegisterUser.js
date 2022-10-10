@@ -432,36 +432,36 @@ else
 return(
   <Container 
   className="d-flex align-items-center justify-content-center"
-  style={{ background:"red",height:"20vh"}}
+  style={{ minHeight: "90vh"}}
 >
   <div className="w-100" style={{ maxWidth: "400px",marginTop:"12px",marginBottom:"14px" }}>
 
 
-      <Card    style={{background:"green",height:"10vh"}}>
+      <Card>
         <Card.Body>
           <h2 className="text-center mb-4">Registrujte se</h2>
       
           <Form onSubmit={onSubmit}   encType="multipart/form-data">
-<Form.Group  controlId="formBasicName">
+<Form.Group className="mb-3" controlId="formBasicName">
         <Form.Label>Ime:</Form.Label>
         <Form.Control type="text" placeholder="Unesite vase ime"   value={name} onChange={onChangeName} />
         {!nameErr && <p   style={{color:'red'}}   >Ime mora da pocinje velikim slovom</p>}
        
       </Form.Group>
-      <Form.Group  controlId="formBasicSurname">
+      <Form.Group className="mb-3" controlId="formBasicSurname">
         <Form.Label>Prezime</Form.Label>
         <Form.Control type="text" placeholder="Unesite vase prezime"value={surname} onChange={onChangeSurname} />
         {!surnameErr && <p   style={{color:'red'}}   >Prezime mora da pocinje velikim slovom</p>}
       </Form.Group>
 
-      <Form.Group  controlId="formBasicEmail">
+      <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email</Form.Label>
         <Form.Control type="text" placeholder="Unesite vas email"   value={email} onChange={onChangeEmail}  />
         {!emailErr && <p   style={{color:'red'}}   >Vase email nije validan</p>}
         {!existsErr && <p   style={{color:'red'}}   >Email vec postoji!</p>}
       </Form.Group>
 
-      <Form.Group  controlId="formBasicPassword">
+      <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Label>Lozinka</Form.Label>
         <div   className='pass-wrapper'>
         <Form.Control type={passwordShown ? "text" : "password"}  placeholder="Unesite vasu lozinku" value={password} onChange={onChangePass}    />
@@ -469,7 +469,7 @@ return(
               </div>
         {!passwordErr&& <p   style={{color:'red'}}   >Vase lozinka mora sadrzati makar 8 karaktera</p>}
       </Form.Group>
-      <Form.Group  controlId="formConfirmPassword">
+      <Form.Group className="mb-3" controlId="formConfirmPassword">
         <Form.Label>Potvrda lozinke</Form.Label>
         <div   className='pass-wrapper'>
         <Form.Control type={passwordShown2 ? "text" : "password"} placeholder="Potvrdite vasu lozinku"     value={password2} onChange={onChangePass2}      />
@@ -477,7 +477,7 @@ return(
               </div>
         {!password2Err && <p   style={{color:'red'}}   >Uneli ste pogresnu lozinku</p>}
       </Form.Group>
-      <Form.Group controlId="formFile" >
+      <Form.Group controlId="formFile" className="mb-3">
         <Form.Label>Slika</Form.Label>
         <Form.Control type="file"   filename="image"   onChange={onChangeImage}/>
         {!imageErr && <p   style={{color:'red'}}   >Izaberite sliku</p>}

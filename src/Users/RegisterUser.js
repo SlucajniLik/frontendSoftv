@@ -437,7 +437,7 @@ return(
   
 
 
-      <Card  style={{background:'red'}} >
+      <Card  style={{background:'red',height:"5vh"}} >
         <Card.Body>
           <h2 className="text-center mb-4">Registrujte se</h2>
       

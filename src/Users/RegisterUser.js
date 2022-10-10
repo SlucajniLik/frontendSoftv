@@ -432,12 +432,12 @@ else
 return(
   <Container 
   className="d-flex align-items-center justify-content-center"
-  style={{ minHeight: "90vh",background:"red",height:"20vh"}}
+  style={{ background:"red",height:"20vh"}}
 >
   <div className="w-100" style={{ maxWidth: "400px",marginTop:"12px",marginBottom:"14px" }}>
 
 
-      <Card>
+      <Card    style={{background:"green",height:"10vh"}}>
         <Card.Body>
           <h2 className="text-center mb-4">Registrujte se</h2>
       

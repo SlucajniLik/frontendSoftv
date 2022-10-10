@@ -434,7 +434,7 @@ return(
   className="d-flex align-items-center justify-content-center"
   style={{ height:"80vh"}}
 >
-  <div className="w-100" style={{ maxWidth: "400px",marginTop:"40vh",marginBottom:"14px" }}>
+  <div className="w-100" style={{ maxWidth: "400px",marginTop:"5vh",marginBottom:"14px" }}>
 
 
       <Card>

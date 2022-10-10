@@ -434,10 +434,10 @@ return(
   className="d-flex align-items-center justify-content-center"
   style={{ minHeight: "90vh"}}
 >
-  <div className="w-100" style={{ maxWidth: "400px",marginTop:"12px",marginBottom:"14px" }}>
+  
 
 
-      <Card>
+      <Card     style={{ marginTop:"12px",marginBottom:"14px" }}>
         <Card.Body>
           <h2 className="text-center mb-4">Registrujte se</h2>
       
@@ -497,7 +497,7 @@ return(
     </Form>
         </Card.Body>
       </Card>
-      </div>
+    
     </Container>
 
 )

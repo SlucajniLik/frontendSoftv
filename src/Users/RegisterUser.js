@@ -438,7 +438,7 @@ return(
 
 
       <Card  style={{background:'red',height:"25vh"}} >
-        <Card.Body>
+        <Card.Body    style={{background:'green',height:"25vh"}}>
           <h2 className="text-center mb-4">Registrujte se</h2>
       
           <Form onSubmit={onSubmit}  style={{background:'yellow',height:"25vh"}} encType="multipart/form-data">

@@ -298,7 +298,8 @@ function OrderdProduct() {
   )*/
 
 
-
+if(OrderdProduct.orders.length>0)
+{
   return (
     <>
     <br/>
@@ -373,10 +374,29 @@ background: "#f1f1f1"
 
 
     )
-    
-    
+    }
+    else
+    {
 
 
+      return(
+        <Container 
+        className="d-flex align-items-center justify-content-center"
+        style={{ minHeight: "90vh"}}
+      >
+        <div className="w-100" style={{ maxWidth: "400px" }}>
+      
+      
+      <h1>Svi proizvodi su isporuceni</h1>
+          </div>
+          </Container>
+      )
+
+
+
+
+
+    }
 
 
 

@@ -467,7 +467,8 @@ return(
         <Form.Control type={passwordShown ? "text" : "password"}  placeholder="Unesite vasu lozinku" value={password} onChange={onChangePass}    />
         <i onClick={togglePassword}>{eye}</i>{" "}
               </div>
-        {!passwordErr&& <p   style={{color:'red'}}   >Vase lozinka mora sadrzati makar 8 karaktera</p>}
+              <p style={{color:'blue'}}   >Vasa lozinka mora sadrzati makar 8 karaktera</p>
+        {!passwordErr&& <p   style={{color:'red'}}   >Vasa lozinka mora sadrzati makar 8 karaktera</p>}
       </Form.Group>
       <Form.Group className="mb-3" controlId="formConfirmPassword">
         <Form.Label>Potvrda lozinke</Form.Label>
@@ -475,6 +476,7 @@ return(
         <Form.Control type={passwordShown2 ? "text" : "password"} placeholder="Potvrdite vasu lozinku"     value={password2} onChange={onChangePass2}      />
         <i onClick={togglePassword2}>{eye}</i>{" "}
               </div>
+              <p style={{color:'blue'}}   >Vasa lozinka mora sadrzati makar 8 karaktera</p>
         {!password2Err && <p   style={{color:'red'}}   >Uneli ste pogresnu lozinku</p>}
       </Form.Group>
       <Form.Group controlId="formFile" className="mb-3">

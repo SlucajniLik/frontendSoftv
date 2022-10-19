@@ -27,7 +27,7 @@ function UpdateProfileS() {
   const [imageErr, setImageErr] = useState(true);
   const [Success,SetSuccess]=useState(false)
   
-const refImage=useRef("deda.jpeg")
+const refImage=useRef(null)
 
   const [passwordShown, setPasswordShown] = useState(false);
   const togglePassword = () => {
@@ -399,7 +399,7 @@ return(
       </Form.Group>
       <Form.Group controlId="formFile" className="mb-3">
         <Form.Label>Slika</Form.Label>
-        <Form.Control   refImage={refImage} type="file" filename="image"   onChange={onChangeImage}/>
+        <Form.Control   refImage={refImage} type="file" ref="asm.jpg" filename="image"   onChange={onChangeImage}/>
         {!imageErr && <p   style={{color:'red'}}   >Izaberite sliku</p>}
         {Success && <p   style={{color:'green'}}   >Uspesno ste izmenili podatke</p>}
       </Form.Group>

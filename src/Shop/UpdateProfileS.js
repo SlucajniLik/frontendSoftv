@@ -226,7 +226,7 @@ if(validate()==true)
 
 
 
-  const imageRef=ref(storage,`images/${image.name}`+v4())
+  /*const imageRef=ref(storage,`images/${image.name}`+v4())
         uploadBytes(imageRef,image).then(
         
         ()=>
@@ -290,6 +290,74 @@ refImage.current.value=null
         }
         
         )
+        */
+
+
+
+        const user=new FormData()
+
+
+        user.append("email",email)
+        user.append("password",password)
+
+
+
+        const useremail={
+          email:email
+         }
+        axios.post('https://servicetwo2.herokuapp.com/users/checkEmailExist',useremail).then(res=>
+        {  console.log(res.data)
+          var access=res.data.access
+                  if(res.data.id==userState.id)
+                  {
+                     access=true
+             
+                  }
+          
+                  setExistsErr(access)  
+              if(access!=false)
+              {
+      
+      
+      
+      
+      
+      
+      
+        axios.post('https://servicetwo2.herokuapp.com/users/updateProfile/'+params.id,user,{
+          headers: {
+            access: localStorage.getItem("access"),
+          },
+        }
+        ).then(res=>console.log(res.data))
+      
+      
+      
+        setPassword("")
+        setPassword2("")
+        setEmail("")
+      setImage("")
+      refImage.current.value=null
+      
+      
+        console.log("true")
+      
+        SetSuccess(true)
+        ///navigate("/ProfileS")
+      }}
+        )
+
+
+
+
+
+
+
+
+
+
+
+        
 
 
 }

@@ -44,9 +44,9 @@ function App() {
     role:""
   });
 
+  
   const [ userPassword,setUserPassword] = useState({
     pass:"123"});
-
 
   useEffect(() => {
     axios
@@ -68,7 +68,8 @@ function App() {
             name:res.data.name,
             role:res.data.role
           });
-      setUserPassword({...userPassword});
+      //setUserPassword({...userPassword});
+    
         }
    
       });

@@ -229,7 +229,7 @@ user.append("email",email)
 user.append("password",password)
 user.append("image",image)
 
- /*const imageRef=ref(storage,`images/${image.name}`+v4())
+ const imageRef=ref(storage,`images/${image.name}`+v4())
         uploadBytes(imageRef,image).then(
         
         ()=>
@@ -293,7 +293,7 @@ refImage.current.value=null
         }
         
         )
-        */
+        
 
 }
 

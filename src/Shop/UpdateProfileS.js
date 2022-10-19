@@ -17,7 +17,7 @@ function UpdateProfileS() {
   const { userState,setUserState} = useContext(DefContext);
 
 
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState(userState.email);
   const [password, setPassword] = useState("");
   const [password2, setPassword2] = useState("");
   const [image, setImage] = useState("");

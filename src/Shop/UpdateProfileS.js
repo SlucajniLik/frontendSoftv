@@ -371,7 +371,7 @@ return(
 
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email</Form.Label>
-        <Form.Control type="text" placeholder="Unesite email"   value={"DDDD"} onChange={onChangeEmail}  />
+        <Form.Control type="text" placeholder="Unesite email"   value={email} onChange={onChangeEmail}  />
         {!emailErr && <p   style={{color:'red'}}   >Vase email nije validan</p>}
         {!existsErr && <p   style={{color:'red'}}   >Email vec postoji!</p>}
       </Form.Group>

@@ -44,7 +44,7 @@ function App() {
     role:""
   });
 
-  const { userPassword,setUserPassword} = useState({
+  const [ userPassword,setUserPassword] = useState({
     pass:"123"});
 
 

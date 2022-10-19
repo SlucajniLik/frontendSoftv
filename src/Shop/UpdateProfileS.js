@@ -27,7 +27,7 @@ function UpdateProfileS() {
   const [imageErr, setImageErr] = useState(true);
   const [Success,SetSuccess]=useState(false)
   
-const refImage=useRef(null)
+const refImage=useRef("deda.jpeg")
 
   const [passwordShown, setPasswordShown] = useState(false);
   const togglePassword = () => {

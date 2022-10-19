@@ -44,9 +44,9 @@ function App() {
     role:""
   });
 
-  const { userPassword,setUserPassword} = useContext(DefContext);
-  /*const [ userPassword,setUserPassword] = useState({
-    pass:"123"});*/
+
+ const [ userPassword,setUserPassword] = useState({
+    pass:"123"});
 
   useEffect(() => {
     axios

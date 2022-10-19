@@ -45,8 +45,7 @@ function App() {
   });
 
   
-  const [ userPassword,setUserPassword] = useState({
-    pass:"123"});
+  const [ userPassword,setUserPassword] = useState();
 
   useEffect(() => {
     axios

@@ -200,6 +200,10 @@ function onSubmit(e)
       image:image
   }*/
 
+
+console.log("Ovde je passwordddd :"+userPassword)
+
+
 const user=new FormData()
 
 

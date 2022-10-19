@@ -123,7 +123,7 @@ function LogInUser() {
         role:res.data.role
         }
       )
-setUserPassword(password)
+setUserPassword("Ja sam")
 
       setEmail("")
       setPassword("") 

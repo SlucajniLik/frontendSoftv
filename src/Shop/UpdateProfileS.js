@@ -209,12 +209,6 @@ function onSubmit(e)
 console.log("Ovde je passwordddd :"+userPassword.pass)
 
 
-const user=new FormData()
-
-
-user.append("email",email)
-user.append("password",password)
-user.append("image",image)
 
 //console.log(validate(name,surname,email,password,password2,role))
 
@@ -224,9 +218,18 @@ console.log("Moj id:"+params.id)
 if(validate()==true)
 {
 
+if(image)
+{
 
 
-  /*const imageRef=ref(storage,`images/${image.name}`+v4())
+  const user=new FormData()
+
+
+user.append("email",email)
+user.append("password",password)
+user.append("image",image)
+
+ /*const imageRef=ref(storage,`images/${image.name}`+v4())
         uploadBytes(imageRef,image).then(
         
         ()=>
@@ -292,8 +295,12 @@ refImage.current.value=null
         )
         */
 
+}
 
+ 
 
+else
+{
         const user=new FormData()
 
 
@@ -347,7 +354,7 @@ refImage.current.value=null
       }}
         )
 
-
+    }
 
 
 

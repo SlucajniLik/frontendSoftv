@@ -166,7 +166,7 @@ else
 
 if(image)
 {
-if(!image|| !Imagereg.test(image.name) )
+if(!Imagereg.test(image.name) )
 {
   setImageErr(false)
   error=false
@@ -344,7 +344,7 @@ else
         setPassword2("")
         setEmail("")
       setImage("")
-      refImage.current.value=null
+    //  refImage.current.value=null
       
       
         console.log("true")

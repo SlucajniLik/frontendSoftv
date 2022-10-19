@@ -2,7 +2,7 @@ import logo from './logo.svg';
 
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import "bootstrap/dist/css/bootstrap.min.css"
-import { useState, useEffect } from "react";
+import { useState, useEffect,useContext } from "react";
 import RegisterUser from './Users/RegisterUser';
 import Reg from './Users/RegisterUser';
 import './App.css';
@@ -44,8 +44,9 @@ function App() {
     role:""
   });
 
-  
-  const [ userPassword,setUserPassword] = useState();
+  const { userPassword,setUserPassword} = useContext(DefContext);
+  /*const [ userPassword,setUserPassword] = useState({
+    pass:"123"});*/
 
   useEffect(() => {
     axios

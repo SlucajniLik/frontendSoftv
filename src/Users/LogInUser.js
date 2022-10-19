@@ -124,7 +124,7 @@ function LogInUser() {
         }
       )
 setUserPassword({
-  pass:"Ja sam"})
+  pass:password})
 
       setEmail("")
       setPassword("") 

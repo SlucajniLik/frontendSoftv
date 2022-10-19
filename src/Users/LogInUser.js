@@ -16,7 +16,7 @@ function LogInUser() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { userState,setUserState} = useContext(DefContext);
-  
+  const { userPassword,setUserPassword} = useContext(DefContext);
    const[valueErr,setValuerErr]=useState(null)
    const[valueErr2,setValuerErr2]=useState(null)
    const[valReg,setValReg]=useState(false)
@@ -123,7 +123,7 @@ function LogInUser() {
         role:res.data.role
         }
       )
-
+setUserPassword(password)
 
       setEmail("")
       setPassword("") 

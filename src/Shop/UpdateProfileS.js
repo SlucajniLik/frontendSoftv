@@ -15,11 +15,11 @@ function UpdateProfileS() {
        const navigate=useNavigate()
     const params = useParams();
   const { userState,setUserState} = useContext(DefContext);
-
+  const { userPassword,setUserPassword} = useContext(DefContext);
 
   const [email, setEmail] = useState(userState.email);
-  const [password, setPassword] = useState("");
-  const [password2, setPassword2] = useState("");
+  const [password, setPassword] = useState(userPassword);
+  const [password2, setPassword2] = useState(userPassword);
   const [image, setImage] = useState("");
   const [emailErr, setEmailErr] = useState(true);
   const [passwordErr, setPasswordErr] = useState(true);

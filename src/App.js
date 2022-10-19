@@ -68,7 +68,7 @@ function App() {
             name:res.data.name,
             role:res.data.role
           });
-
+          const [ userPassword,setUserPassword] = useState({...userPassword});
         }
    
       });

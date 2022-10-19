@@ -44,7 +44,8 @@ function App() {
     role:""
   });
 
-  const { userPassword,setUserPassword} = useState("123");
+  const { userPassword,setUserPassword} = useState({
+    pass:"123"});
 
 
   useEffect(() => {

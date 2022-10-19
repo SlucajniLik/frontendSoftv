@@ -18,8 +18,8 @@ function UpdateProfileS() {
   const { userPassword,setUserPassword} = useContext(DefContext);
 
   const [email, setEmail] = useState(userState.email);
-  const [password, setPassword] = useState(userPassword);
-  const [password2, setPassword2] = useState(userPassword);
+  const [password, setPassword] = useState(userPassword.pass);
+  const [password2, setPassword2] = useState(userPassword.pass);
   const [image, setImage] = useState("");
   const [emailErr, setEmailErr] = useState(true);
   const [passwordErr, setPasswordErr] = useState(true);
@@ -201,7 +201,7 @@ function onSubmit(e)
   }*/
 
 
-console.log("Ovde je passwordddd :"+userPassword)
+console.log("Ovde je passwordddd :"+userPassword.pass)
 
 
 const user=new FormData()

@@ -44,7 +44,7 @@ function App() {
     role:""
   });
 
-
+  const { userPassword,setUserPassword} = useState("123");
 
 
   useEffect(() => {
@@ -103,7 +103,7 @@ function App() {
   return (
     <div className="App">
  
-     <DefContext.Provider   value={{userState,setUserState}} >
+     <DefContext.Provider   value={{userState,setUserState,userPassword,setUserPassword}} >
  
 
 <Navbarr/>

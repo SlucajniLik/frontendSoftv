@@ -5,13 +5,23 @@ import Table from 'react-bootstrap/Table';
 import {Form,Container,Row,Col,Card} from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import styles from './mystyle.module.css'
-
+import Modal from 'react-bootstrap/Modal';
 
 
 
 
 function Users(props)
 {
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+
+
+
+
 
 return(
 
@@ -22,10 +32,38 @@ return(
  <td>{props.user.name} {props.user.surname}</td>
  <td>{props.user.role} </td>
  <td>
-     <Button variant="success"><a   style={{textDecoration:"none",color:"white"}}    href='#' onClick={()=>props.aproveUser(props.user._id)}>Odobriti</a></Button> 
+     <Button variant="success"><a   style={{textDecoration:"none",color:"white"}}    href='#' onClick={handleShow}>Odobriti</a></Button> 
+     <Modal show={show} onHide={handleClose} animation={false}>
+        <Modal.Header closeButton>
+          <Modal.Title>Povrdi</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Jeste li sigurni da zelite da potvrdite korisnika ?</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Ne
+          </Button>
+          <Button variant="success"  onClick={()=>props.aproveUser(props.user._id)}>
+            Da
+          </Button>
+        </Modal.Footer>
+      </Modal>
      </td>
  <td>
-     <Button variant="danger"><a  style={{textDecoration:"none",color:"white"}}  href='#' onClick={()=>props.deleteUser(props.user._id)}>Odbiti</a></Button> 
+     <Button variant="danger"><a  style={{textDecoration:"none",color:"white"}}  href='#' onClick={handleShow}>Odbiti</a></Button> 
+     <Modal show={show} onHide={handleClose} animation={false}>
+        <Modal.Header closeButton>
+          <Modal.Title>Povrdi</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Jeste li sigurni da zelite da odbijete korisnika ?</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Ne
+          </Button>
+          <Button variant="success"  onClick={()=>props.deleteUser(props.user._id)}>
+            Da
+          </Button>
+        </Modal.Footer>
+      </Modal>
      </td>
     
 </tr>

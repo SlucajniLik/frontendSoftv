@@ -62,7 +62,7 @@ function Navbarr() {
             <Nav.Link href="/Cart">
              <img height="30px"
 
-            src="/Images/icons8-shopping-cart-64.png"/>
+            src="/Images/cart2.png"/>
            
             </Nav.Link>
        </>

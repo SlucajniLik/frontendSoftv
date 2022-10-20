@@ -261,9 +261,9 @@ var access=res.data.access
           setPassword("")
           setPassword2("")
           setEmail("")
-          setImage("")
+      
           refImage.current.value=null
-        
+          setImage("")
         
           console.log("true")
         
@@ -318,9 +318,9 @@ var access=res.data.access
           setPassword("")
           setPassword2("")
           setEmail("")
-          setImage("")
-          refImage.current.value=null
         
+          refImage.current.value=null
+          setImage("")
         
           console.log("true")
         

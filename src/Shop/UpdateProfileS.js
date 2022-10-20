@@ -277,9 +277,9 @@ user.append("image",image)
   setPassword("")
   setPassword2("")
   setEmail("")
-setImage("")
-refImage.current.value=null
 
+refImage.current.value=null
+setImage("")
 
   console.log("true")
 
@@ -343,9 +343,9 @@ else
         setPassword("")
         setPassword2("")
         setEmail("")
+
+      refImage.current.value=null
       setImage("")
-    //  refImage.current.value=null
-      
       
         console.log("true")
       

@@ -448,6 +448,7 @@ return(
       <Form.Group controlId="formFile" className="mb-3">
         <Form.Label>Slika</Form.Label>
         <Form.Control  ref={refImage} type="file" filename="image"   onChange={onChangeImage}  name="slikaU"   />
+        <p   style={{color:'blue'}}   >Slika nije obavezna</p>
         {!imageErr && <p   style={{color:'red'}}   >Izaberite sliku</p>}
         {Success && <p   style={{color:'green'}}   >Uspesno ste izmenili podatke</p>}
       </Form.Group>

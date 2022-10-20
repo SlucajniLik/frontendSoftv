@@ -17,7 +17,7 @@ function UpdateProfileD() {
   const { userState,setUserState} = useContext(DefContext);
 
 
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState(userState.email);
   const [password, setPassword] = useState("");
   const [password2, setPassword2] = useState("");
   const [image, setImage] = useState("");
@@ -158,7 +158,8 @@ else
   setPassword2Err(true)
 }
 
-
+if(image)
+{
 
 if(!image|| !Imagereg.test(image.name) )
 {
@@ -172,7 +173,11 @@ else
 }
 
 
-
+}
+else
+{
+  setImageErr(true)
+}
 
 
   return error;
@@ -195,6 +200,8 @@ function onSubmit(e)
       image:image
   }*/
 
+  if(image)
+  {
 const user=new FormData()
 
 
@@ -277,8 +284,68 @@ if(validate()==true)
   }
   
   )
+}
+else
+{
+
+  const user=new FormData()
 
 
+  user.append("email",email)
+  user.append("password",password)
+  const useremail={
+    email:email
+   }
+  axios.post('https://servicethree3.herokuapp.com/users/checkEmailExist',useremail).then(res=>
+  {
+       
+        console.log(res.data)
+        var access=res.data.access
+        if(res.data.id==userState.id)
+        {
+           access=true
+   
+        }
+
+        setExistsErr(access)  
+        if(access!=false)
+        {
+
+
+
+  axios.post('https://servicethree3.herokuapp.com/users/updateProfile/'+params.id,user,{
+    headers: {
+      access: localStorage.getItem("access"),
+    },
+  }
+  ).then(res=>console.log(res.data))
+
+
+
+  setPassword("")
+  setPassword2("")
+  setEmail("")
+//refImage.current.value=null
+setImage("")
+
+  console.log("true")
+
+  SetSuccess(true)
+  //navigate("/ProfileD")
+}}
+  )
+
+
+
+
+
+
+
+
+
+
+
+}
 
 
 }

@@ -47,10 +47,10 @@ const refImage=useRef(null)
   {
      var error=true
   
-  
+     const Imagereg=new RegExp('[A-Za-z0-9].(jpg|jpeg|png|gif|JPG|JPEG|PNG|GIF)')
   
       
-     if(!name  || !isNaN(name))
+     if(!name  || !isNaN(name) || /[A-Z]/.test( name[0]))
      {
       setNameErr(false)
       error=false
@@ -68,13 +68,24 @@ const refImage=useRef(null)
      }
   
   
-     if(!image)
-     { error=false
-      setImageErr(false)
-     }
-     else{
-      setImageErr(true)
-     }
+     
+if(image)
+{
+if(!Imagereg.test(image.name) )
+{
+  setImageErr(false)
+  error=false
+}
+else
+{
+
+  setImageErr(true)
+}
+}
+else
+{
+  setImageErr(true)
+}
   
   return error
   
@@ -108,7 +119,8 @@ const refImage=useRef(null)
   if(validate())
   {
 
-
+    if(image)
+    {
 
     const imageRef=ref(storage,`images/${image.name}`+v4())
     uploadBytes(imageRef,image).then(
@@ -146,6 +158,25 @@ const refImage=useRef(null)
    setName("")
    SetSuccess(true)
   }
+  else
+  {
+    axios.post('https://serviceone1.herokuapp.com/products/updateproduct/'+params.id,product,{
+      headers: {
+        access: localStorage.getItem("access"),
+      },
+    }).then(res=>console.log(res.data))  
+
+
+
+
+    // navigate("/AllProducts")
+   setPrice("")
+   setImage("")
+    refImage.current.value=null
+   setName("")
+   SetSuccess(true)
+  }
+}
 }
   
 
@@ -170,7 +201,7 @@ const refImage=useRef(null)
 <Form.Group className="mb-3" controlId="formBasicName">
         <Form.Label>Ime proizvoda:  </Form.Label>
         <Form.Control type="text" placeholder="Unesite ime proizvoda"   value={name} onChange={onChangeName} />
-        {!nameErr && <p   style={{color:'red'}}   >Unesite ime proizvoda</p>}
+        {!nameErr && <p   style={{color:'red'}}   > Ime proizvoda mora da pocinje velikim slovom</p>}
        
       </Form.Group>
       <Form.Group className="mb-3" controlId="formBasicSurname">

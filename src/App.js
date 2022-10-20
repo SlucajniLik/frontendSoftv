@@ -48,6 +48,13 @@ function App() {
  const [ userPassword,setUserPassword] = useState({
     pass:"123"});
 
+
+    const [ cartNumber,setCartNumber] = useState("0");
+  
+
+
+
+
   useEffect(() => {
     axios
       .get("https://serviceone1.herokuapp.com/users/check", {
@@ -72,7 +79,50 @@ function App() {
     
         }
    
+
+         if(res.data.role=="Prodavac")
+         {
+
+           
+          axios.get('https://servicetwo2.herokuapp.com/products/Cart/'+res.data.id, {
+            headers: {
+              access: localStorage.getItem("access"),
+            },
+          }).then(response=>{
+
+            setCartNumber(response.data.lenght)
+           // console.log(response.data)
+            }
+            ).catch((error)=>{
+                console.log(error)
+               
+            }
+            
+            )
+     
+      
+ 
+
+
+
+
+
+         }
+
+
+
+
       });
+
+
+        
+
+
+
+
+
+
+
   }, []);
 
   console.log("ispravno:"+userState.id)
@@ -105,7 +155,7 @@ function App() {
   return (
     <div className="App">
  
-     <DefContext.Provider   value={{userState,setUserState,userPassword,setUserPassword}} >
+     <DefContext.Provider   value={{userState,setUserState,userPassword,setUserPassword,setCartNumber,cartNumber}} >
  
 
 <Navbarr/>

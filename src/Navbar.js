@@ -8,7 +8,7 @@ import { DefContext } from "./Helpers/DefContext";
 
 function Navbarr() {
 
-   
+  const { cartNumber,SetCartNumber} = useContext(DefContext);
   const { userState,setUserState} = useContext(DefContext);
   const logout = () => {
     localStorage.removeItem("access");
@@ -74,7 +74,7 @@ function Navbarr() {
                 right: 0,
                 transform: "translate(25%, 25%)",
               }}
-            >5</div>
+            >{cartNumber}</div>
             </Nav.Link>
        </>
 

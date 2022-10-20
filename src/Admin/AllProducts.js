@@ -4,7 +4,7 @@ import axios from 'axios'
 import Table from 'react-bootstrap/Table';
 import {Form,Container,Row,Col,Card} from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
-
+import Modal from 'react-bootstrap/Modal';
 
 function Products(props)
 {
@@ -28,7 +28,10 @@ function Products(props)
 
 )*/
 
+const [show, setShow] = useState(false);
 
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 return (
 
 
@@ -62,7 +65,21 @@ return (
               style={{ gap: ".5rem" }}
             >
               <Button   variant="danger"
-              className="w-100"  onClick={()=>props.deleteProduct(props.product._id)}>Izbrisi</Button>
+              className="w-100"  onClick={handleShow}  >Izbrisi</Button>
+               <Modal show={show} onHide={handleClose} animation={false}>
+        <Modal.Header closeButton>
+          <Modal.Title>Povrdi</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Jeste li sigurni da zelite da izbrisete korisnika ?</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Ne
+          </Button>
+          <Button variant="danger"  onClick={()=>props.deleteProduct(props.product._id)}>
+            Da
+          </Button>
+        </Modal.Footer>
+      </Modal>
               
            <Link  className="w-100"  style={{color:"white", textDecoration: "none" }}  to={"/UpdateProduct/"+props.product._id+"/"+props.product.name+"/"+props.product.price}  ><Button   className="w-100"    variant="success">Izmeni</Button></Link>
             </div>

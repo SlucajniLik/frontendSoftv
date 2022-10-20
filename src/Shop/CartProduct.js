@@ -16,7 +16,7 @@ function Orders(props)
 
 const  [numProd,SetNumProd]=useState("")
 
-const { cartNumber,SetCartNumber} = useContext(DefContext);
+
 
 
 
@@ -145,6 +145,7 @@ return (
 
 function CartProduct() {
 
+  const { cartNumber,SetCartNumber} = useContext(DefContext);
     const [ordersA,setOrders] = useState({
         orders:[]
    });

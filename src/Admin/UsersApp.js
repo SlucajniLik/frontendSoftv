@@ -13,6 +13,14 @@ import styles from './mystyle.module.css'
 function Users(props)
 {
 
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+
+
 return(
 
 <tr>
@@ -23,7 +31,21 @@ return(
  <td>{props.user.role} </td>
  <td>
     
-     <Button variant="danger"><a    style={{textDecoration:"none",color:"white"}}   href='#' onClick={()=>props.deleteUser(props.user._id)}>Izbrisi</a></Button> 
+     <Button variant="danger"><a    style={{textDecoration:"none",color:"white"}}   href='#'  onClick={handleShow}    >Izbrisi</a></Button> 
+     <Modal show={show} onHide={handleClose} animation={false}>
+        <Modal.Header closeButton>
+          <Modal.Title>Povrdi</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Jeste li sigurni da zelite da izbrisete korisnika ?</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Ne
+          </Button>
+          <Button variant="danger"  onClick={()=>props.deleteUser(props.user._id)}>
+            Da
+          </Button>
+        </Modal.Footer>
+      </Modal>
      </td>
    
 </tr>

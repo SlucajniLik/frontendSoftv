@@ -16,7 +16,7 @@ function Orders(props)
 
 const  [numProd,SetNumProd]=useState("")
 
-
+const { cartNumber,SetCartNumber} = useContext(DefContext);
 
 
 
@@ -305,6 +305,7 @@ function OrderProducts(){
                    setOrders({orders:res.data})
          console.log(res.data)
          console.log('Ovde duzina'+ordersA.orders.length)
+         SetCartNumber(cartNumber+1)
          }
          );
 

@@ -49,7 +49,7 @@ function App() {
     pass:"123"});
 
 
-    const [ cartNumber,setCartNumber] = useState();
+    const [ cartNumber,setCartNumber] = useState(0);
   
 
 
@@ -124,7 +124,7 @@ function App() {
 
 
 
-  }, [cartNumber]);
+  }, []);
 
   console.log("ispravno:"+userState.id)
 

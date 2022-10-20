@@ -106,7 +106,7 @@ return (
 }
 
 function ChoseProduct() {
-
+  const { cartNumber,SetCartNumber} = useContext(DefContext);
     const [productA,setProducts] = useState({
         products:[]
    });
@@ -187,6 +187,7 @@ function ChoseProduct() {
             {
               if(res.data==false)
               {navigate("/NewShop")}
+              SetCartNumber(cartNumber+1)
             }
            );
           

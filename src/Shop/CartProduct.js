@@ -206,9 +206,13 @@ function CartProduct() {
           },
         }).then(
            res=>console.log(res.data));
+           SetCartNumber(cartNumber-1)
            setOrders({
             orders:ordersA.orders.filter(el=>el._id!=id)
-        })
+            
+        }
+     
+        )
           
    
    

@@ -59,7 +59,7 @@ function Navbarr() {
             <Nav.Link href="/Drivers">Vozaci</Nav.Link>
             <Nav.Link href="/">Profil</Nav.Link>
 
-            <Nav.Link href="/Cart" >
+            <Nav.Link href="/Cart"  style={{ width: "3rem", height: "3rem", position: "relative" }} >
              <img height="30px"
 
             src="/Images/cart2.png"/>

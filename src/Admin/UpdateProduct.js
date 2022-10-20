@@ -213,6 +213,7 @@ else
       <Form.Group controlId="formFile" className="mb-3">
         <Form.Label>Unesite sliku</Form.Label>
         <Form.Control  ref={refImage} type="file" filename="image"   onChange={onChangeImage}/>
+        <p   style={{color:'blue'}}   >Slika nije obavezna</p>
         {!imageErr && <p   style={{color:'red'}}   >Unesite sliku proizvoda</p>}
         {Success && <p   style={{color:'green'}}   >Uspesno ste izmenili podatke</p>}
       </Form.Group>

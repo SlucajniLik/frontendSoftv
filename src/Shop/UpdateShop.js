@@ -301,25 +301,26 @@ console.log("Not validate")
 <Form.Group className="mb-3" controlId="formBasicName">
         <Form.Label>Ime radnje  </Form.Label>
         <Form.Control type="text" placeholder="Unesite ime radnje"   value={name} onChange={onChangeName} />
-        {!nameErr && <p   style={{color:'red'}}   >Unesite ime radnje</p>}
+        {!nameErr && <p   style={{color:'red'}}   >Ime radnje mora da pocinje velikim slovom</p>}
        
       </Form.Group>
       <Form.Group className="mb-3" controlId="formBasicSurname">
         <Form.Label>Grad</Form.Label>
         <Form.Control type="text" placeholder="Unesite ime grad" value={city} onChange={onChangeCity} />
-        {!cityErr && <p   style={{color:'red'}}   >Unesite ime grada</p>}
+        {!cityErr && <p   style={{color:'red'}}   >Ime grada mora da pocinje velikim slovom</p>}
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Adresa</Form.Label>
         <Form.Control type="text" placeholder="Unesite adresu"   value={address} onChange={onChangeAddress}  />
-        {!addressErr && <p   style={{color:'red'}}   >Unesite adresu</p>}
+        {!addressErr && <p   style={{color:'red'}}   >Adresa mora da pocinje velikim slovom</p>}
       </Form.Group>
 
     
       <Form.Group controlId="formFile" className="mb-3">
         <Form.Label>Slika</Form.Label>
         <Form.Control  ref={refImage} type="file" filename="image"   onChange={onChangeImage}/>
+      <p   style={{color:'blue'}}   >Slika nije obavezna</p>
         {!imageErr && <p   style={{color:'red'}}   >Unesite sliku</p>}
         {Success && <p   style={{color:'green'}}   >Uspesno ste izmenili podatke</p>}
       </Form.Group>

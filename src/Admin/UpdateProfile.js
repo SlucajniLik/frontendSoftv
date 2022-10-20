@@ -199,12 +199,12 @@ function onSubmit(e)
       image:image
   }*/
 
-  const user=new FormData()
+  /*const user=new FormData()
 
 
   user.append("email",email)
   user.append("password",password)
-  user.append("image",image)
+  user.append("image",image)*/
 
 //console.log(validate(name,surname,email,password,password2,role))
 

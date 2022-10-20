@@ -21,13 +21,14 @@ function UpdateProfileS() {
   const [password, setPassword] = useState(userPassword.pass);
   const [password2, setPassword2] = useState(userPassword.pass);
   const [image, setImage] = useState("");
+  const refImage=useRef(null)
   const [emailErr, setEmailErr] = useState(true);
   const [passwordErr, setPasswordErr] = useState(true);
   const [password2Err, setPassword2Err] = useState(true);
   const [imageErr, setImageErr] = useState(true);
   const [Success,SetSuccess]=useState(false)
   
-const refImage=useRef(null)
+
 
   const [passwordShown, setPasswordShown] = useState(false);
   const togglePassword = () => {
@@ -63,6 +64,7 @@ const refImage=useRef(null)
     {
  setPasswordErr(true)
     }*/
+    SetSuccess(false)
   }
 
 
@@ -209,6 +211,13 @@ function onSubmit(e)
 console.log("Ovde je passwordddd :"+userPassword.pass)
 
 
+
+const user=new FormData()
+
+
+user.append("email",email)
+user.append("password",password)
+user.append("image",image)
 
 //console.log(validate(name,surname,email,password,password2,role))
 

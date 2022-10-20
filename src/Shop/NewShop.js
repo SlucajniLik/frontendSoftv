@@ -132,9 +132,9 @@ function validate()
      var error=true
   
   
-  
+     const Imagereg=new RegExp('[A-Za-z0-9].(jpg|jpeg|png|gif|JPG|JPEG|PNG|GIF)')
       
-     if(!name)
+     if(!name  || /[a-z]/.test( name[0]))
      {
       setNameErr(false)
       error=false
@@ -143,7 +143,7 @@ function validate()
       setNameErr(true)
      }
   
-     if(!city)
+     if(!city || /[a-z]/.test( city[0]))
      { error=false
       setCityErr(false)
      }
@@ -151,7 +151,7 @@ function validate()
       setCityErr(true)
      }
   
-     if(!address)
+     if(!address || /[a-z]/.test( address[0]))
      { error=false
       setAddressErr(false)
      }
@@ -162,7 +162,7 @@ function validate()
 
 
 
-     if(!image)
+     if(!image || !Imagereg.test(image.name))
      { error=false
       setImageErr(false)
      }
@@ -327,6 +327,7 @@ if(shopState.exist==false)
       <Form.Group controlId="formFile" className="mb-3">
         <Form.Label>Izaberite sliku</Form.Label>
         <Form.Control type="file" filename="image"   onChange={onChangeImage}/>
+       <p   style={{color:'blue'}}   >Slika je obavezna</p>
         {!imageErr && <p   style={{color:'red'}}   >Unesite sliku</p>}
         {Success && <p   style={{color:'green'}}   >Uspesno ste uneli podatke</p>}
       </Form.Group>

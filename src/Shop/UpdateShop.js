@@ -229,7 +229,14 @@ SetSuccess(true)
 }
 else
 {
+  const shop=new FormData()
 
+  shop.append("name",name)
+  shop.append("city",city)
+  shop.append("address",address)
+  shop.append("id",userState.id)
+ 
+  shop.append("nameSeller",userState.name)
   axios.post('https://servicetwo2.herokuapp.com/shops/UpdateShop/'+params.id,shop,{
     headers: {
       access: localStorage.getItem("access"),

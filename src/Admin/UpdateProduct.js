@@ -11,9 +11,9 @@ import {storage} from "../firebase"
 import{ref,uploadBytes,getDownloadURL} from "firebase/storage"
 import {v4} from "uuid"
 function UpdateProduct() {
-
-  const [name, setName] = useState("");
-  const [price, setPrice] = useState("");
+  const params = useParams();
+  const [name, setName] = useState(params.name);
+  const [price, setPrice] = useState(params.price);
   const [image, setImage] = useState("");
 const refImage=useRef(null)
 
@@ -25,7 +25,7 @@ const refImage=useRef(null)
 
 
 
-  const params = useParams();
+
   const navigate = useNavigate();
   function onChangeName(e)
   {
@@ -50,7 +50,7 @@ const refImage=useRef(null)
      const Imagereg=new RegExp('[A-Za-z0-9].(jpg|jpeg|png|gif|JPG|JPEG|PNG|GIF)')
   
       
-     if(!name  || !isNaN(name) || /[A-Z]/.test( name[0]))
+     if(!name  || !isNaN(name) || /[a-z]/.test( name[0]))
      {
       setNameErr(false)
       error=false

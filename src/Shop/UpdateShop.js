@@ -12,12 +12,12 @@ import {v4} from "uuid"
 function UpdateShop() {
 
   const { userState,setUserState} = useContext(DefContext);
+  const params=useParams()
 
-
-  const [name, setName] = useState("");
-  const [city, setCity] = useState("");
+  const [name, setName] = useState(params.name);
+  const [city, setCity] = useState(params.city);
   const [image, setImage] = useState("");
-  const [address, setAddress] = useState("");
+  const [address, setAddress] = useState(params.address);
  const refImage=useRef(null)
 
 
@@ -34,9 +34,9 @@ function UpdateShop() {
      var error=true
   
   
-  
+     const Imagereg=new RegExp('[A-Za-z0-9].(jpg|jpeg|png|gif|JPG|JPEG|PNG|GIF)')
       
-     if(!name)
+     if(!name || /[a-z]/.test( name[0]))
      {
       setNameErr(false)
       error=false
@@ -45,7 +45,7 @@ function UpdateShop() {
       setNameErr(true)
      }
   
-     if(!city)
+     if(!city || /[a-z]/.test( city[0]))
      { error=false
       setCityErr(false)
      }
@@ -53,7 +53,7 @@ function UpdateShop() {
       setCityErr(true)
      }
   
-     if(!address)
+     if(!address || /[a-z]/.test( address[0]))
      { error=false
       setAddressErr(false)
      }
@@ -64,13 +64,24 @@ function UpdateShop() {
 
 
 
-     if(!image)
-     { error=false
-      setImageErr(false)
-     }
-     else{
-      setImageErr(true)
-     }
+       
+if(image)
+{
+if(!Imagereg.test(image.name) )
+{
+  setImageErr(false)
+  error=false
+}
+else
+{
+
+  setImageErr(true)
+}
+}
+else
+{
+  setImageErr(true)
+}
   
   return error
   
@@ -94,7 +105,7 @@ function UpdateShop() {
 
 
 
-    const params=useParams()
+   
 
   function onChangeName(e)
   {
@@ -142,6 +153,10 @@ function onSubmit(e)
   }*/
 if(validate()){
 
+
+
+  if(image)
+  {
   const shop=new FormData()
 
   shop.append("name",name)
@@ -211,7 +226,37 @@ if(validate()){
 SetSuccess(true)
    
     //setImage("")
-  
+}
+else
+{
+
+  axios.post('https://servicetwo2.herokuapp.com/shops/UpdateShop/'+params.id,shop,{
+    headers: {
+      access: localStorage.getItem("access"),
+    },
+  } ).then(res=>
+{
+            if(res.data==true)
+            {
+
+               
+               //navigate("/NewShop")
+            }
+
+       
+}
+    
+    
+    )
+
+  setName("")
+  setCity("")
+  setAddress("")
+  setImage("")
+ refImage.current.value=null
+
+ SetSuccess(true)
+}
   
 
 

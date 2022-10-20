@@ -388,7 +388,7 @@ else
       </Card.Title>
         
   
-     <Link   style={{color:"white", textDecoration: "none" }} to={"/UpdateShop/"+shopState.id}   > <Button   className="w-100" variant="success">Azuriraj</Button></Link> 
+     <Link   style={{color:"white", textDecoration: "none" }} to={"/UpdateShop/"+shopState.id+"/"+shopState.name+"/"+shopState.city+"/"+shopState.address}   > <Button   className="w-100" variant="success">Azuriraj</Button></Link> 
         </Card.Body>
         
       </Card>

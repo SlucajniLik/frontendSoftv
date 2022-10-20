@@ -145,7 +145,7 @@ function App() {
    <Route path="/Cart" element={<CartProduct/>} />
    <Route path="/" element={<ProfileS/>} />
    <Route path="/UpdateProfileS/:id" element={<UpdateProfileS/>} />
-   <Route path="/UpdateShop/:id" element={<UpdateShop/>} />
+   <Route path="/UpdateShop/:id/:name/:city/:address" element={<UpdateShop/>} />
    </>
 }
 {

@@ -49,7 +49,7 @@ function App() {
     pass:"123"});
 
 
-    const [ cartNumber,setCartNumber] = useState("0");
+    const [ cartNumber,setCartNumber] = useState();
   
 
 
@@ -91,6 +91,7 @@ function App() {
           }).then(response=>{
 
             setCartNumber(response.data.lenght)
+            console.log("Ovde  je kvantitet korpe"+response.data.lenght)
            // console.log(response.data)
             }
             ).catch((error)=>{

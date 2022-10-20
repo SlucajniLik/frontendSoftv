@@ -6,7 +6,7 @@ import {Form,Container,Row,Col,Card} from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 
 import styles from './mystyle.module.css'
-
+import Modal from 'react-bootstrap/Modal';
 
 
 

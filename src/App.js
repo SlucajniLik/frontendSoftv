@@ -90,7 +90,7 @@ function App() {
             },
           }).then(response=>{
 
-            setCartNumber(response.data.lenght)
+            setCartNumber((response.data).lenght)
             console.log("Ovde  je kvantitet korpe"+response.data)
            // console.log(response.data)
             }

@@ -157,10 +157,10 @@ else
 }
 
 
+
 if(image)
 {
-
-if(!image|| !Imagereg.test(image.name) )
+if( !Imagereg.test(image.name) )
 {
   setImageErr(false)
   error=false
@@ -170,12 +170,13 @@ else
 
   setImageErr(true)
 }
-
 }
 else
 {
   setImageErr(true)
 }
+
+
 
 
   return error;
@@ -198,14 +199,7 @@ function onSubmit(e)
       image:image
   }*/
 
-  if(image)
-  {
-const user=new FormData()
 
-
-user.append("email",email)
-user.append("password",password)
-user.append("image",image)
 
 //console.log(validate(name,surname,email,password,password2,role))
 
@@ -214,8 +208,16 @@ user.append("image",image)
 console.log("Moj id:"+params.id)
 if(validate()==true)
 {
+  if(image)
+{
+
+  const user=new FormData()
 
 
+  user.append("email",email)
+  user.append("password",password)
+  user.append("image",image)
+  
 
   const imageRef=ref(storage,`images/${image.name}`+v4())
   uploadBytes(imageRef,image).then(
@@ -278,20 +280,14 @@ var access=res.data.access
   }
   
   )
-
 }
 else
 {
-
-
   const user=new FormData()
 
 
   user.append("email",email)
   user.append("password",password)
-
-
-
   const useremail={
     email:email
    }
@@ -323,7 +319,7 @@ var access=res.data.access
           setPassword2("")
           setEmail("")
           setImage("")
-          //refImage.current.value=null
+          refImage.current.value=null
         
         
           console.log("true")
@@ -333,14 +329,6 @@ var access=res.data.access
 
         }
       })
-
-
-
-
-
-
-
-
 
 
 

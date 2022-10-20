@@ -124,7 +124,7 @@ function App() {
 
 
 
-  }, []);
+  }, [cartNumber]);
 
   console.log("ispravno:"+userState.id)
 

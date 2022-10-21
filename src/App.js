@@ -49,7 +49,7 @@ function App() {
     pass:"123"});
 
 
-    const [cartNumber,setCartNumber] = useState(0);
+    const [cartNumber,setCartNumber] = useState();
   
 
 
@@ -89,11 +89,13 @@ function App() {
               access: localStorage.getItem("access"),
             },
           }).then(response=>{
-                  if(response.data.length>0)
-                  {setCartNumber(response.data.length)}
-                  else{
-                    setCartNumber(0)
-                  }
+                 // if(response.data.length>0)
+                 // {
+                    setCartNumber(response.data.length)
+                 // }
+                 // else{
+                  //  setCartNumber(0)
+                 // }
             
             console.log("Ovde  je kvantitet korpe"+response.data)
            // console.log(response.data)

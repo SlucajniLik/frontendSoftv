@@ -161,8 +161,8 @@ function ChoseProduct() {
     }, []);
 
 
-
-    const { cartNumber,SetCartNumber} = useContext(DefContext);
+            
+    const {cartNumber,setCartNumber} = useContext(DefContext);
 
     function OrderProduct(SellerId,DriverId,ProductId,numProd,SetNumProd){
 
@@ -187,7 +187,11 @@ function ChoseProduct() {
             {
               if(res.data==false)
               {navigate("/NewShop")}
-              SetCartNumber(20)
+             
+              setCartNumber(
+                cartNumber+1
+              )
+
             }
            );
           

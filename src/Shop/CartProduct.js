@@ -145,7 +145,7 @@ return (
 
 function CartProduct() {
 
-  const { cartNumber,SetCartNumber} = useContext(DefContext);
+  const { cartNumber,setCartNumber} = useContext(DefContext);
     const [ordersA,setOrders] = useState({
         orders:[]
    });
@@ -206,7 +206,7 @@ function CartProduct() {
           },
         }).then(
            res=>console.log(res.data));
-          
+           setCartNumber(cartNumber-1)
            setOrders({
             orders:ordersA.orders.filter(el=>el._id!=id)
             
@@ -310,7 +310,7 @@ function OrderProducts(){
                    setOrders({orders:res.data})
          console.log(res.data)
          console.log('Ovde duzina'+ordersA.orders.length)
-         SetCartNumber(cartNumber+1)
+         
          }
          );
 

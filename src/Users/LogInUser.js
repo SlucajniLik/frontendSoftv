@@ -45,34 +45,7 @@ function LogInUser() {
        }
       
     
-       if(res.data.role=="Prodavac")
-       {
-
-         
-        axios.get('https://servicetwo2.herokuapp.com/products/Cart/'+res.data.id, {
-          headers: {
-            access: localStorage.getItem("access"),
-          },
-        }).then(response=>{
-               // if(response.data.length>0)
-               // {
-                  setCartNumber(response.data.length)
-               // }
-               // else{
-                //  setCartNumber(0)
-               // }
-          
-          console.log("Ovde  je kvantitet korpe"+response.data)
-         // console.log(response.data)
-          }
-          ).catch((error)=>{
-              console.log(error)
-             
-          }
-          
-          )
-   
-       }
+      
 
 
   }, []);
@@ -150,6 +123,41 @@ function LogInUser() {
         role:res.data.role
         }
       )
+      if(res.data.role=="Prodavac")
+      {
+
+        
+       axios.get('https://servicetwo2.herokuapp.com/products/Cart/'+res.data.id, {
+         headers: {
+           access: localStorage.getItem("access"),
+         },
+       }).then(response=>{
+              // if(response.data.length>0)
+              // {
+                 setCartNumber(response.data.length)
+              // }
+              // else{
+               //  setCartNumber(0)
+              // }
+         
+         console.log("Ovde  je kvantitet korpe"+response.data)
+        // console.log(response.data)
+         }
+         ).catch((error)=>{
+             console.log(error)
+            
+         }
+         
+         )
+  
+      }
+
+
+
+
+
+
+
 setUserPassword({
   pass:password})
 

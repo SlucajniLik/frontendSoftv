@@ -36,7 +36,7 @@ function LogInUser() {
 
     const eye = <FontAwesomeIcon icon={faEye} />;
 
-
+    const { cartNumber,setCartNumber} = useContext(DefContext);
     useEffect(() => {
   
        if(params.reg=="reg")
@@ -45,7 +45,34 @@ function LogInUser() {
        }
       
     
+       if(res.data.role=="Prodavac")
+       {
 
+         
+        axios.get('https://servicetwo2.herokuapp.com/products/Cart/'+res.data.id, {
+          headers: {
+            access: localStorage.getItem("access"),
+          },
+        }).then(response=>{
+               // if(response.data.length>0)
+               // {
+                  setCartNumber(response.data.length)
+               // }
+               // else{
+                //  setCartNumber(0)
+               // }
+          
+          console.log("Ovde  je kvantitet korpe"+response.data)
+         // console.log(response.data)
+          }
+          ).catch((error)=>{
+              console.log(error)
+             
+          }
+          
+          )
+   
+       }
 
 
   }, []);

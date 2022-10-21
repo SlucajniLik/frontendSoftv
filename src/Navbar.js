@@ -8,7 +8,7 @@ import { DefContext } from "./Helpers/DefContext";
 
 function Navbarr() {
 
-  const { cartNumber,SetCartNumber} = useContext(DefContext);
+  const { cartNumber,setCartNumber} = useContext(DefContext);
   const { userState,setUserState} = useContext(DefContext);
   const logout = () => {
     localStorage.removeItem("access");

@@ -134,7 +134,7 @@ function ChoseProduct() {
 
 
 
-    const { cartNumber,SetCartNumber} = useContext(DefContext);
+    
    const  navigate=useNavigate()
 
     useEffect(() => {
@@ -162,7 +162,7 @@ function ChoseProduct() {
 
 
 
-
+    const { cartNumber,SetCartNumber} = useContext(DefContext);
 
     function OrderProduct(SellerId,DriverId,ProductId,numProd,SetNumProd){
 
@@ -187,7 +187,7 @@ function ChoseProduct() {
             {
               if(res.data==false)
               {navigate("/NewShop")}
-              SetCartNumber(cartNumber+1)
+              SetCartNumber(20)
             }
            );
           
@@ -327,7 +327,7 @@ width: "30vh",
 background: "#f1f1f1"
 
 }
-      }     onChange={onChangeSearch}   value={SelectedProduct.price}  placeholder="Pretrazi proizvod po ceni" name="search"/>
+      }     onChange={onChangeSearch}   value={SelectedProduct.price}  placeholder="Pretrazi proizvod po imenu" name="search"/>
       <Button type="submit"   onClick={SearchProduct}   style={
 
 {

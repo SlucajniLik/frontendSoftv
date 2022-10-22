@@ -59,7 +59,24 @@ function Navbarr() {
             <Nav.Link href="/Drivers">Vozaci</Nav.Link>
             <Nav.Link href="/">Profil</Nav.Link>
 
-            <Nav.Link href="/Cart"  style={{ width: "3rem", height: "3rem", position: "relative" }} >
+           
+       </>
+
+}
+{
+ userState.role=="Vozac" &&
+ <>
+<Nav.Link href="/ShopList">Radnje</Nav.Link>
+<Nav.Link href="/"> Profil</Nav.Link>
+</>
+
+}
+{userState.status && <Nav.Link    ><Button className='loggedInContainer'    onClick={logout} name="logOut"  > Logout</Button></Nav.Link>}          
+    
+          </Nav>
+
+          { userState.role=="Prodavac" && <Nav>
+         <Nav.Link href="/Cart"  style={{ width: "3rem", height: "3rem", position: "relative" }} >
              <img height="30px"
 
             src="/Images/cart2.png"/>
@@ -76,23 +93,8 @@ function Navbarr() {
               }}
             >{cartNumber}</div>
             </Nav.Link>
-       </>
-
-}
-{
- userState.role=="Vozac" &&
- <>
-<Nav.Link href="/ShopList">Radnje</Nav.Link>
-<Nav.Link href="/"> Profil</Nav.Link>
-</>
-
-}
-{/*userState.status && <Nav.Link    ><Button className='loggedInContainer'    onClick={logout} name="logOut"  > Logout</Button></Nav.Link>*/}          
-    
           </Nav>
-          <Nav>
-          {userState.status && <Nav.Link    ><Button className='loggedInContainer'    onClick={logout} name="logOut"  > Logout</Button></Nav.Link>}  
-          </Nav>
+          }
           </Navbar.Collapse>
           </Container>
       </Navbar>

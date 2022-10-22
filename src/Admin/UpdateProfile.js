@@ -324,7 +324,7 @@ var access=res.data.access
           setPassword("")
           setPassword2("")
           setEmail("")
-        params.email="2"
+
           refImage.current.value=null
           setImage("")
         

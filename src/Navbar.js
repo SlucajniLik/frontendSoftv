@@ -90,7 +90,9 @@ function Navbarr() {
 {userState.status && <Nav.Link    ><Button className='loggedInContainer'    onClick={logout} name="logOut"  > Logout</Button></Nav.Link>}          
     
           </Nav>
-
+          <Nav>
+          {userState.status && <Nav.Link    ><Button className='loggedInContainer'    onClick={logout} name="logOut"  > Logout</Button></Nav.Link>}  
+          </Nav>
           </Navbar.Collapse>
           </Container>
       </Navbar>

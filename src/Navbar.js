@@ -25,7 +25,7 @@ function Navbarr() {
        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark"  >
         <Container>
           
-        <Navbar.Brand href="#">My-Company</Navbar.Brand>
+        <Navbar.Brand  style={{marginTop:"0" }} href="#">My-Company</Navbar.Brand>
         
     <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
       <Navbar.Collapse  id="responsive-navbar-nav" >
@@ -77,7 +77,7 @@ function Navbarr() {
           </Nav>
 
           { userState.role=="Prodavac" && <Nav>
-         <Nav.Link href="/Cart"    style={{background:"white",width: "3rem", height: "3rem", position: "relative" }}
+         <Nav.Link href="/Cart"    style={{background:"white",borderColor:"red",width: "3rem", height: "3rem", position: "relative" }}
             variant="outline-primary"
             className="rounded-circle" >
              <img height="30px"

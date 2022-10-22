@@ -9,7 +9,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import { DefContext } from "../Helpers/DefContext";
 import { useNavigate,Link,useParams } from "react-router-dom";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
-
+import  secureLocalStorage  from  "react-secure-storage";
 function LogInUser() {
 
   
@@ -160,7 +160,7 @@ function LogInUser() {
 
 setUserPassword({
   pass:password})
-
+  secureLocalStorage.setItem("pass",password);
       setEmail("")
       setPassword("") 
   

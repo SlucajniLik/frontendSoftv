@@ -76,7 +76,7 @@ function App() {
             role:res.data.role
           });
       //setUserPassword({...userPassword});
-    
+          console.log("Ove se menja email:"+res.data.email)
         }
    
 

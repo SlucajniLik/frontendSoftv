@@ -16,10 +16,10 @@ function UpdateProfile() {
     const params = useParams();
   const { userState,setUserState} = useContext(DefContext);
 
-
+  let pass = secureLocalStorage.getItem("pass");
   const [email, setEmail] = useState(userState.email);
-  const [password, setPassword] = useState("");
-  const [password2, setPassword2] = useState("");
+  const [password, setPassword] = useState(pass);
+  const [password2, setPassword2] = useState(pass);
   const [image, setImage] = useState("");
   const [emailErr, setEmailErr] = useState(true);
   const [passwordErr, setPasswordErr] = useState(true);

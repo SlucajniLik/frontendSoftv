@@ -19,10 +19,10 @@ function Navbarr() {
 
 
 
-return(
 
 
-  function CollapsibleExample() {
+
+ 
     return (
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container>
@@ -44,9 +44,9 @@ return(
         </Container>
       </Navbar>
     );
-  }
+  
 
-)
+
 
 
 

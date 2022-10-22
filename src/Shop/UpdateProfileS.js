@@ -11,15 +11,16 @@ import{ref,uploadBytes,getDownloadURL} from "firebase/storage"
 import {v4} from "uuid"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import { faEye } from "@fortawesome/free-solid-svg-icons";
+import  secureLocalStorage  from  "react-secure-storage";
 function UpdateProfileS() {
        const navigate=useNavigate()
     const params = useParams();
   const { userState,setUserState} = useContext(DefContext);
   const { userPassword,setUserPassword} = useContext(DefContext);
-
+  let pass = secureLocalStorage.getItem("pass");
   const [email, setEmail] = useState(userState.email);
-  const [password, setPassword] = useState(userPassword.pass);
-  const [password2, setPassword2] = useState(userPassword.pass);
+  const [password, setPassword] = useState(pass);
+  const [password2, setPassword2] = useState(pass);
   const [image, setImage] = useState("");
   const refImage=useRef(null)
   const [emailErr, setEmailErr] = useState(true);

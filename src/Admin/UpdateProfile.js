@@ -11,6 +11,7 @@ import{ref,uploadBytes,getDownloadURL} from "firebase/storage"
 import {v4} from "uuid"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import { faEye } from "@fortawesome/free-solid-svg-icons";
+import  secureLocalStorage  from  "react-secure-storage";
 function UpdateProfile() {
        const navigate=useNavigate()
     const params = useParams();

@@ -77,7 +77,7 @@ function Navbarr() {
           </Nav>
 
           { userState.role=="Prodavac" && <Nav>
-         <Nav.Link href="/Cart"    style={{background:"white",borderColor:"red",borderStyle:"solid",solid,width: "3rem", height: "3rem", position: "relative" }}
+         <Nav.Link href="/Cart"    style={{background:"white",borderColor:"red",borderStyle:"solid",width: "3rem", height: "3rem", position: "relative" }}
             variant="outline-primary"
             className="rounded-circle" >
              <img height="30px"

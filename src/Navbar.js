@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { DefContext } from "./Helpers/DefContext";
-
+import  secureLocalStorage  from  "react-secure-storage";
 function Navbarr() {
 
   const { cartNumber,setCartNumber} = useContext(DefContext);
@@ -13,7 +13,7 @@ function Navbarr() {
   const logout = () => {
     localStorage.removeItem("access");
     setUserState({ email: "", id: 0, status: false });
-      
+    secureLocalStorage.removeItem("pass") 
        window.location.href="/"
   };
 

@@ -3,17 +3,18 @@ import ForgotPassword from './ForgotPassword';
 import React from "react"
 
 
-describe("button component",()=>{
+describe("button input component",()=>{
 
 
-    it("check button exists",()=>{
+    it("check input exists",()=>{
 
         // await act(async ()=>{
       
               const {getByTestId}=render(<ForgotPassword/>);
-              const button=getByTestId("button")
+              //const button=getByTestId("button")
+              const input=getByTestId("inputEmail")
              
-              expect(button).toBeTruthy()
+              expect(input).toBeTruthy()
              
       
       

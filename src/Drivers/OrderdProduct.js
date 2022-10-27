@@ -61,7 +61,7 @@ return (
  <td>{props.order.ProductId.name} </td>
  <td>{ props.order.NumProd}</td>
  <td>{props.order.ProductId.price*props.order.NumProd} Din</td>
- <td><Button   className="w-100"     variant="success"   onClick={()=>props.DeliverProduct(props.order._id)}>Isporuci</Button></td>
+ <td><input type="checkbox"  className="w-100"     variant="success"   onClick={()=>props.DeliverProduct(props.order._id)}>Isporuci</input></td>
 </tr>
 
   /*<Card className="h-100">

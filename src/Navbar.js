@@ -23,10 +23,8 @@ function Navbarr() {
  return (
   
        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark"  >
-        <Container>
-          
-        <Navbar.Brand  style={{paddingTop:"0px",background:"red" }} href="#">My-Company</Navbar.Brand>
-        
+        <Navbar.Brand   href="#">My-Company</Navbar.Brand>
+        <Container>   
     <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
       <Navbar.Collapse  id="responsive-navbar-nav" >
       

@@ -25,12 +25,11 @@ function Navbarr() {
        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark"  >
         
         <Container>   
-     
+        <Navbar.Brand className="me-auto"  href="#">My-Company</Navbar.Brand>
     <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
       <Navbar.Collapse  id="responsive-navbar-nav" >
       
           <Nav className="me-auto">
-          <Navbar.Brand   href="#">My-Company</Navbar.Brand>
            { 
            !userState.status &&
            <>

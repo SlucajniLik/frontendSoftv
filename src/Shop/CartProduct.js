@@ -224,8 +224,8 @@ function CartProduct() {
 function UpdateNum(e,id,valNum,setNProd,SetNumProd)
 {
 
-
-
+if(e.key=="Enter")
+{
   if(!isNaN(valNum) && valNum.length!=0 ){
     let data=[]
     axios.post('https://servicetwo2.herokuapp.com/products/CardUpdate/'+id+'/'+valNum,data,{
@@ -245,6 +245,9 @@ function UpdateNum(e,id,valNum,setNProd,SetNumProd)
       SetNumProd("")
     }
 
+}
+
+ 
 
 
   }

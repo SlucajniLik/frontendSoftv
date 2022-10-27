@@ -68,7 +68,7 @@ return (
  <td>{nProd}</td>
  <td>{props.order.ProductId.price*nProd} Din</td>
  <td><Form.Control type="text" id="fname" name="fname" onChange={onChangeNum} value={numProd}   placeholder="Broj komada"    onKeyDown={()=>props.UpdateNum(props.order._id,numProd,setNProd,SetNumProd)}        /></td>
- <td><Button className="w-100"    variant="success"   >Izmeni</Button> </td>
+ { /*<td><Button className="w-100"    variant="success"   >Izmeni</Button> </td>*/}
  <td><Button className="w-100"    variant="danger"   onClick={()=>props.DeleteOrder(props.order._id)}>Odustani</Button> </td>
 </tr>
 
@@ -221,11 +221,10 @@ function CartProduct() {
 
 
 
-function UpdateNum(id,valNum,setNProd,SetNumProd,e)
+function UpdateNum(e,id,valNum,setNProd,SetNumProd)
 {
 
-if(e.key=="Enter")
-{
+
 
   if(!isNaN(valNum) && valNum.length!=0 ){
     let data=[]
@@ -247,7 +246,7 @@ if(e.key=="Enter")
     }
 
 
-}
+
   }
 
 
@@ -438,7 +437,7 @@ background: "#f1f1f1"
     <th>Broj art</th>
     <th>Ukupna cena</th>
     <th>Broj komada</th>
-    <th>Izmeni</th>
+    {/*<th>Izmeni</th>*/}
     <th>Odustani</th>
   </tr>
       </thead>

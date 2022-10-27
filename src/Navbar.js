@@ -27,11 +27,12 @@ function Navbarr() {
         <Container>   
   
     <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
-    <Navbar.Brand  href="#">My-Company</Navbar.Brand>
-    <span class="navbar-brand mb-0 h1">My-company</span>
+    
+   
       <Navbar.Collapse  id="responsive-navbar-nav" >
       
           <Nav className="me-auto">
+          <Navbar.Brand  href="#">My-Company</Navbar.Brand>
            { 
            !userState.status &&
            <>

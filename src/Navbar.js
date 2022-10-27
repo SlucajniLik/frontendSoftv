@@ -28,6 +28,7 @@ function Navbarr() {
   
     <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
     <Navbar.Brand  href="#">My-Company</Navbar.Brand>
+    <span class="navbar-brand mb-0 h1">My-company</span>
       <Navbar.Collapse  id="responsive-navbar-nav" >
       
           <Nav className="me-auto">
@@ -72,7 +73,7 @@ function Navbarr() {
 </>
 
 }
-{userState.status && <Nav.Link    ><button className='loggedInContainer'    onClick={logout} name="logOut"  > Logout</button></Nav.Link>}          
+{userState.status && <Nav.Link    ><Button className='loggedInContainer'    onClick={logout} name="logOut"  > Logout</Button></Nav.Link>}          
     
           </Nav>
 

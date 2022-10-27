@@ -67,7 +67,7 @@ return (
  <td>{ props.order.ProductId.price} Din</td>
  <td>{nProd}</td>
  <td>{props.order.ProductId.price*nProd} Din</td>
- <td><Form.Control type="text" id="fname" name="fname" onChange={onChangeNum} value={numProd}   placeholder="Broj komada"    onKeyDown={()=>props.UpdateNum(props.order._id,numProd,setNProd,SetNumProd)}        /></td>
+ <td><Form.Control type="text" id="fname" name="fname" onChange={onChangeNum} value={numProd}   placeholder="Broj komada"    onKeyPress={()=>props.UpdateNum(props.order._id,numProd,setNProd,SetNumProd)}        /></td>
  { /*<td><Button className="w-100"    variant="success"   >Izmeni</Button> </td>*/}
  <td><Button className="w-100"    variant="danger"   onClick={()=>props.DeleteOrder(props.order._id)}>Odustani</Button> </td>
 </tr>
@@ -221,10 +221,10 @@ function CartProduct() {
 
 
 
-function UpdateNum(e,id,valNum,setNProd,SetNumProd)
+function UpdateNum(event,id,valNum,setNProd,SetNumProd)
 {
 
-if(e.key=="Enter")
+if(event.key=="Enter")
 {
   if(!isNaN(valNum) && valNum.length!=0 ){
     let data=[]

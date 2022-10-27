@@ -31,7 +31,7 @@ return(
  <td>{props.user.role} </td>
  <td>
     
-     <Button variant="danger"><a    style={{textDecoration:"none",color:"white"}}   href='#'  onClick={handleShow}    >Izbrisi</a></Button> 
+     <Button   variant="danger"><a    style={{textDecoration:"none",color:"white"}}   href='#'  onClick={handleShow}    >Izbrisi</a></Button> 
      <Modal show={show} onHide={handleClose} animation={false}>
         <Modal.Header closeButton>
           <Modal.Title>Povrdi</Modal.Title>
@@ -196,7 +196,7 @@ background: "#f1f1f1"
 
 }
       }     onChange={onChangeSearch}   value={SelectedUser.name}  placeholder="Pretraga vozaca po imenu ili prezimenu" name="search"/>
-      <Button type="submit"   onClick={SearchUser}   style={
+      <Button type="submit"      onClick={SearchUser}   style={
 
 {
   float:"left",
@@ -228,7 +228,7 @@ background: "#f1f1f1"
   
 
   
-<div className="w-100" >
+<div className="w-100"  >
 
     <Table className={styles.tb}  striped bordered hover>
           <thead>
@@ -268,7 +268,7 @@ else
   >
     <div className="w-100" style={{ maxWidth: "400px" }}>
 
-      <h1 className='fs-1'  >Nema korisnika</h1>
+      <h1 className='fs-1'   >Nema korisnika</h1>
       </div>
     </Container>
   )

@@ -5,14 +5,14 @@ import {Form,Container} from 'react-bootstrap';
 import Cookies from 'js-cookie';
 import jwt_decode from "jwt-decode";
 import { DefContext } from "../Helpers/DefContext";
-import { useNavigate } from "react-router-dom";
+//import { useNavigate } from "react-router-dom";
 function ForgotPassword() {
 
   
   const [email, setEmail] = useState("");
   const { userState,setUserState} = useContext(DefContext);
 
-  let navigate = useNavigate();
+  //let navigate = useNavigate();
   const [emailErr, setEmailErr] = useState(true);
   const [Success,SetSuccess]=useState(false)
   function onChangeEmail(e)
@@ -87,7 +87,7 @@ function onSubmit(e)
 
   })
 
-
+ // SetSuccess(true)  Za jest test samo
   }
   
 
@@ -122,14 +122,14 @@ if(localStorage.getItem("accessToken")!=null)
 
 
     <Form onSubmit={onSubmit}  >
-    <Form.Group className="mb-3" controlId="formBasicEmail">
+    <Form.Group     className="mb-3" controlId="formBasicEmail">
       <Form.Label>Email:</Form.Label>
-      <Form.Control type="text" placeholder="Unesite email"    name={email}  onChange={onChangeEmail} />
-      {!emailErr && <p   style={{color:'red'}}   >Vase email nije validan</p>}
-      {Success && <p   style={{color:'green'}}   >Uspesno ste poslali email</p>}
+      <Form.Control  data-testid="inputEmail" type="text" placeholder="Unesite email"    name={email}  onChange={onChangeEmail} />
+      {!emailErr && <p     data-testid="errorEmail"  style={{color:'red'}}   >Vas email nije validan</p>}
+      {Success && <p   data-testid="successEmail" style={{color:'green'}}   >Uspesno ste poslali email</p>}
     </Form.Group>
 
-    <Button variant="success"  className="w-100"  type="submit">
+    <Button variant="success"   data-testid="button" className="w-100"  type="submit">
       Posalji email
     </Button>
    

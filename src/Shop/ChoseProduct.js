@@ -308,6 +308,7 @@ SetNumProd("")
         ProductPriceFrom=SelectedPriceFrom.priceF
         ProductPriceTo=SelectedPriceTo.priceT
       }
+      console.log( ProductPriceFrom,ProductPriceTo)
       axios.get('https://servicetwo2.herokuapp.com/products/SearchPriceProduct/'+ProductPriceFrom+'/'+ProductPriceTo, {
         headers: {
           access: localStorage.getItem("access"),
@@ -434,6 +435,7 @@ background: "#f1f1f1"
 
 
     <Form style={{width:"90%",display:"flex",alignItems:"center",justifyContent:"center"}}  >
+    <label >Od:</label>
       <Form.Control type="text"  style={
 {
 padding: "10px",
@@ -444,9 +446,9 @@ width: "10vh",
 background: "#f1f1f1"
 
 }
-      }     onChange={onChangeSearchPriceFrom}   value={SelectedPriceFrom.priceF}  placeholder="Unesite cenu" name="search1"/>
+      }     onChange={onChangeSearchPriceFrom}   value={SelectedPriceFrom.priceF}  placeholder="Cena" name="search1"/>
 
-
+<label >Do:</label>
 <Form.Control type="text"  style={
 {
 padding: "10px",
@@ -457,9 +459,9 @@ width: "10vh",
 background: "#f1f1f1"
 
 }
-      }     onChange={onChangeSearchPriceTo}   value={SelectedPriceTo.priceT}  placeholder="Unesite cenu" name="search2"/>
+      }     onChange={onChangeSearchPriceTo}   value={SelectedPriceTo.priceT}  placeholder="Cena" name="search2"/>
 
-      
+<span >    </span>
 
       <Button type="submit"   onClick={SearchPriceProduct}   style={
 

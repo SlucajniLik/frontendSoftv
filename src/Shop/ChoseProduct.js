@@ -385,6 +385,7 @@ if(productA.products.length>0)
   return (
     <>
  <br/>
+ <div>
  <Form style={{width:"90%",display:"flex",alignItems:"center",justifyContent:"center"}}  >
       <Form.Control type="text"  style={
 {
@@ -488,7 +489,7 @@ background: "#f1f1f1"
 
 
 
-
+</div>
 
 
 

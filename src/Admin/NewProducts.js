@@ -172,9 +172,9 @@ return error
         {!nameErr && <p   style={{color:'red'}}   >Unesite ime proizvoda</p>}
       </Form.Group>
       <Form.Group className="mb-3" controlId="formBasicSurname">
-        <Form.Label>Cena proizvoda</Form.Label>
+        <Form.Label>Cena proizvoda:</Form.Label>
         <Form.Control type="text" placeholder="Unesite cenu proizvoda"value={price} onChange={onChangePrice} />
-        {!priceErr && <p   style={{color:'red'}}   >Unesite cenu proizvoda</p>}
+        {!priceErr && <p   style={{color:'red'}}   >Unesite cenu proizvoda (Cena u dinarima) </p>}
       </Form.Group>
 
       <Form.Group controlId="formFile" className="mb-3">

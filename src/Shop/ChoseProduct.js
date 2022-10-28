@@ -437,7 +437,7 @@ background: "#f1f1f1"
     <br/>
 
     <Form style={{width:"90%",display:"flex",alignItems:"center",justifyContent:"center"}}  >
-    <label style={{fontSize:"50px"}} >Od:&nbsp;</label>
+    <label style={{fontSize:"20px"}} >Od:&nbsp;</label>
       <Form.Control type="text"  style={
 {
 padding: "10px",
@@ -450,7 +450,7 @@ background: "#f1f1f1"
 }
       }     onChange={onChangeSearchPriceFrom}   value={SelectedPriceFrom.priceF}  placeholder="Cena" name="search1"/>
 
-<label style={{fontSize:"50px"}} >Do:&nbsp;</label>
+<label style={{fontSize:"20px"}} >Do:&nbsp;</label>
 <Form.Control type="text"  style={
 {
 padding: "10px",

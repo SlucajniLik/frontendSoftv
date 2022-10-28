@@ -388,7 +388,6 @@ if(productA.products.length>0)
  <div    style={{ display: "grid",
   columnGap: "50px",
   gridTemplateColumns:"auto auto auto",
-  backgroundColor: "#2196F3",
   padding: "10px"}}   > 
   <div  style={{  
   

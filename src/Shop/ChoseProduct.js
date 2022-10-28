@@ -385,7 +385,17 @@ if(productA.products.length>0)
   return (
     <>
  <br/>
- <div    style={{width:"100%",display:"flex",flexDirection:"row",background:"red",alignItems:"center",justifyContent:"center"}}   >   
+ <div    style={{ display: "grid",
+  columnGap: "50px",
+  gridTemplateColumns:"auto auto auto",
+  backgroundColor: "#2196F3",
+  padding: "10px"}}   > 
+  <div >
+  <div  style={{  backgroundColor: "rgba(255, 255, 255, 0.8)",
+  border:"1px solid rgba(0, 0, 0, 0.8)",
+  padding: "20px",
+  fontSize: "30px",
+  textAlign: "center"}} >
  <Form style={{width:"90%",display:"flex",alignItems:"center",justifyContent:"center"}}  >
       <Form.Control type="text"  style={
 {
@@ -432,9 +442,13 @@ background: "#f1f1f1"
 
     </Form>
 
+    </div>
 
-
-
+<div style={{  backgroundColor: "rgba(255, 255, 255, 0.8)",
+  border:"1px solid rgba(0, 0, 0, 0.8)",
+  padding: "20px",
+  fontSize: "30px",
+  textAlign: "center"}}   >
     <Form style={{width:"90%",display:"flex",alignItems:"center",justifyContent:"center"}}  >
     <label >Od:&nbsp;</label>
       <Form.Control type="text"  style={
@@ -486,7 +500,7 @@ background: "#f1f1f1"
 
       }    ><i class="fa fa-search"></i></Button>
     </Form>
-
+    </div>
     </div>
 
 

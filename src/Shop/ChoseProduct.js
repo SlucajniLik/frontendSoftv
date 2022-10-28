@@ -390,9 +390,13 @@ if(productA.products.length>0)
   gridTemplateColumns:"auto auto auto",
   backgroundColor: "#2196F3",
   padding: "10px"}}   > 
+  <div  style={{  
+  
+  padding: "20px",
+  fontSize: "30px",
+  textAlign: "center",visibility:"hidden"}} ></div>
+  <div  style={{  
 
-  <div  style={{  backgroundColor: "rgba(255, 255, 255, 0.8)",
-  border:"1px solid rgba(0, 0, 0, 0.8)",
   padding: "20px",
   fontSize: "30px",
   textAlign: "center"}} >
@@ -444,8 +448,8 @@ background: "#f1f1f1"
 
     </div>
 
-<div style={{  backgroundColor: "rgba(255, 255, 255, 0.8)",
-  border:"1px solid rgba(0, 0, 0, 0.8)",
+<div style={{  
+ 
   padding: "20px",
   fontSize: "30px",
   textAlign: "center"}}   >

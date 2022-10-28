@@ -118,6 +118,20 @@ function ChoseProduct() {
     
     })
     
+
+    const [SelectedPriceFrom,SetSelectedPriceFrom]=useState({
+
+      priceF:""
+      
+      })
+
+
+      const [SelectedPriceTo,SetSelectedPriceTo]=useState({
+
+        priceT:""
+        
+        })
+
     function onChangeSearch(e)
     {
     
@@ -130,6 +144,25 @@ function ChoseProduct() {
 
 
 
+    function onChangeSearchPriceFrom(e)
+    {
+    
+         SetSelectedProduct(
+          {
+            price:e.target.value      
+          }
+         )
+    }
+
+    function onChangeSearchPriceTo(e)
+    {
+    
+         SetSelectedProduct(
+          {
+            price:e.target.value      
+          }
+         )
+    }
 
 
 
@@ -258,7 +291,38 @@ SetNumProd("")
     
     }
     
-
+    function SearchPriceProduct(e)
+    {  
+    
+      e.preventDefault()
+     
+      var ProductPriceFrom=""
+      var ProductPriceTo=""
+      if((SelectedPriceFrom.priceF.length==0 || SelectedPriceTo.priceT.length==0)||(SelectedPriceFrom.priceF.length==0 && SelectedPriceTo.priceT.length==0 ))
+      {
+        ProductPriceFrom="NoProduct"
+        ProductPriceTo="NoProduct"
+      }
+      else
+      {
+        ProductPriceFrom=SelectedPriceFrom.priceF
+        ProductPriceTo=SelectedPriceTo.priceT
+      }
+      axios.get('https://servicetwo2.herokuapp.com/products/SearchPriceProduct/'+ProductPriceFrom+'/'+ProductPriceTo, {
+        headers: {
+          access: localStorage.getItem("access"),
+        },
+      }).then(response=>{
+    
+        setProducts({products:response.data})
+        console.log("ovfde SearchProduct:"+response.data)
+        }
+        ).catch((error)=>{
+            console.log(error)
+           
+        })
+    
+    }
 
 
 
@@ -353,7 +417,95 @@ background: "#f1f1f1"
 }
 
       }    ><i class="fa fa-search"></i></Button>
+
+
+
+
+
+
+
+{/* Pretraga po ceni */ }
+
+
+
     </Form>
+
+
+
+
+    <Form style={{width:"90%",display:"flex",alignItems:"center",justifyContent:"center"}}  >
+      <Form.Control type="text"  style={
+{
+padding: "10px",
+fontSize: "17px",
+border: "1px solid grey",
+float: "left",
+width: "10vh",
+background: "#f1f1f1"
+
+}
+      }     onChange={onChangeSearchPriceFrom}   value={SelectedPriceFrom.priceF}  placeholder="Unesite cenu" name="search1"/>
+
+
+<Form.Control type="text"  style={
+{
+padding: "10px",
+fontSize: "17px",
+border: "1px solid grey",
+float: "left",
+width: "10vh",
+background: "#f1f1f1"
+
+}
+      }     onChange={onChangeSearchPriceTo}   value={SelectedPriceTo.priceT}  placeholder="Unesite cenu" name="search2"/>
+
+      
+
+      <Button type="submit"   onClick={SearchPriceProduct}   style={
+
+{
+  float:"left",
+  width: "5vh",
+  padding: "10px",
+  background: "#262626",
+  color: "white",
+  fontSize: "17px",
+  border: "1px solid grey",
+  borderLeft: "none",
+  cursor: "pointer",
+
+
+
+
+
+
+}
+
+      }    ><i class="fa fa-search"></i></Button>
+    </Form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <br/>
 
   <Container 

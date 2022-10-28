@@ -497,21 +497,6 @@ background: "#f1f1f1"
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br/>
-
   <Container 
   
   className="d-flex  justify-content-center  "

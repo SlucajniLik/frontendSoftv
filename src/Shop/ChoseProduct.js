@@ -435,7 +435,7 @@ background: "#f1f1f1"
 
 
 
-    <Form style={{width:"90%",display:"flex",alignItems:"center",justifyContent:"center",position:"absolute",left:"300px"}}  >
+    <Form style={{width:"90%",display:"flex",alignItems:"center",justifyContent:"center",position:"absolute",left:"90vh"}}  >
     <label >Od:&nbsp;</label>
       <Form.Control type="text"  style={
 {

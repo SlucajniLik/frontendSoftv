@@ -147,9 +147,9 @@ function ChoseProduct() {
     function onChangeSearchPriceFrom(e)
     {
     
-         SetSelectedProduct(
+         SetSelectedPriceFrom(
           {
-            price:e.target.value      
+            priceF:e.target.value      
           }
          )
     }
@@ -157,9 +157,9 @@ function ChoseProduct() {
     function onChangeSearchPriceTo(e)
     {
     
-         SetSelectedProduct(
+         SetSelectedPriceTo(
           {
-            price:e.target.value      
+            priceT:e.target.value      
           }
          )
     }

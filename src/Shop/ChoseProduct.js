@@ -390,7 +390,7 @@ if(productA.products.length>0)
   gridTemplateColumns:"auto auto auto",
   backgroundColor: "#2196F3",
   padding: "10px"}}   > 
-  <div >
+
   <div  style={{  backgroundColor: "rgba(255, 255, 255, 0.8)",
   border:"1px solid rgba(0, 0, 0, 0.8)",
   padding: "20px",
@@ -501,8 +501,8 @@ background: "#f1f1f1"
       }    ><i class="fa fa-search"></i></Button>
     </Form>
     </div>
-    </div>
-
+    
+</div>
 
 
 

@@ -205,13 +205,13 @@ else
        
       </Form.Group>
       <Form.Group className="mb-3" controlId="formBasicSurname">
-        <Form.Label>Cena proizvoda</Form.Label>
+        <Form.Label>Cena proizvoda u dinarima:</Form.Label>
         <Form.Control type="text" placeholder="Unesite cenu proizvoda"value={price} onChange={onChangePrice} />
         {!priceErr && <p   style={{color:'red'}}   >Unesite cenu proizvoda</p>}
       </Form.Group>
 
       <Form.Group controlId="formFile" className="mb-3">
-        <Form.Label>Unesite sliku</Form.Label>
+        <Form.Label>Unesite sliku:</Form.Label>
         <Form.Control  ref={refImage} type="file" filename="image"   onChange={onChangeImage}/>
         <p   style={{color:'blue'}}   >Slika nije obavezna</p>
         {!imageErr && <p   style={{color:'red'}}   >Unesite sliku proizvoda</p>}

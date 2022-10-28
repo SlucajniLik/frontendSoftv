@@ -435,7 +435,7 @@ background: "#f1f1f1"
 
 
     <Form style={{width:"90%",display:"flex",alignItems:"center",justifyContent:"center"}}  >
-    <label >Od:</label>
+    <label >Od: </label>
       <Form.Control type="text"  style={
 {
 padding: "10px",
@@ -448,7 +448,7 @@ background: "#f1f1f1"
 }
       }     onChange={onChangeSearchPriceFrom}   value={SelectedPriceFrom.priceF}  placeholder="Cena" name="search1"/>
 
-<label >Do:</label>
+<label >Do: </label>
 <Form.Control type="text"  style={
 {
 padding: "10px",
@@ -461,7 +461,7 @@ background: "#f1f1f1"
 }
       }     onChange={onChangeSearchPriceTo}   value={SelectedPriceTo.priceT}  placeholder="Cena" name="search2"/>
 
-<span >    </span>
+<label >  </label>
 
       <Button type="submit"   onClick={SearchPriceProduct}   style={
 

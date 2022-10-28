@@ -383,14 +383,9 @@ SetNumProd("")
 if(productA.products.length>0)
 {
   return (
-    <div        style={
-      {
-     position:"relative"
-      
-      }
-            } >
+    <>
  <br/>
- 
+ <div    style={{width:"100%",display:"flex",flexDirection:"row",background:"red",alignItems:"center",justifyContent:"center"}}   >   
  <Form style={{width:"90%",display:"flex",alignItems:"center",justifyContent:"center"}}  >
       <Form.Control type="text"  style={
 {
@@ -440,7 +435,7 @@ background: "#f1f1f1"
 
 
 
-    <Form style={{width:"90%",display:"flex",alignItems:"center",justifyContent:"center",position:"absolute",left:"90vh"}}  >
+    <Form style={{width:"90%",display:"flex",alignItems:"center",justifyContent:"center"}}  >
     <label >Od:&nbsp;</label>
       <Form.Control type="text"  style={
 {
@@ -492,7 +487,7 @@ background: "#f1f1f1"
       }    ><i class="fa fa-search"></i></Button>
     </Form>
 
-
+    </div>
 
 
 
@@ -533,7 +528,7 @@ background: "#f1f1f1"
    
 </div>
     </Container>
-    </div>
+    </>
     )
 }
 else

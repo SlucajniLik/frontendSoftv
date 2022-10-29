@@ -437,9 +437,9 @@ background: "#f1f1f1"
      <th >Slika</th>      
     <th>Ime proizvoda</th>
     <th>Cena</th>
-    <th>Broj kom</th>
+    <th>Broj art</th>
     <th>Ukupna cena</th>
-    <th>Broj komada</th>
+    <th>Broj artikala</th>
     {/*<th>Izmeni</th>*/}
     <th>Odustani</th>
   </tr>

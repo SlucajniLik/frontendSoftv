@@ -394,7 +394,7 @@ width: "48vh",
 background: "#f1f1f1"
 
 }
-      }     onChange={onChangeSearch}   value={SelectedProduct.name}  placeholder="Pretrazi proizvod po imenu ili ukupnoj ceni" name="search"/>
+      }     onChange={onChangeSearch}   value={SelectedProduct.name}  placeholder="Pretrazi proizvod po imenu" name="search"/>
       <Button type="submit"   onClick={SearchProduct}   style={
 
 {

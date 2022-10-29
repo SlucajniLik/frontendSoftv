@@ -394,7 +394,7 @@ width: "48vh",
 background: "#f1f1f1"
 
 }
-      }     onChange={onChangeSearch}   value={SelectedProduct.name}  placeholder="Pretrazi proizvod po imenu ili ceni" name="search"/>
+      }     onChange={onChangeSearch}   value={SelectedProduct.name}  placeholder="Pretrazi proizvod po imenu ili ukupnoj ceni" name="search"/>
       <Button type="submit"   onClick={SearchProduct}   style={
 
 {
@@ -437,7 +437,7 @@ background: "#f1f1f1"
      <th >Slika</th>      
     <th>Ime proizvoda</th>
     <th>Cena</th>
-    <th>Broj art</th>
+    <th>Broj kom</th>
     <th>Ukupna cena</th>
     <th>Broj komada</th>
     {/*<th>Izmeni</th>*/}

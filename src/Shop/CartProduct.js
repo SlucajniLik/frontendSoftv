@@ -314,6 +314,7 @@ function OrderProducts(){
          res=>{
                    setOrders({orders:res.data})
          console.log(res.data)
+         setCartNumber(0)
          console.log('Ovde duzina'+ordersA.orders.length)
          
          }

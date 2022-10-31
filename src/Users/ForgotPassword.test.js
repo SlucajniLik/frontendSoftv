@@ -50,8 +50,8 @@ it("error after button",()=>{
 });
 
 
-
-/*it("success after button",()=>{
+/*
+it("success after button",()=>{
 
     //act(async ()=>{
   
@@ -65,6 +65,7 @@ it("error after button",()=>{
           expect(successEmail.innerHTML).toBe("Uspesno ste poslali email")
          
   
+
   
   
   

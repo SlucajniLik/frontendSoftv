@@ -18,7 +18,10 @@ function Users(props)
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const [show1, setShow1] = useState(false);
 
+  const handleClose1 = () => setShow1(false);
+  const handleShow1 = () => setShow1(true);
 
 
 
@@ -32,14 +35,14 @@ return(
  <td>{props.user.name} {props.user.surname}</td>
  <td>{props.user.role} </td>
  <td>
-     <Button variant="success"><a   style={{textDecoration:"none",color:"white"}}    href='#' onClick={handleShow}>Odobriti</a></Button> 
-     <Modal show={show} onHide={handleClose} animation={false}>
+     <Button variant="success"><a   style={{textDecoration:"none",color:"white"}}    href='#' onClick={handleShow1}>Odobriti</a></Button> 
+     <Modal show={show1} onHide={handleClose1} animation={false}>
         <Modal.Header closeButton>
           <Modal.Title>Povrdi</Modal.Title>
         </Modal.Header>
         <Modal.Body>Jeste li sigurni da zelite da potvrdite korisnika ?</Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
+          <Button variant="secondary" onClick={handleClose1}>
             Ne
           </Button>
           <Button variant="success"  onClick={()=>props.aproveUser(props.user._id)}>

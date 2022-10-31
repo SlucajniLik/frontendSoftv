@@ -70,7 +70,7 @@ return (
         <Modal.Header closeButton>
           <Modal.Title>Povrdi</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Jeste li sigurni da zelite da izbrisete korisnika ?</Modal.Body>
+        <Modal.Body>Jeste li sigurni da zelite da izbrisete proizvod ?</Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Ne

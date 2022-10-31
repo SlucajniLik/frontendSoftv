@@ -315,7 +315,7 @@ SetNumProd("")
         },
       }).then(response=>{
     
-        setProducts({products:response.data})
+        setProducts({products:response.data.sort(function(a, b){return a.price-b.price})})
         console.log("ovfde SearchProduct:"+response.data)
         }
         ).catch((error)=>{

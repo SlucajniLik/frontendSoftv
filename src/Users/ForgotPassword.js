@@ -124,7 +124,7 @@ if(localStorage.getItem("accessToken")!=null)
     <Form onSubmit={onSubmit}  >
     <Form.Group     className="mb-3" controlId="formBasicEmail">
       <Form.Label>Email:</Form.Label>
-      <Form.Control  data-testid="inputEmail" type="text" placeholder="Unesite email"    name={email}  onChange={onChangeEmail} />
+      <Form.Control  data-testid="inputEmail" type="text" placeholder="Unesite email"    value={email}  onChange={onChangeEmail} />
       {!emailErr && <p     data-testid="errorEmail"  style={{color:'red'}}   >Vas email nije validan</p>}
       {Success && <p   data-testid="successEmail" style={{color:'green'}}   >Uspesno ste poslali email</p>}
     </Form.Group>

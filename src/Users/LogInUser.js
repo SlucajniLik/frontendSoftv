@@ -161,6 +161,7 @@ function LogInUser() {
 setUserPassword({
   pass:password})
   secureLocalStorage.setItem("pass",password);
+  secureLocalStorage.setItem("email",email);
       setEmail("")
       setPassword("") 
   

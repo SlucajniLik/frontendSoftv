@@ -18,7 +18,8 @@ function UpdateProfile() {
   const { userState,setUserState} = useContext(DefContext);
 
   let pass = secureLocalStorage.getItem("pass");
-  const [email, setEmail] = useState(params.email);
+  let em=secureLocalStorage.getItem("email");
+  const [email, setEmail] = useState(em);
   const [password, setPassword] = useState(pass);
   const [password2, setPassword2] = useState(pass);
   const [image, setImage] = useState("");
@@ -223,8 +224,8 @@ if(validate()==true)
   user.append("email",email)
   user.append("password",password)
   user.append("image",image)
-  
-
+  secureLocalStorage.setItem("email",email);
+  secureLocalStorage.setItem("pass",password);
   const imageRef=ref(storage,`images/${image.name}`+v4())
   uploadBytes(imageRef,image).then(
   
@@ -294,6 +295,8 @@ else
 
   user.append("email",email)
   user.append("password",password)
+  secureLocalStorage.setItem("email",email);
+  secureLocalStorage.setItem("pass",password);
   const useremail={
     email:email
    }

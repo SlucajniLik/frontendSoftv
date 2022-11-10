@@ -308,19 +308,19 @@ if(shopState.exist==false)
 <Form.Group className="mb-3" controlId="formBasicName">
         <Form.Label>Ime: </Form.Label>
         <Form.Control type="text" placeholder="Unesite ime prodavnice"   value={name} onChange={onChangeName} />
-        {!nameErr && <p   style={{color:'red'}}   >Unesite ime prodavnice</p>}
+        {!nameErr && <p   style={{color:'red'}}   >Ime prodavnice mora da pocinje velikim slovom</p>}
        
       </Form.Group>
       <Form.Group className="mb-3" controlId="formBasicSurname">
         <Form.Label>Grad</Form.Label>
         <Form.Control type="text" placeholder="Unesite ime grada"value={city} onChange={onChangeCity} />
-        {!cityErr && <p   style={{color:'red'}}   >Unesite ime grada</p>}
+        {!cityErr && <p   style={{color:'red'}}   >Ime grada mora da pocinje velikim slovom</p>}
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Adresa</Form.Label>
         <Form.Control type="text" placeholder="Unesite adresu"   value={address} onChange={onChangeAddress}  />
-        {!addressErr && <p   style={{color:'red'}}   >Unesite adresu</p>}
+        {!addressErr && <p   style={{color:'red'}}   >Adresa mora da pocinje velikim slovom</p>}
       </Form.Group>
 
     

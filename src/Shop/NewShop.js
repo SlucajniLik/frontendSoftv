@@ -1,4 +1,5 @@
-import React from 'react';
+
+import React, { useRef } from 'react';
 import  axios from 'axios'
 
 import { useState,useContext,useEffect } from 'react';
@@ -17,6 +18,7 @@ function NewShop() {
   const [name, setName] = useState("");
   const [city, setCity] = useState("");
   const [image, setImage] = useState("");
+  const refImage=useRef(null)
   const [address, setAddress] = useState("");
   const [shopState, setShopState] = useState({
     name: "",
@@ -240,7 +242,7 @@ uploadBytes(imageRef,image).then(
       setCity("")
       setAddress("")
       setImage("")
-     
+      refImage.current.value=null
     SetSuccess(true)
     console.log(window.location.hostname)
 
@@ -326,7 +328,7 @@ if(shopState.exist==false)
     
       <Form.Group controlId="formFile" className="mb-3">
         <Form.Label>Izaberite sliku</Form.Label>
-        <Form.Control type="file" filename="image"   onChange={onChangeImage}/>
+        <Form.Control  ref={refImage} type="file" filename="image"   onChange={onChangeImage}/>
        <p   style={{color:'blue'}}   >Slika je obavezna</p>
         {!imageErr && <p   style={{color:'red'}}   >Unesite sliku</p>}
         {Success && <p   style={{color:'green'}}   >Uspesno ste uneli podatke</p>}

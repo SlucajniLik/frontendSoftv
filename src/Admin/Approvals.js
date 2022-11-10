@@ -197,7 +197,7 @@ function aproveUser(id)
       {
         UserSel=SelectedUser.name
       }
-      axios.get('https://serviceone1.herokuapp.com/users/SearchUser/'+UserSel, {
+      axios.get('https://serviceone1.herokuapp.com/users/SearchUserAproved/'+UserSel, {
         headers: {
           access: localStorage.getItem("access"),
         },

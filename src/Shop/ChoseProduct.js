@@ -220,10 +220,13 @@ function ChoseProduct() {
             {
               if(res.data==false)
               {navigate("/NewShop")}
-             
+             else
+            {
               setCartNumber(
                 cartNumber+1
               )
+            }
+              
 
             }
            );
